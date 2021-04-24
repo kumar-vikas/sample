@@ -1,0 +1,70 @@
+/*** Cover Base ****/
+.cover-base{
+  max-width: 1294px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url(../images/cover-bg.png);
+  height: 813px;
+  background-size: 100% 100%;
+  position: relative;
+}
+.cover-base ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin: 324px 0 0 500px;
+}
+.cover-base ul li{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: -3px;
+}
+.cover-base .btn-wrappper > .btn-icon, .cover-base .btn-wrappper > .btn-icon:hover, .cover-base .btn-wrappper > .btn-icon:focus{
+  min-width: 55px;
+  max-width: 55px;
+  height: 55px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.cover-base .btn-wrappper > .btn-icon img {
+    width: 27px;
+    margin: 7px auto 0 13px;
+}
+.cover-base .btn-wrappper{
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 50px 20px 20px 50px;
+  padding: 3px 40px 0 8px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.cover-base .btn-wrappper:hover{
+  background: #0164b1;
+  border: 2px solid #fff;
+}
+.small-btn-wrap{
+  display: inline-block;
+  vertical-align: middle;
+  visibility: hidden;
+}
+.cover-base .btn-wrappper:hover .small-btn-wrap{
+  visibility: visible;
+}
+.small-btn-wrap .btn-icon{
+  display: inline-flex;
+  margin: 4px 10px;
+} 
+.cover-base li > .chaper-name{
+  width: 300px;
+  text-align: right;
+}
+.cover-logo{
+  position: absolute;
+  right: 70px;
+  top: 70px;
+  width: 160px;
+}
+.cover-logo img{
+  width: 100%;
+}

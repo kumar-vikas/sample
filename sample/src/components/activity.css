@@ -1,0 +1,201 @@
+/*** Activty Base ****/
+.activity-base{
+  max-width: 1294px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url(../images/activity-bg-image.png);
+  height: 813px;
+  background-size: 100% 100%;
+  position: relative;
+}
+.activity-base-inner{
+  max-width: 100%;
+  padding: 20px 0 0 0;
+  border-radius: 25px;
+}
+.pencile-image{
+  position: absolute;
+  top: 134px;
+  left: 117px;
+  z-index: 1;
+  width: 131px;
+  z-index: 2;
+}
+.dailoug-block-img{
+  position: absolute;
+  top: 150px;
+  left: 240px;
+  z-index: 1;
+}
+.activity-folder{
+  padding-top: 50px;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.activity-footer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.activity-footer .activity-icon-wrap{
+  margin: -30px 20px 0;
+}
+.activity-footer .activity-icon-block{
+  width: 70px;
+  height: 70px;
+}
+.activity-footer .activity-icon-block img{
+  width: 52px;
+}
+.activity-footer .activity-name-block.type2{
+  margin-top: -40px;
+  min-width: 120px;
+  padding: 10px;
+}
+/****  activity-1 *****/
+.activity-1-wrap{
+  background: url(../images/act-bg-1.png);
+  background-size: 100% 100%;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  height: 500px;
+}
+.activity-1 .activity-assets-block{
+  margin: 46px 0 42px 0;
+}
+.activity-1 .activity-assets{
+  margin-top: 100px;
+}
+
+/****  activity-2 *****/
+.activity-2-wrap{
+  background: #c5e9fa;
+  width: 1060px;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 40px 0 30px;
+}
+.activity-folder-bg .activity-2{
+  background: url(../images/bubble-bg.png);
+  background-size: 100% 100%;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  height: 430px;
+  margin: 44px auto 0;
+  text-align: center;
+}
+.activity-2 .activity-icon-wrap{
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 60px;
+}
+.video-frame{
+  background: #bdbec1;
+  display: inline-block;
+  width: 459px;
+  height: 350px;
+  margin: 40px 30px 0 55px;
+  border-radius: 25px;
+  vertical-align: middle;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.video-frame-inner{
+  background: #fff;
+  display: inline-block;
+  width: 419px;
+  height: 258px;
+  margin: 0;
+  border-radius: 25px;
+  vertical-align: middle;
+}
+.activity-2 .activity-name-block.type3{
+  display: block;
+  max-width: 120px;
+  margin: -37px auto;
+  position: relative;
+  top: -20px;
+}
+.activity-2 .activity-name.medium {
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+
+/****  activity-2 *****/
+.activity-3-wrap{
+  background: #c5e9fa;
+  width: 1060px;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 0px 0 30px;
+}
+.activity-3{
+  padding: 100px 60px 0;
+  text-align: center;
+}
+.activity-3 .activity-name-block.type3{
+  display: block;
+  max-width: 120px;
+  margin: -37px auto;
+  position: relative;
+  top: -80px;
+}
+.activity-3 .activity-name.medium {
+  font-size: 22px;
+  line-height: 1.1;
+}
+.act-3-bubble{
+  background: url(../images/bubble-icon.png) no-repeat;
+  width: 285px;
+  height: 198px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 13px;
+  position: relative;
+  background-size: 100% 100%;
+}
+.activity-3 .type2 .activity-name.medium {
+  font-size: 15px;
+  line-height: 1.1;
+}
+.activity-3 .activity-name-block{
+  position: absolute;
+}
+.activity-3 .activity-name-block.first{
+  left: 9px;
+  bottom: 53px;
+}
+.activity-3 .activity-name-block.second{
+  left: 84px;
+  bottom: 13px;
+}
+.activity-3 .activity-name-block.third{
+  right: 9px;
+  bottom: 53px;
+}
+.act-3-bubble > .activity-name-block:first-child{
+  position: relative;
+  top: -10px;
+  display: block;
+  max-width: 100px;
+  margin: 0 auto;
+}
+.activity-3 .activity-bubble.circle{
+  width: 130px;
+  height: 130px;
+  background: transparent;
+  border: 0;
+  position: relative;
+  top: -25px;
+}
+
+#vidPlayer{
+  width: 100%;
+}
