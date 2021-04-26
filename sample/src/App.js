@@ -5,6 +5,8 @@ import Precursive from "./components/precursive"
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
+import backBtn from "./images/play-btn.png"
+import homeBtn from "./images/home-btn.png"
 
 function App(props) {
   const [state, setState] = useState({visible:false, history:null});
@@ -26,7 +28,14 @@ function App(props) {
     
     <div className="App">
       
-      {state.visible ?  <div id="backBtn" onClick={()=> gotoBack()}>BACK BTN</div>: ''}
+      {state.visible ?  <div id="backBtn">
+          <div className="btn-icon oragnge-btn play-btn" onClick={()=> gotoBack()}>
+            <img src={backBtn}/>
+          </div>
+          <div className="btn-icon red-btn home-btn">
+            <img src={homeBtn}/>
+          </div>
+      </div>: ''}
 
       <Router>
       <Switch>

@@ -17,9 +17,7 @@
   position: absolute;
   top: 134px;
   left: 117px;
-  z-index: 1;
   width: 131px;
-  z-index: 2;
 }
 .dailoug-block-img{
   position: absolute;
@@ -198,4 +196,20 @@
 
 #vidPlayer{
   width: 100%;
+}
+
+#closeBtn{
+  position: absolute;
+    right: 0;
+    top: 37px;
+    width: 45px;
+    height: 45px;
+}
+
+.vidCont{
+  background-color:rgba(0, 0, 0, 1);
+    width: 100%;
+    height: 790px;
+    display: flex;
+    align-items: center;
 }

@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+#backBtn .play-btn{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+#backBtn{
+  position: absolute;
+  z-index: 1;
+  right: 135px;
+  top: 69px;
+}
+
+#backBtn div:nth-child(2){
+  left: 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

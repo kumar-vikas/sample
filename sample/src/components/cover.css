@@ -12,13 +12,13 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin: 324px 0 0 500px;
+  margin: 320px 0 0 475px;
 }
 .cover-base ul li{
   display: flex;
   align-items: center;
   width: 100%;
-  margin-bottom: -3px;
+  height: 70px;
 }
 .cover-base .btn-wrappper > .btn-icon, .cover-base .btn-wrappper > .btn-icon:hover, .cover-base .btn-wrappper > .btn-icon:focus{
   min-width: 55px;
@@ -35,7 +35,7 @@
   background: transparent;
   border: 2px solid transparent;
   border-radius: 50px 20px 20px 50px;
-  padding: 3px 40px 0 8px;
+  /* padding: 3px 40px 0 8px; */
   margin-left: 20px;
   cursor: pointer;
 }

@@ -6,9 +6,11 @@ import animationImg from "../images/animation.png"
 import infoBtn from "../images/info-btn.png";
 
 class Precursive extends Component{
+
     constructor(props){
-        super(props)
-        this.videoRef = React.createRef();
+        super(props);
+		this.vid = null;
+        //this.videoRef = React.createRef();
         this.state = {
             src:this.props.src,
             visible:'none'
@@ -17,16 +19,22 @@ class Precursive extends Component{
     }
 
     playVideo = () => {
-        this.setState({visible:"block" })
+        this.setState({visible:"flex" })
         /* let videe = this.videoRef.current;
         alert(videe); */
-        var vid = document.getElementById("vidPlayer");
-        console.log(vid)
-        vid.src = "assets/animations/supercity_1.mp4"
-        vid.play();
+        this.vid = document.getElementById("vidPlayer");
+        console.log(this.vid)
+        this.vid.src = "assets/animations/supercity_1.mp4"
+        this.vid.play();
 
         console.log(" video playing")
     }
+
+	closeVideo = () =>{
+		this.setState({visible:"none" })
+		this.vid.pause();
+		console.log("close video")
+	}
     
 	componentDidMount(){
 		console.log(" -----------------")
@@ -36,8 +44,14 @@ class Precursive extends Component{
     render() { 
         return (
             <div className="activity-base">
-  	            <img src={pencilImg} className="pencile-image"/>
+				<div style={{display: this.state.visible }} className="vidCont">
+					<video controls id="vidPlayer" ref={this.videoRef} src=''></video>
+					<button onClick={()=>this.closeVideo()} id="closeBtn">&#10008;</button>
+				</div>
+
+  	            
   	<div className="activity-base-inner">
+	  <img src={pencilImg} className="pencile-image"/>
   		<div className="activity-head">
 		  <a href="#" className="btn-icon oragnge-btn info-btn">
 		    <img src={infoBtn}/>
@@ -45,17 +59,8 @@ class Precursive extends Component{
 		  <div className="activity-name-block">
 		    <p className="activity-name">Pre-Cursive A</p>
 		  </div>
-		  <a href="#" className="btn-icon oragnge-btn play-btn">
-		    <img src="assets/images/play-btn.png"/>
-		  </a>
-		  <a href="#" className="btn-icon red-btn home-btn">
-		    <img src="assets/images/home-btn.png"/>
-		  </a>
 		</div>
   		<div className="activity-folder">
-          
-            <video id="vidPlayer" style={{display: this.state.visible }} ref={this.videoRef} src=''></video>
-
   			<div className="activity-folder-bg activity-2-wrap">
   				<div className="activity-2">
   					<div className="activity-name-block type3">
