@@ -2,7 +2,10 @@
 import './App.css';
 import FirstScr from "./components/FirstScr";
 import Precursive from "./components/precursive";
-import VideoComp from "./components/videoComp"
+import VideoComp from "./components/videoComp";
+import Warmup from "./components/Warmup";
+import PreWriting from "./components/PreWriting";
+import ActivityComp from "./components/ActivityComp"
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
@@ -36,10 +39,10 @@ function App(props) {
       
       {state.visible ?  <div id="backBtn">
           <div className="btn-icon oragnge-btn play-btn" onClick={()=> gotoBack()}>
-            <img src={backBtn}/>
+            <img alt="" src={backBtn}/>
           </div>
           <div className="btn-icon red-btn home-btn" onClick={()=> gotoHome()}>
-            <img src={homeBtn}/>
+            <img alt="" src={homeBtn}/>
           </div>
       </div>: ''}
 
@@ -71,6 +74,36 @@ function App(props) {
             render = {(props)=>{
               props.setVisibility = setVisibility;
               return <VideoComp {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+        <Route 
+          path={"/Warmup"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              return <Warmup {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+        <Route 
+          path={"/PreWriting"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              return <PreWriting {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+        <Route 
+          path={"/ActivityComp"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              return <ActivityComp {...props}/>
               }}
             /* component={Precursive} */
         />

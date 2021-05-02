@@ -18,27 +18,27 @@ class FirstScr extends Component {
 	
         <div className="cover-base">
   	<div className="cover-logo">
-  		<img src={logo1}/>
+  		<img alt="" src={logo1}/>
   	</div>
     <div className="toc-list">
     	<ul>
     		<li>
-    			<a href="#"className="chaper-name">Junior infants</a>
+    			<a className="chaper-name">Junior infants</a>
     			<div className="btn-wrappper">
-    				<a href="#" className="btn-icon blue-btn">
-					  <img src={playBtn}/>
+    				<a className="btn-icon blue-btn">
+					  <img alt="" src={playBtn}/>
 					</a>
 					<div className="small-btn-wrap">
 						<p  className="chaper-name small">
 							<NavLink to="/precursive">
-								<a href="#" className="btn-icon small blue-btn">
-								<img src={playBtn}/>
-								</a> Pre-Cursive
-							</NavLink>	
+								<span className="btn-icon small blue-btn">
+									<img alt="" src={playBtn}/>
+								</span> Pre-Cursive
+							</NavLink>
 						</p>
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small oragnge-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small oragnge-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Cursive
 						</p>
 					</div>
@@ -46,20 +46,20 @@ class FirstScr extends Component {
     		</li>
 
     		<li>
-    			<a href="#"className="chaper-name">Senior infants</a>
+    			<a className="chaper-name">Senior infants</a>
     			<div className="btn-wrappper">
-    				<a href="#" className="btn-icon blue-btn">
-					  <img src={playBtn}/>
+    				<a className="btn-icon blue-btn">
+					  <img alt="" src={playBtn}/>
 					</a>
 					<div className="small-btn-wrap">
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small blue-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small blue-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Pre-Cursive
 						</p>
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small oragnge-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small oragnge-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Cursive
 						</p>
 					</div>
@@ -67,20 +67,20 @@ class FirstScr extends Component {
     		</li>
 
     		<li>
-    			<a href="#"className="chaper-name">First Class</a>
+    			<a className="chaper-name">First Class</a>
     			<div className="btn-wrappper">
-    				<a href="#" className="btn-icon blue-btn">
-					  <img src={playBtn}/>
+    				<a className="btn-icon blue-btn">
+					  <img alt="" src={playBtn}/>
 					</a>
 					<div className="small-btn-wrap">
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small blue-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small blue-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Pre-Cursive
 						</p>
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small oragnge-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small oragnge-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Cursive
 						</p>
 					</div>
@@ -88,20 +88,20 @@ class FirstScr extends Component {
     		</li>
 
     		<li>
-    			<a href="#"className="chaper-name">Second Class</a>
+    			<a className="chaper-name">Second Class</a>
     			<div className="btn-wrappper">
-    				<a href="#" className="btn-icon blue-btn">
-					  <img src={playBtn}/>
+    				<a className="btn-icon blue-btn">
+					  <img alt="" src={playBtn}/>
 					</a>
 					<div className="small-btn-wrap">
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small blue-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small blue-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Pre-Cursive
 						</p>
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small oragnge-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small oragnge-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Cursive
 						</p>
 					</div>
@@ -109,20 +109,20 @@ class FirstScr extends Component {
     		</li>
 
     		<li>
-    			<a href="#"className="chaper-name">Third and<br/>Fourth Class</a>
+    			<a className="chaper-name">Third and<br/>Fourth Class</a>
     			<div className="btn-wrappper">
-    				<a href="#" className="btn-icon blue-btn">
-					  <img src={playBtn}/>
+    				<a className="btn-icon blue-btn">
+					  <img alt="" src={playBtn}/>
 					</a>
 					<div className="small-btn-wrap">
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small blue-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small blue-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Pre-Cursive
 						</p>
 						<p  className="chaper-name small">
-							<a href="#" className="btn-icon small oragnge-btn">
-							  <img src={playBtn}/>
+							<a className="btn-icon small oragnge-btn">
+							  <img alt="" src={playBtn}/>
 							</a> Cursive
 						</p>
 					</div>

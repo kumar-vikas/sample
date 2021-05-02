@@ -42,11 +42,13 @@
 .cover-base .btn-wrappper:hover{
   background: #0164b1;
   border: 2px solid #fff;
+  width: 220px;
 }
 .small-btn-wrap{
   display: inline-block;
   vertical-align: middle;
   visibility: hidden;
+  text-align: left;
 }
 .cover-base .btn-wrappper:hover .small-btn-wrap{
   visibility: visible;

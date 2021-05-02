@@ -1,0 +1,109 @@
+<!doctype html>
+<html ng-app="dndMatchApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Flat - Unit 1 Page 25 Extra Grammer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <!--  stop-screen-move on-resize ng-style="style()" -->
+  <body ng-controller="dndMatchController as dndMatCtrl" stop-screen-move on-resize ng-style="style()">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="stage" ng-controller="dataController as data">
+      <div class="headerArea">
+        <div class="rubric">
+          <div class="rubricNumber"><div ng-bind-html="data.rN"></div></div>
+          <div class="rubricText" ng-bind-html="data.rT"></div>
+        </div>
+      </div>
+
+      <div class="containerArea">
+        <div class="contentArea">
+          <!-- activity content - Start -->
+          <img class="flatImg" ng-src="{{data.fI}}" />
+
+          <!--div class="disableDrags" ng-show="disableDrags==true"></div-->
+          <div id="{{obj.id}}" class="dndDrops" data-itemDropped="" ng-repeat="obj in dndMatCtrl.droppableObjects" ng-drop-data="obj" ng-drop="true" ng-drop-success="dndMatCtrl.onDropComplete($data,$event,obj.id)" ng-center-anchor="{{dndMatCtrl.centerAnchor}}"></div>
+
+          <div id="{{obj.id}}" class="dndDrags" data-droppedOn="" ng-repeat="obj in dndMatCtrl.draggableObjects" ng-drag-data="obj" ng-drag="true" ng-drag-start="dndMatCtrl.onDragStart($data,$event)" ng-drag-stop="dndMatCtrl.onDragRelease($data,$event)" data-allow-transform="true" >{{obj.txt}}</div>
+          <!-- activity content - End -->
+
+          <!-- popup content - Start -->
+          <div class="popupHolder" ng-show="dndMatCtrl.showPopup">
+            <div class="popupBlocker" ng-show="dndMatCtrl.showPopup"></div>
+            <div class="popupBox" ng-show="dndMatCtrl.showPopup">
+              <div class="popupContent">
+                <img src="" ng-src="{{data.pI}}" />
+              </div>
+              <div class="popupHeader">
+                <div class="popupTitle"><img ng-src="" /></div>
+                <div class="popupClose" ng-click="dndMatCtrl.closePopup()"></div>
+              </div>
+            </div>
+          </div>
+          <!-- popup content - End -->
+        </div>
+      </div>
+
+      <div class="footerArea">
+        <div class="prevBtn"></div>
+        <div class="controllBar">
+          <div class="playpauseBtn roundBtns play" ng-show="dndMatCtrl.showVideoControls"></div>
+          <div class="muteBtn roundBtns mute" ng-show="dndMatCtrl.showVideoControls"></div>
+          <div class="showhideBtn roundBtns" ng-show="dndMatCtrl.showTextControls"></div>
+          <div class="popupBtn" ng-show="dndMatCtrl.showPopupControls"  ng-click="dndMatCtrl.showAnswer()"></div>
+          <div class="extraBtn" ng-show="dndMatCtrl.showExtraControls"></div>
+        </div>
+        <div class="nextBtn"></div>
+      </div>
+    </div>
+
+    <div id="loader">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/vars.js"></script>
+
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/directives/onresize.js"></script>
+        <script src="scripts/directives/stopscreenmove.js"></script>
+        <script src="scripts/directives/dnddirective.js"></script>
+
+        <script src="scripts/controllers/dndMatch.js"></script>
+        
+        <script src="scripts/data/data.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
