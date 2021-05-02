@@ -15,7 +15,8 @@ class FirstScr extends Component {
 
     render() {
         return (
-            <div className="cover-base">
+	
+        <div className="cover-base">
   	<div className="cover-logo">
   		<img src={logo1}/>
   	</div>
@@ -33,7 +34,7 @@ class FirstScr extends Component {
 								<a href="#" className="btn-icon small blue-btn">
 								<img src={playBtn}/>
 								</a> Pre-Cursive
-							</NavLink>							
+							</NavLink>	
 						</p>
 						<p  className="chaper-name small">
 							<a href="#" className="btn-icon small oragnge-btn">
@@ -130,7 +131,7 @@ class FirstScr extends Component {
     	</ul>
     </div>
   </div>
-         );
+		);
     }
 }
  

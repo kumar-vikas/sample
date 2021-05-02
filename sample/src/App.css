@@ -14,6 +14,10 @@
   top: 69px;
 }
 
+#backBtn div{
+  cursor: pointer;
+}
+
 #backBtn div:nth-child(2){
   left: 10px;
 }

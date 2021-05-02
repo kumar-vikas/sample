@@ -1,7 +1,8 @@
 /* import logo from './logo.svg'; */
 import './App.css';
 import FirstScr from "./components/FirstScr";
-import Precursive from "./components/precursive"
+import Precursive from "./components/precursive";
+import VideoComp from "./components/videoComp"
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
@@ -24,6 +25,11 @@ function App(props) {
     state.history.goBack()
   }
 
+  function gotoHome(){
+    setState({visible:false})
+    state.history.push("./")
+  }
+
   return (
     
     <div className="App">
@@ -32,7 +38,7 @@ function App(props) {
           <div className="btn-icon oragnge-btn play-btn" onClick={()=> gotoBack()}>
             <img src={backBtn}/>
           </div>
-          <div className="btn-icon red-btn home-btn">
+          <div className="btn-icon red-btn home-btn" onClick={()=> gotoHome()}>
             <img src={homeBtn}/>
           </div>
       </div>: ''}
@@ -55,6 +61,16 @@ function App(props) {
             render = {(props)=>{
               props.setVisibility = setVisibility;
               return <Precursive {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+        <Route 
+          path={"/videoComp"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              return <VideoComp {...props}/>
               }}
             /* component={Precursive} */
         />
