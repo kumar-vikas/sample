@@ -21,9 +21,13 @@ class VideoComp extends Component{
         console.log(this.vid)
         this.vid.src = "assets/animations/supercity_1.mp4"
         this.vid.play();
-
+		this.vid.addEventListener("ended", this.onVideoEnded)
         console.log(" video playing")
     }
+
+	onVideoEnded =()=>{
+		this.closeVideo();
+	}
 
 	closeVideo = () =>{
 		this.setState({visible:"none" })
@@ -68,7 +72,7 @@ class VideoComp extends Component{
 				    	<div class="video-frame-inner">
 						<div style={{display: this.state.visible }} className="vidCont">
 							<video controls id="vidPlayer" ref={this.videoRef} src=''></video>
-							<button onClick={()=>this.closeVideo()} id="closeBtn">&#10008;</button>
+							{/* <button onClick={()=>this.closeVideo()} id="closeBtn">&#10008;</button> */}
 						</div>
 				    	</div>
 				    </div>

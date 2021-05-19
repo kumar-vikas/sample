@@ -29,6 +29,10 @@
   --textSmall: adventuring;
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   /*background: #000;*/
   font-size: 14px;
