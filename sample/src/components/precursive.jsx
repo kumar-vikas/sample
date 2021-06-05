@@ -17,8 +17,11 @@ class Precursive extends Component{
         //this.videoRef = React.createRef();
         this.state = {
             src:this.props.src,
-            visible:'none'
+            visible:'none',
+			name:this.props.location.name
         }
+
+		console.log(props)
     }
 
     /* playVideo = () => {
@@ -38,14 +41,33 @@ class Precursive extends Component{
 	} */
     
 	componentDidMount(){
-		console.log(" -----------------")
+		//console.log(this.props.state," -----------------")
 		this.props.setVisibility(this.props.history);
+	}
+
+	/* componentDidUpdate(){
+		if(this.state.name !== this.props.state.name){
+			this.props.updateActiveTab(this.state.name);
+		}		
+
+		console.log(this.props.state," *************** ", this.state.name)
+	} */
+
+	componentWillReceiveProps(props, state){
+		if(props.location.name != null){
+			console.log(this.state.name, " ============", props.location.name);
+			if(this.state.name != props.state.activeTab){
+				props.updateActiveTab(this.state.name);
+				console.log(props," *------------------------------- ")
+			}
+		}
 	}
 
     render() { 
         return (
 
 			<div class="activity-base">
+				{console.log(this.props.state)}
   	<img alt="" src={pencilImg} class="pencile-image"/>
   	<div class="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
@@ -56,7 +78,7 @@ class Precursive extends Component{
 		    <img alt="" src={infoBtn}/>
 		  </a>
 		  <div class="activity-name-block">
-		    <p class="activity-name">Pre-Cursive A</p>
+		    <p class="activity-name">Pre-Cursive {this.state.name}</p>
 		  </div>
 		  {/* <a href="#" class="btn-icon oragnge-btn play-btn">
 		    <img alt="" src="assets/images/play-btn.png"/>
@@ -157,7 +179,7 @@ class Precursive extends Component{
 				         <img alt="" src={gameImg}/>
 				      </div>
 				      <div class="activity-name-block type2">
-				        <p class="activity-name medium">Games</p>
+				        <p class="activity-name medium">Game</p>
 				      </div>
 				    </div>
 				    <div class="activity-icon-wrap">

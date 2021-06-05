@@ -13,13 +13,22 @@ class Warmup extends Component{
         }
     }
 
-	playVideo = () => {
+	playVideo = (_id) => {
         this.setState({visible:"flex" })
         /* let videe = this.videoRef.current;
         alert(videe); */
+
+		var src = "";
+		if(_id == 0){
+			src = "assets/animations/supercity_1.mp4"
+		}else{
+			console.log(" *********************")
+			src = "assets/Letter Writing/Capital letter/Copy of G_capital_feedback3.mp4"
+		}
+
         this.vid = document.getElementById("vidPlayer");
         console.log(this.vid)
-        this.vid.src = "assets/animations/supercity_1.mp4"
+        this.vid.src = src;
         this.vid.play();
 
         console.log(" video playing")
@@ -56,7 +65,7 @@ class Warmup extends Component{
   					<div class="activity-name-block type3">
 					 	<p class="activity-name medium">Warm-Up</p>
 					</div>
-		  			<div class="activity-icon-wrap" onClick={()=>this.playVideo()}>
+		  			<div class="activity-icon-wrap" onClick={()=>this.playVideo(0)}>
 				      	<div class="activity-icon-block">
 				        	<img alt="" src={animationImg}/>
 				      	</div>
@@ -72,7 +81,7 @@ class Warmup extends Component{
 						</div>
 				    	</div>
 				    </div>
-				    <div class="activity-icon-wrap">
+				    <div class="activity-icon-wrap" onClick={()=>this.playVideo(1)}>
 				      	<div class="activity-icon-block">
 				        	<img alt="" src={animationImg}/>
 				      	</div>

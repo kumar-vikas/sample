@@ -13,23 +13,58 @@ import backBtn from "./images/play-btn.png"
 import homeBtn from "./images/home-btn.png"
 
 function App(props) {
-  const [state, setState] = useState({visible:false, history:null});
+  const [state, setState] = useState({visible:false, history:null,
+    nameList:[
+      {"name":"A", "video":"path"},
+      {"name":"B"},
+      {"name":"C"},
+      {"name":"D"},
+      {"name":"E"},
+      {"name":"F"},
+      {"name":"G"},
+      {"name":"H"},
+      {"name":"I"},
+      {"name":"J"},
+      {"name":"K"},
+      {"name":"L"},
+      {"name":"M"},
+      {"name":"N"},
+      {"name":"O"},
+      {"name":"P"},
+      {"name":"Q"},
+      {"name":"R"},
+      {"name":"S"},
+      {"name":"T"},
+      {"name":"U"},
+      {"name":"V"},
+      {"name":"W"},
+      {"name":"X"},
+      {"name":"Y"},
+      {"name":"Z"}
+    ],
+    activeTab: null
+  });
 
   function setVisibility(history){
 
     setState({
+      ...state,
       visible:true,
       history
     });
   }
 
+  function updateActiveTab(_a){
+    	setState({...state, activeTab:_a});
+  }
+
   function gotoBack(){
-    setState({visible:false})
+    setState({...state, visible:false})
     state.history.goBack()
   }
 
   function gotoHome(){
-    setState({visible:false})
+    setState({...state, visible:false})
     state.history.push("./")
   }
 
@@ -53,6 +88,8 @@ function App(props) {
             exact={true}
             render = {(props)=>{
             props.setVisibility = setVisibility;
+            props.state = state;
+            props.updateActiveTab = updateActiveTab;
             return <FirstScr {...props}/>
             }}
             /* component={FirstScr} */
@@ -63,6 +100,8 @@ function App(props) {
             exact={true}
             render = {(props)=>{
               props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
               return <Precursive {...props}/>
               }}
             /* component={Precursive} */
@@ -73,6 +112,8 @@ function App(props) {
             exact={true}
             render = {(props)=>{
               props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
               return <VideoComp {...props}/>
               }}
             /* component={Precursive} */
@@ -83,6 +124,8 @@ function App(props) {
             exact={true}
             render = {(props)=>{
               props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
               return <Warmup {...props}/>
               }}
             /* component={Precursive} */
@@ -93,6 +136,8 @@ function App(props) {
             exact={true}
             render = {(props)=>{
               props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
               return <PreWriting {...props}/>
               }}
             /* component={Precursive} */
@@ -103,6 +148,8 @@ function App(props) {
             exact={true}
             render = {(props)=>{
               props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
               return <ActivityComp {...props}/>
               }}
             /* component={Precursive} */

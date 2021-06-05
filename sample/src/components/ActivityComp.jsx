@@ -60,7 +60,7 @@ class ActivityComp extends Component{
 				    <div class="video-frame">
 				    	<div class="video-frame-inner">
 						<div /* style={{display: this.state.visible }} */ className="vidCont">
-							<iframe id="iPlayer" src='dist-DnD-OnImage/index.html'></iframe>
+							<iframe frameBorder="0" id="iPlayer" src='assets/Activity/index.html'></iframe>
 							{/* <button onClick={()=>this.closeVideo()} id="closeBtn">&#10008;</button> */}
 						</div>
 				    	</div>
