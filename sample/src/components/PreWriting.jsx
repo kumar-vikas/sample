@@ -30,7 +30,7 @@ class PreWriting extends Component{
 					</div>
   					<div className="act-3-bubble">
   						<div className="activity-name-block type2">
-				        	<p className="activity-name medium">Exercise 1</p>
+				        	<p className="activity-name medium">Pattern 1</p>
 				      	</div>
 				      	<div className="activity-bubble circle text">
 					      <div className="">
@@ -60,7 +60,7 @@ class PreWriting extends Component{
   					</div>
   					<div className="act-3-bubble">
   						<div className="activity-name-block type2">
-				        	<p className="activity-name medium">Exercise 2</p>
+				        	<p className="activity-name medium">Pattern 2</p>
 				      	</div>
 				      	<div className="activity-bubble circle text">
 					      <div className="">
@@ -90,7 +90,7 @@ class PreWriting extends Component{
   					</div>
   					<div className="act-3-bubble">
   						<div className="activity-name-block type2">
-				        	<p className="activity-name medium">Exercise 3</p>
+				        	<p className="activity-name medium">Pattern 3</p>
 				      	</div>
 				      	<div className="activity-bubble circle text">
 					      <div className="">
@@ -150,7 +150,7 @@ class PreWriting extends Component{
   					</div>
   					<div className="act-3-bubble">
   						<div className="activity-name-block type2">
-				        	<p className="activity-name medium">Exercise5</p>
+				        	<p className="activity-name medium">Exercise 5</p>
 				      	</div>
 				      	<div className="activity-bubble circle text">
 					      <div className="">

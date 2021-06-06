@@ -84,10 +84,12 @@
 .lftToc{
   height: 420px;
   overflow: auto;
+  width: 360px;
 }
 
 .subToc{
   height: 420px;
+  width: 170px;
   overflow: auto;
   padding: 10px;
 }

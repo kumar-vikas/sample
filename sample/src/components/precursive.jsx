@@ -91,18 +91,18 @@ class Precursive extends Component{
   			<div class="activity-folder-bg activity-1-wrap">
   				<div class="flex activity-1">
 		  			<div class="activity-assets">
-					  <div class="activity-bubble left">
-					  <NavLink to="/videoComp">
-					    <div class="activity-icon-wrap">
-					      <div class="activity-icon-block">
-					         <img alt="" src={animationImg}/>
-					      </div>
-					      <div class="activity-name-block type4">
-					        <p class="activity-name small">Animations</p>
-					      </div>
-					    </div>
-						</NavLink>
-					  </div>
+					  {/* <div class="activity-bubble left">
+						<NavLink to="/videoComp">
+							<div class="activity-icon-wrap">
+							<div class="activity-icon-block">
+								<img alt="" src={animationImg}/>
+							</div>
+							<div class="activity-name-block type4">
+								<p class="activity-name small">Animations</p>
+							</div>
+							</div>
+							</NavLink>
+					  </div> */}
 					  <div class="activity-assets-block">
 					    <div class="activity-bubble circle text">
 					      <div class="">
@@ -115,7 +115,7 @@ class Precursive extends Component{
 					    </div>
 						</NavLink>
 					  </div>
-					  <div class="activity-bubble right">
+					  {/* <div class="activity-bubble right">
 					  <NavLink to="ActivityComp">
 					    <div class="activity-icon-wrap">
 					      <div class="activity-icon-block">
@@ -126,7 +126,7 @@ class Precursive extends Component{
 					      </div>
 					    </div>
 						</NavLink>
-					  </div>
+					  </div> */}
 					</div>
 					<NavLink to="/Warmup">
 					<div class="activity-assets-block top">
@@ -141,7 +141,7 @@ class Precursive extends Component{
 					</div>
 					</NavLink>
 					<div class="activity-assets">
-					  <div class="activity-bubble left">
+					  {/* <div class="activity-bubble left">
 					    <div class="activity-icon-wrap">
 					      <div class="activity-icon-block">
 					         <img alt="" src={animationImg}/>
@@ -150,7 +150,7 @@ class Precursive extends Component{
 					        <p class="activity-name small">Animations</p>
 					      </div>
 					    </div>
-					  </div>
+					  </div> */}
 					  <div class="activity-assets-block">
 					    <div class="activity-bubble circle text">
 					      <div class="">
@@ -161,7 +161,7 @@ class Precursive extends Component{
 					      <p class="activity-name medium">Letter Formation</p>
 					    </div>
 					  </div>
-					  <div class="activity-bubble right">
+					  {/* <div class="activity-bubble right">
 					    <div class="activity-icon-wrap">
 					      <div class="activity-icon-block">
 					         <img alt="" src={activityImg}/>
@@ -170,7 +170,7 @@ class Precursive extends Component{
 					        <p class="activity-name small">Activities</p>
 					      </div>
 					    </div>
-					  </div>
+					  </div> */}
 					</div>
 				</div>
 				<div class="activity-footer">
