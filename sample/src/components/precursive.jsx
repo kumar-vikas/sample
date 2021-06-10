@@ -4,9 +4,8 @@ import "./theme.css";
 import pencilImg from "../images/pencil-big.png"
 import animationImg from "../images/animation.png"
 import infoBtn from "../images/info-btn.png";
-import activityImg from "../images/activity.png";
 import gameImg from "../images/games.png";
-import printImg from "../images/print-btn.png"
+import printImg from "../images/print-btn.png";
 import { NavLink } from 'react-router-dom';
 
 class Precursive extends Component{

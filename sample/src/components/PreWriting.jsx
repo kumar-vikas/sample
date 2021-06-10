@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import pencilImg from "../images/pencil-big.png"
 import animationImg from "../images/animation.png"
 import infoBtn from "../images/info-btn.png";
+import activityImg from "../images/activity.png";
+import { NavLink } from 'react-router-dom';
 
 class PreWriting extends Component{
     constructor(props){
@@ -44,13 +46,15 @@ class PreWriting extends Component{
 						  <p className="activity-name small">Slow</p>
 						</div>
 
+						<NavLink to="/PreWritingPractice">
 				      	<div className="activity-name-block type4 second">
 						  <div className="activity-small-icon">
-						    <img alt="" src="assets/images/activity.png"/>
+						    <img alt="" src={activityImg}/>
 						  </div>
 						  <p className="activity-name small">Practice</p>
 						</div>
-
+						</NavLink>
+						
 				      	<div className="activity-name-block type4 third">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>

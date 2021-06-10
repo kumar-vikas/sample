@@ -6,6 +6,7 @@ import VideoComp from "./components/videoComp";
 import Warmup from "./components/Warmup";
 import PreWriting from "./components/PreWriting";
 import ActivityComp from "./components/ActivityComp"
+import PreWritingPractice from "./components/PreWritingPractice";
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
@@ -21,7 +22,7 @@ function App(props) {
       {"name":"D"},
       {"name":"E"},
       {"name":"F"},
-      {"name":"G"},
+      /* {"name":"G"},
       {"name":"H"},
       {"name":"I"},
       {"name":"J"},
@@ -40,7 +41,7 @@ function App(props) {
       {"name":"W"},
       {"name":"X"},
       {"name":"Y"},
-      {"name":"Z"}
+      {"name":"Z"} */
     ],
     activeTab: null
   });
@@ -151,6 +152,18 @@ function App(props) {
               props.state = state;
               props.updateActiveTab = updateActiveTab;
               return <ActivityComp {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+        <Route 
+          path={"/PreWritingPractice"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
+              return <PreWritingPractice {...props}/>
               }}
             /* component={Precursive} */
         />
