@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { fabric } from 'fabric';
-import "./canvasStyle.css"
+import "./canvasStyle.css";
 
 function Test(props){
     var canvas;
     var width = window.innerWidth;
     var height = window.innerHeight;
-    var activeTool = 1;
+    var activeTool = 0;
     var rect, origX, origY;
     var isDown = false;
     var boxColor = 'rgba(0,0,255,0.5)';
@@ -26,7 +26,6 @@ function Test(props){
         height = props.canprops.height;
         canvas.setDimensions({width:width, height:height});
         console.log(props.canprops);
-        ccd()
     });
 
     function ccd(){
@@ -90,13 +89,20 @@ function Test(props){
     
     }
 
-    return(
-        <div style={{marginTop:props.canprops.marginTop}}>
+    function removeAll(){
+      canvas.clear();
+		  canvas.renderAll();
+    }
 
-            {/* <button onClick={onAddCircle}>Add circle</button> */}
-            
+    return(
+        <div className="parentCont" style={{marginTop:props.canprops.marginTop}}>
+
             <canvas id="c" style={canStyle}></canvas>
-            {/* <FabricJSCanvas className="sample-canvas" onReady={onReady} /> */}
+
+            <div className="btnControl">
+              <button className="buttons" onClick={ccd}></button>
+              <button className="buttons" onClick={removeAll}></button>
+            </div>
     </div>
     )
 }

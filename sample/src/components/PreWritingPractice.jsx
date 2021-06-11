@@ -5,6 +5,7 @@ import animationImg from "../images/animation.png"
 import infoBtn from "../images/info-btn.png";
 import gameImg from "../images/games.png";
 import printImg from "../images/print-btn.png";
+import penIcon from "../images/pencil-2.png"
 
 function PreWritingPractice(){
     
@@ -31,7 +32,7 @@ function PreWritingPractice(){
 		  </a> */}
 		</div>
   		
-          <Test canprops={{width:"1075", height:"200", marginTop:360}} className="drawingTool"/>
+          <Test canprops={{width:"1075", height:"200", marginTop:360, "iconI": penIcon}} className="drawingTool"/>
   	</div>
   </div>
     )
