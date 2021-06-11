@@ -12,6 +12,11 @@
     margin: 0 auto;
 }
 
+#canBack{
+    background-color: #fff;
+    display: inline-block;
+}
+
 .buttons{
     width: 45px;
     height: 45px;

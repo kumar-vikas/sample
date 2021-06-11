@@ -1,38 +1,45 @@
-import React, { Component } from 'react';
+import { useEffect } from 'react';
 import Test from "./Test";
+import "./practice.css";
 import pencilImg from "../images/pencil-big.png"
 import animationImg from "../images/animation.png"
 import infoBtn from "../images/info-btn.png";
 import gameImg from "../images/games.png";
 import printImg from "../images/print-btn.png";
 import penIcon from "../images/pencil-2.png"
+import bgImg from "../images/activity-bg-image-2.jpg"
 
-function PreWritingPractice(){
-    
+function PreWritingPractice(props){	
+	var baseStyle = {
+		backgroundImage: 2
+	}
+	/* useEffect(()=>{
+		props.setVisibility(props.history);		
+	}, []) */
+
+
     return(
         <div className="activity-base">
-				{/* {console.log(this.props.state)} */}
   	<img alt="" src={pencilImg} class="pencile-image"/>
-  	<div class="dailoug-block-img">
+  	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
 	</div>
-  	<div class="activity-base-inner">
-  		<div class="activity-head">
-		  <a class="btn-icon oragnge-btn info-btn">
+  	<div className="activity-base-inner">
+  		<div className="activity-head">
+		  <a className="btn-icon oragnge-btn info-btn">
 		    <img alt="" src={infoBtn}/>
 		  </a>
-		  <div class="activity-name-block">
-		    <p class="activity-name">Pre-Cursive</p>
+		  <div className="activity-name-block">
+		    <p className="activity-name">Pre-Cursive</p>
 		  </div>
-		  {/* <a href="#" class="btn-icon oragnge-btn play-btn">
-		    <img alt="" src="assets/images/play-btn.png"/>
-		  </a>
-		  <a href="#" class="btn-icon red-btn home-btn">
-		    <img alt="" src="assets/images/home-btn.png"/>
-		  </a> */}
 		</div>
+
+		<div id="vidCont">
+			<video autoPlay id="vidPlayer" src="assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4"></video>
+		</div>
+
   		
-          <Test canprops={{width:"1075", height:"200", marginTop:360, "iconI": penIcon}} className="drawingTool"/>
+          <Test canprops={{width:"1075", height:"200", marginTop:100, "iconI": penIcon}} className="drawingTool"/>
   	</div>
   </div>
     )

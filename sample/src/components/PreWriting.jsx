@@ -10,6 +10,10 @@ class PreWriting extends Component{
         super(props)
     }
 
+	componentDidMount(){
+		this.props.setVisibility(this.props.history);
+	}
+
     render(){
         return(
             <div className="activity-base">
@@ -39,28 +43,33 @@ class PreWriting extends Component{
 					       <img alt="" src="assets/images/act-1.png"/>
 					      </div>
 					    </div>
-				      	<div className="activity-name-block type4 first">
-						  <div className="activity-small-icon">
-						    <img alt="" src={animationImg}/>
-						  </div>
-						  <p className="activity-name small">Slow</p>
-						</div>
 
 						<NavLink to="/PreWritingPractice">
-				      	<div className="activity-name-block type4 second">
-						  <div className="activity-small-icon">
-						    <img alt="" src={activityImg}/>
-						  </div>
-						  <p className="activity-name small">Practice</p>
-						</div>
+							<div className="activity-name-block type4 first">
+							<div className="activity-small-icon">
+								<img alt="" src={animationImg}/>
+							</div>
+							<p className="activity-name small">Slow</p>
+							</div>
+						</NavLink>
+
+						<NavLink to="/PreWritingPractice">
+							<div className="activity-name-block type4 second">
+							<div className="activity-small-icon">
+								<img alt="" src={activityImg}/>
+							</div>
+							<p className="activity-name small">Practice</p>
+							</div>
 						</NavLink>
 						
-				      	<div className="activity-name-block type4 third">
-						  <div className="activity-small-icon">
-						    <img alt="" src={animationImg}/>
-						  </div>
-						  <p className="activity-name small">Fast</p>
-						</div>
+						<NavLink to="/PreWritingPractice">
+							<div className="activity-name-block type4 third">
+							<div className="activity-small-icon">
+								<img alt="" src={animationImg}/>
+							</div>
+							<p className="activity-name small">Fast</p>
+							</div>
+						</NavLink>
   					</div>
   					<div className="act-3-bubble">
   						<div className="activity-name-block type2">

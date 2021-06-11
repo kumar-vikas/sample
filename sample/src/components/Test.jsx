@@ -3,7 +3,7 @@ import { fabric } from 'fabric';
 import "./canvasStyle.css";
 
 function Test(props){
-    var canvas;
+    var canvas = null;
     var width = window.innerWidth;
     var height = window.innerHeight;
     var activeTool = 0;
@@ -16,17 +16,24 @@ function Test(props){
     };
     
     var canStyle = {
-      border:"1px solid red"
+      border:"1px solid #333"
     }
 
     useEffect(() => {
-        canvas = new fabric.Canvas('c', { selection: false });
+     if(canvas == null){
+      init()
+      console.log(canvas)
+     }
+    });
+    
+    function init(){
+      canvas = new fabric.Canvas('c', { selection: false });
 
         width = props.canprops.width;
         height = props.canprops.height;
         canvas.setDimensions({width:width, height:height});
-        console.log(props.canprops);
-    });
+        //console.log(props.canprops);
+    }
 
     function ccd(){
       canvas.isDrawingMode = true;
@@ -97,11 +104,13 @@ function Test(props){
     return(
         <div className="parentCont" style={{marginTop:props.canprops.marginTop}}>
 
-            <canvas id="c" style={canStyle}></canvas>
+            <div id="canBack">
+              <canvas id="c" style={canStyle}></canvas>
+            </div>
 
             <div className="btnControl">
               <button className="buttons" onClick={ccd}></button>
-              <button className="buttons" onClick={removeAll}></button>
+              <button className="buttons" onClick={removeAll}> </button>
             </div>
     </div>
     )
