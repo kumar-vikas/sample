@@ -9,7 +9,11 @@ class PrintableComponent extends Component{
         super(props)
 
 		this.state={
-			printIms: ["1 Worksheet: the letter a","2 Worksheet: the letter b","3 Worksheet: the letter c","4 Worksheet: the letter d"]
+			printIms: [{"display":"1 Worksheet: the letter a", "path":"assets/Printables/a.pdf"},
+						{"display":"2 Worksheet: the letter b", "path":"assets/Printables/b.pdf"},
+						{"display":"3 Worksheet: the letter c", "path":"assets/Printables/c.pdf"},
+						{"display":"4 Worksheet: the letter d", "path":"assets/Printables/d.pdf"}
+					  ]
 		}
     }
 
@@ -45,8 +49,10 @@ class PrintableComponent extends Component{
 								{
 									this.state.printIms.map((nam)=>(
 										<div className="printablesBtn">
-											<div className="print-inner">{nam}</div>
+											<a href={nam.path} target="_blank">
+											<div className="print-inner">{nam.display}</div>
 											<img width="60" src={printIcon} alt="" />
+											</a>
 										</div>
 									))
 								}

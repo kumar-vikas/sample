@@ -245,11 +245,14 @@
 .print-frame-inner{
   margin-top: 30px;
   height: 390px;
-  border: 1px solid;
   overflow: auto;
 }
 
 .printablesBtn{
+  margin-bottom: 5px;
+}
+
+.printablesBtn a{
   display: flex;
   justify-content: center;
   align-items: center;
