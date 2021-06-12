@@ -26,7 +26,7 @@ function Test(props){
         height = props.canprops.height;
         canvas.setDimensions({width:width, height:height});
         console.log(props.canprops);
-        ccd()
+        ccd();
     });
 
     function ccd(){
