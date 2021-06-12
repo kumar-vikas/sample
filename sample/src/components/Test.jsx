@@ -34,7 +34,7 @@ function Test(props){
         
         setCan({can:canvas});
 
-        console.log(props.canprops, can);
+        // console.log(props.canprops, can);
     }
 
     function ccd(){

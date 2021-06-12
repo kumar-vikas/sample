@@ -6,17 +6,30 @@ import animationImg from "../images/animation.png"
 import infoBtn from "../images/info-btn.png";
 import gameImg from "../images/games.png";
 import printImg from "../images/print-btn.png";
-import penIcon from "../images/pencil-2.png"
-import bgImg from "../images/activity-bg-image-2.jpg"
+import penIcon from "../images/pencil-2.png";
+import vidIcon538 from "../images/vidIcon-538.png"
 
 function PreWritingPractice(props){
-	var baseStyle = {
-		backgroundImage: 2
+
+	var cPath = props.location.path.split("$");
+
+	var obj = {
+		"pat-1slow":"assets/Pre-Writing/Copy of Bubble_page 4_slow.mp4",
+		"pat-1fast":"assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4",
+		"pat-2slow":"assets/Pre-Writing/Copy of Chimney_page 6_slow.mp4",
+		"pat-2fast":"assets/Pre-Writing/Copy of Chimney_page 6_normal.mp4",
+		"pat-3slow":"assets/Pre-Writing/Copy of Bee_slow.mp4",
+		"pat-3fast":"assets/Pre-Writing/Copy of Bee_Normal.mp4",
+		"pat-4slow":"assets/Pre-Writing/Copy of Snail page_12 slow.mp4",
+		"pat-4fast":"assets/Pre-Writing/Copy of Snail page_12_normal.mp4",
+		"pat-5slow":"assets/Pre-Writing/Copy of Butterfly_slow.mp4",
+		"pat-5fast":"assets/Pre-Writing/Copy of Butterfly_normal.mp4"
 	}
 
 	useEffect(()=>{
 		props.setVisibility(props.history);
 	}, [])
+
 
     return(
         <div className="activity-base">
@@ -35,7 +48,12 @@ function PreWritingPractice(props){
 		</div>
 
 		<div id="vidCont">
-			<video autoPlay controls id="vidPlayer-pre" src="assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4"></video>
+			<div>
+				<button>Slow</button>
+				<span><img src={vidIcon538} alt="" /></span>
+				<button>fast</button>
+			</div>
+			<video autoPlay controls id="vidPlayer-pre" src={obj[cPath]}></video>
 		</div>
 
   		

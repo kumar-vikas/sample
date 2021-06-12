@@ -17,13 +17,13 @@
     display: inline-block;
 }
 
-.buttons{
+.btnControl .buttons{
     width: 45px;
     height: 45px;
     margin-left: 5px;
 }
 
-button:first-child{
+.btnControl button:first-child{
     background-image: url(../images/pencil-2.png);
     background-size: cover;
 }

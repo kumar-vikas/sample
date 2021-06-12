@@ -1,11 +1,43 @@
 
 #vidCont{
+    position: relative;
+    top: 15px;
     text-align: left;
 }
 
+#vidCont div img{
+    transform: scale(-1);
+    height: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#vidCont div button{
+    font-family: var(--activityName);
+    width: 70px;
+    height: 35px;
+    background-color: #8d278f;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#vidCont div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: chocolate;
+    padding: 10px;
+    border-radius: 40px;
+    top: -50px;
+    left: 365px;
+}
+
 #vidPlayer-pre{
-    width: 300px;
-    border: 5px solid #ccc;
+    width: 445px;
+    border: 10px solid #858484;
     margin-left: 251px;
 }
 
