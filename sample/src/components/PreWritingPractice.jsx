@@ -11,25 +11,35 @@ import vidIcon538 from "../images/vidIcon-538.png"
 
 function PreWritingPractice(props){
 
-	var cPath = props.location.path.split("$");
+	const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
 
 	var obj = {
-		"pat-1slow":"assets/Pre-Writing/Copy of Bubble_page 4_slow.mp4",
-		"pat-1fast":"assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4",
-		"pat-2slow":"assets/Pre-Writing/Copy of Chimney_page 6_slow.mp4",
-		"pat-2fast":"assets/Pre-Writing/Copy of Chimney_page 6_normal.mp4",
-		"pat-3slow":"assets/Pre-Writing/Copy of Bee_slow.mp4",
-		"pat-3fast":"assets/Pre-Writing/Copy of Bee_Normal.mp4",
-		"pat-4slow":"assets/Pre-Writing/Copy of Snail page_12 slow.mp4",
-		"pat-4fast":"assets/Pre-Writing/Copy of Snail page_12_normal.mp4",
-		"pat-5slow":"assets/Pre-Writing/Copy of Butterfly_slow.mp4",
-		"pat-5fast":"assets/Pre-Writing/Copy of Butterfly_normal.mp4"
+		"pat-1$slow":"assets/Pre-Writing/Copy of Bubble_page 4_slow.mp4",
+		"pat-1$fast":"assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4",
+		"pat-2$slow":"assets/Pre-Writing/Copy of Chimney_page 6_slow.mp4",
+		"pat-2$fast":"assets/Pre-Writing/Copy of Chimney_page 6_normal.mp4",
+		"pat-3$slow":"assets/Pre-Writing/Copy of Bee_slow.mp4",
+		"pat-3$fast":"assets/Pre-Writing/Copy of Bee_Normal.mp4",
+		"pat-4$slow":"assets/Pre-Writing/Copy of Snail page_12 slow.mp4",
+		"pat-4$fast":"assets/Pre-Writing/Copy of Snail page_12_normal.mp4",
+		"pat-5$slow":"assets/Pre-Writing/Copy of Butterfly_slow.mp4",
+		"pat-5$fast":"assets/Pre-Writing/Copy of Butterfly_normal.mp4"
 	}
 
 	useEffect(()=>{
 		props.setVisibility(props.history);
 	}, [])
 
+	function fetchVideo(e){
+		var cc = e.target;
+		let cPath = pattern+"$"+cc.innerHTML.toLowerCase();
+		
+		var vid = document.getElementById("vidPlayer-pre");
+		vid.src = obj[cPath];
+		vid.play();
+
+		console.log(cPath, " ========================")
+	}
 
     return(
         <div className="activity-base">
@@ -49,11 +59,11 @@ function PreWritingPractice(props){
 
 		<div id="vidCont">
 			<div>
-				<button>Slow</button>
+				<button onClick={fetchVideo}>Slow</button>
 				<span><img src={vidIcon538} alt="" /></span>
-				<button>fast</button>
+				<button onClick={fetchVideo}>Fast</button>
 			</div>
-			<video autoPlay controls id="vidPlayer-pre" src={obj[cPath]}></video>
+			<video autoPlay controls id="vidPlayer-pre" src={obj[pattern+"$"+speed]}></video>
 		</div>
 
   		

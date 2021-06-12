@@ -44,7 +44,7 @@ class PreWriting extends Component{
 					      </div>
 					    </div>
 
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-1slow"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-1$slow"}}>
 							<div className="activity-name-block type4 first">
 							<div className="activity-small-icon">
 								<img alt="" src={animationImg}/>
@@ -53,7 +53,7 @@ class PreWriting extends Component{
 							</div>
 						</NavLink>
 
-						<NavLink to={{pathname:"/PreWritingPractice", path:"practice"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-1$practice"}}>
 							<div className="activity-name-block type4 second">
 							<div className="activity-small-icon">
 								<img alt="" src={activityImg}/>
@@ -62,7 +62,7 @@ class PreWriting extends Component{
 							</div>
 						</NavLink>
 						
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-1fast"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-1$fast"}}>
 							<div className="activity-name-block type4 third">
 							<div className="activity-small-icon">
 								<img alt="" src={animationImg}/>
@@ -81,7 +81,7 @@ class PreWriting extends Component{
 					      </div>
 					    </div>
 						
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-2slow"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-2$slow"}}>
 				      	<div className="activity-name-block type4 first">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>
@@ -90,7 +90,7 @@ class PreWriting extends Component{
 						</div>
 						</NavLink>
 
-						<NavLink to={{pathname:"/PreWritingPractice", path:"practice"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-2$practice"}}>
 				      	<div className="activity-name-block type4 second">
 						  <div className="activity-small-icon">
 						    <img alt="" src="assets/images/activity.png"/>
@@ -99,7 +99,7 @@ class PreWriting extends Component{
 						</div>
 						</NavLink>
 
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-2fast"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-2$fast"}}>
 				      	<div className="activity-name-block type4 third">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>
@@ -117,7 +117,7 @@ class PreWriting extends Component{
 					       <img alt="" src="assets/images/act-1.png"/>
 					      </div>
 					    </div>
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-3slow"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-3$slow"}}>
 				      	<div className="activity-name-block type4 first">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>
@@ -126,7 +126,7 @@ class PreWriting extends Component{
 						</div>
 						</NavLink>
 
-						<NavLink to={{pathname:"/PreWritingPractice", path:"practice"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-3$practice"}}>
 				      	<div className="activity-name-block type4 second">
 						  <div className="activity-small-icon">
 						    <img alt="" src="assets/images/activity.png"/>
@@ -134,7 +134,7 @@ class PreWriting extends Component{
 						  <p className="activity-name small">Practice</p>
 						</div>
 						</NavLink>
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-3fast"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-3$fast"}}>
 				      	<div className="activity-name-block type4 third">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>
@@ -152,7 +152,7 @@ class PreWriting extends Component{
 					       <img alt="" src="assets/images/act-1.png"/>
 					      </div>
 					    </div>
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-4slow"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-4$slow"}}>
 				      	<div className="activity-name-block type4 first">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>
@@ -160,7 +160,7 @@ class PreWriting extends Component{
 						  <p className="activity-name small">Slow</p>
 						</div>
 						</NavLink>
-						<NavLink to={{pathname:"/PreWritingPractice", path:"practice"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-4$practice"}}>
 				      	<div className="activity-name-block type4 second">
 						  <div className="activity-small-icon">
 						    <img alt="" src="assets/images/activity.png"/>
@@ -168,7 +168,7 @@ class PreWriting extends Component{
 						  <p className="activity-name small">Practice</p>
 						</div>
 						</NavLink>
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-4fast"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-4$fast"}}>
 				      	<div className="activity-name-block type4 third">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>
@@ -186,7 +186,7 @@ class PreWriting extends Component{
 					       <img alt="" src="assets/images/act-1.png"/>
 					      </div>
 					    </div>
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-5slow"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-5$slow"}}>
 				      	<div className="activity-name-block type4 first">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>
@@ -194,7 +194,7 @@ class PreWriting extends Component{
 						  <p className="activity-name small">Slow</p>
 						</div>
 						</NavLink>
-						<NavLink to={{pathname:"/PreWritingPractice", path:"practice"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-5$practice"}}>
 				      	<div className="activity-name-block type4 second">
 						  <div className="activity-small-icon">
 						    <img alt="" src="assets/images/activity.png"/>
@@ -202,7 +202,7 @@ class PreWriting extends Component{
 						  <p className="activity-name small">Practice</p>
 						</div>
 						</NavLink>
-						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-5fast"}}>
+						<NavLink to={{pathname:"/PreWritingPractice", path:"pat-5$fast"}}>
 				      	<div className="activity-name-block type4 third">
 						  <div className="activity-small-icon">
 						    <img alt="" src={animationImg}/>

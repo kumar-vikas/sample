@@ -21,6 +21,11 @@
     width: 45px;
     height: 45px;
     margin-left: 5px;
+    transition: transform .5s;
+}
+
+.btnControl .buttons:focus{
+    transform: scale(1.1);
 }
 
 .btnControl button:first-child{
@@ -28,7 +33,7 @@
     background-size: cover;
 }
 
-/* button:nth-child(2){
-    background-image: url(../images/pencil-2.png);
+button:nth-child(2){
+    background-image: url(../images/eraser.png);
     background-size: cover;
-} */
+}
