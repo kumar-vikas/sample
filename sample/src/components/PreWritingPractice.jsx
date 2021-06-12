@@ -36,7 +36,7 @@ function PreWritingPractice(props){
 		</div>
 
 		<div id="vidCont">
-			<video autoPlay id="vidPlayer" src="assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4"></video>
+			<video autoPlay controls id="vidPlayer-pre" src="assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4"></video>
 		</div>
 
   		

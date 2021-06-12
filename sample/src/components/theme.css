@@ -247,8 +247,10 @@ body {
 .blue-btn,
 .blue-btn:hover,
 .blue-btn:focus{
-  background: #2cc9f5;
-  box-shadow: inset 0 0 8px 4px #128fb8;
+  background: #ffbc31;
+  box-shadow: inset 0 0 8px 4px #f38a1e;
+  /* background: #2cc9f5;
+  box-shadow: inset 0 0 8px 4px #128fb8; */
 }
 .red-btn,
 .red-btn:hover,
