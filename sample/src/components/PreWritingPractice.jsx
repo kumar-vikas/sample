@@ -9,7 +9,7 @@ import printImg from "../images/print-btn.png";
 import penIcon from "../images/pencil-2.png"
 import bgImg from "../images/activity-bg-image-2.jpg"
 
-function PreWritingPractice(props){	
+function PreWritingPractice(props){
 	var baseStyle = {
 		backgroundImage: 2
 	}
@@ -17,7 +17,6 @@ function PreWritingPractice(props){
 	useEffect(()=>{
 		props.setVisibility(props.history);
 	}, [])
-
 
     return(
         <div className="activity-base">

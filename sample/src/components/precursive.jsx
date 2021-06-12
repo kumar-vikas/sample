@@ -173,6 +173,7 @@ class Precursive extends Component{
 					</div>
 				</div>
 				<div class="activity-footer">
+					<NavLink to="/GameComponent">
 					<div class="activity-icon-wrap">
 				      <div class="activity-icon-block type2">
 				         <img alt="" src={gameImg}/>
@@ -181,6 +182,7 @@ class Precursive extends Component{
 				        <p class="activity-name medium">Game</p>
 				      </div>
 				    </div>
+					</NavLink>
 				    <div class="activity-icon-wrap">
 				      <div class="activity-icon-block type2">
 				         <img alt="" src={printImg}/>

@@ -5,7 +5,8 @@ import Precursive from "./components/precursive";
 import VideoComp from "./components/videoComp";
 import Warmup from "./components/Warmup";
 import PreWriting from "./components/PreWriting";
-import ActivityComp from "./components/ActivityComp"
+import ActivityComp from "./components/ActivityComp";
+import GameComponent from "./components/GameComponent";
 import PreWritingPractice from "./components/PreWritingPractice";
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
@@ -172,6 +173,18 @@ function App(props) {
               props.state = state;
               props.updateActiveTab = updateActiveTab;
               return <PreWritingPractice {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+<Route 
+          path={"/GameComponent"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
+              return <GameComponent {...props}/>
               }}
             /* component={Precursive} */
         />

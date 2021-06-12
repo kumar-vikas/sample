@@ -13,6 +13,10 @@ class Warmup extends Component{
         }
     }
 
+	componentDidMount(){
+		this.props.setVisibility(this.props.history);
+	}
+
 	playVideo = (_id) => {
         this.setState({visible:"flex" })
         /* let videe = this.videoRef.current;
