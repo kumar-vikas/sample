@@ -77,7 +77,7 @@ class Warmup extends Component{
 				    	<div class="video-frame-inner">
 						<div style={{display: this.state.visible }} className="vidCont">
 							<video controls id="vidPlayer" ref={this.videoRef} src=''></video>
-							<button onClick={()=>this.closeVideo()} id="closeBtn">&#10008;</button>
+							{/* <button onClick={()=>this.closeVideo()} id="closeBtn">&#10008;</button> */}
 						</div>
 				    	</div>
 				    </div>

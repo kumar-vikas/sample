@@ -55,7 +55,6 @@ body {
   padding-left: 14px;
 }
 
-
 .chaper-name{
   font-family: var(--chapterName);
   color: #fff;
@@ -63,10 +62,12 @@ body {
   line-height: 1.1;
   font-size: 30px;
   text-decoration: none;
+  margin-right: 5px;
 }
+
 .chaper-name.small{
-  font-size: 14px;
-  line-height: 1.1;
+  font-size: 17px;
+  line-height: 2;
 }
 
 .activity-name{
@@ -235,6 +236,7 @@ body {
   max-width: 30px;
   height: 30px;
   border: 2px solid #fff;
+  margin-left: 5px;
 }
 .oragnge-btn,
 .oragnge-btn:hover,

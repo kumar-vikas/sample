@@ -20,9 +20,9 @@ function App(props) {
       {"name":"B"},
       {"name":"C"},
       {"name":"D"},
-      {"name":"E"},
+      /* {"name":"E"},
       {"name":"F"},
-      /* {"name":"G"},
+      {"name":"G"},
       {"name":"H"},
       {"name":"I"},
       {"name":"J"},
@@ -42,6 +42,14 @@ function App(props) {
       {"name":"X"},
       {"name":"Y"},
       {"name":"Z"} */
+    ],
+    subList:[
+      {"name":"A", "video":"path"},
+      {"name":"B"},
+      {"name":"C"},
+      {"name":"D"},
+      {"name":"E"},
+      {"name":"F"}
     ],
     activeTab: null
   });

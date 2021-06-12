@@ -1,0 +1,14 @@
+
+#vidCont{
+    text-align: left;
+}
+
+#vidPlayer{
+    width: 300px;
+    border: 5px solid #ccc;
+    margin-left: 251px;
+}
+
+/* .activity-base{
+    background-image: url(../images/activity-bg-image-2.jpg);
+} */

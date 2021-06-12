@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
-import "./canvasStyle.css"
+import "./canvasStyle.css";
 
 function Test(props){
-    var canvas;
+    var canvas = null;
     var width = window.innerWidth;
     var height = window.innerHeight;
-    var activeTool = 1;
+    var activeTool = 0;
     var rect, origX, origY;
     var isDown = false;
     var boxColor = 'rgba(0,0,255,0.5)';
@@ -14,33 +14,42 @@ function Test(props){
       color: '#0000ff',
       width: 2
     };
+
+    const [can, setCan] = useState(null)
     
     var canStyle = {
-      border:"1px solid red"
+      border:"1px solid #333"
     }
 
     useEffect(() => {
-        canvas = new fabric.Canvas('c', { selection: false });
+      init();
+    }, []);
+    
+    function init(){
+      canvas = new fabric.Canvas('c', { selection: false });
 
         width = props.canprops.width;
         height = props.canprops.height;
         canvas.setDimensions({width:width, height:height});
-        console.log(props.canprops);
-        ccd();
-    });
+        
+        setCan({can:canvas});
+
+        console.log(props.canprops, can);
+    }
 
     function ccd(){
-      canvas.isDrawingMode = true;
-      canvas.freeDrawingBrush.color = paintOptions.color;
-      canvas.freeDrawingBrush.width = paintOptions.width;
+      console.log(can.can, " *-*-*-*")
+      can.can.isDrawingMode = true;
+      can.can.freeDrawingBrush.color = paintOptions.color;
+      can.can.freeDrawingBrush.width = paintOptions.width;
 
-      canvas.on("mouse:down", function(o){
+      can.can.on("mouse:down", function(o){
         if(activeTool != 1) return
         isDown = true;
-        var pointer = canvas.getPointer(o.e);
+        var pointer = can.can.getPointer(o.e);
         origX = pointer.x;
         origY = pointer.y;
-        var pointer = canvas.getPointer(o.e);
+        var pointer = can.can.getPointer(o.e);
         rect = new fabric.Rect({
             left: origX,
             top: origY,
@@ -52,14 +61,14 @@ function Test(props){
             fill: boxColor,
             transparentCorners: true
         });
-        canvas.add(rect);
+        can.can.add(rect);
     });
 
-    canvas.on('mouse:move', function(o){
+    can.can.on('mouse:move', function(o){
       if (!isDown) return;
       console.log(isDown, " mouse move")
       if(activeTool == 1) {
-        var pointer = canvas.getPointer(o.e);
+        var pointer = can.can.getPointer(o.e);
         
         if(origX>pointer.x){
           rect.set({ left: Math.abs(pointer.x) });
@@ -72,33 +81,44 @@ function Test(props){
         rect.set({ height: Math.abs(origY - pointer.y) });
         
         
-        canvas.renderAll();
+        can.can.renderAll();
       }
     });
     
-    canvas.on('mouse:up', function(o){
+    can.can.on('mouse:up', function(o){
       isDown = false;
     
       if(activeTool == 2) {
-        var currentItem = canvas._objects.length - 1;
-        if(canvas.item(currentItem).selectable == true)
-          canvas.item(currentItem).selectable = false;
+        var currentItem = can.can._objects.length - 1;
+        if(can.can.item(currentItem).selectable == true)
+          can.can.item(currentItem).selectable = false;
         
-        canvas.renderAll();
+        can.can.renderAll();
       }
     });
     
     }
 
-    return(
-        <div style={{marginTop:props.canprops.marginTop}}>
+    function removeAll(){
+      can.can.clear();
+		  can.can.renderAll();
+    }
 
-            {/* <button onClick={onAddCircle}>Add circle</button> */}
-            
-            <canvas id="c" style={canStyle}></canvas>
-            {/* <FabricJSCanvas className="sample-canvas" onReady={onReady} /> */}
+    return(
+        <div className="parentCont" style={{marginTop:props.canprops.marginTop}}>
+          {console.log(can)}
+
+            <div id="canBack">
+              <canvas id="c" style={canStyle}></canvas>
+            </div>
+
+            <div className="btnControl">
+              <button className="buttons" onClick={ccd}></button>
+              <button className="buttons" onClick={removeAll}> </button>
+            </div>
     </div>
     )
 }
 
-export default Test
+const memoTest = React.memo(Test)
+export default memoTest

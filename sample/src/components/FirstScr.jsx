@@ -14,14 +14,17 @@ class FirstScr extends Component {
 
 
 	fetchContent = () =>{
-		return this.props.state.nameList && this.props.state.nameList.map((cur)=>(
-			<p  className="chaper-name small">
+		return this.props.state.subList && this.props.state.subList.map((cur)=>(
+			
 			<NavLink to={{pathname:"/precursive", name:cur.name, updateActiveTab:this.props.updateActiveTab}}>
-				<a className="btn-icon small oragnge-btn">
-					<img alt="" src={playBtn}/>
-				</a> Cursive {cur.name}
+				<div className="chaper-name small">
+					Cursive {cur.name}
+					<span className="btn-icon small oragnge-btn">
+						<img alt="" src={playBtn}/>
+					</span>
+				</div>
 			</NavLink>
-			</p>
+			
 			)
 		)
 		
