@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import pencilImg from "../images/pencil-big.png"
-import animationImg from "../images/animation.png"
+import printable from "../images/printable-icon.png";
+import printIcon from "../images/printIcon-932.png";
 import infoBtn from "../images/info-btn.png";
-import game129 from "../images/game129.png";
-import { NavLink } from 'react-router-dom';
 
-class GameComponent extends Component{
+class PrintableComponent extends Component{
     constructor(props){
         super(props)
+
+		this.state={
+			printIms: ["1 Worksheet: the letter a","2 Worksheet: the letter b","3 Worksheet: the letter c","4 Worksheet: the letter d"]
+		}
     }
 
 	componentDidMount(){
@@ -28,18 +31,26 @@ class GameComponent extends Component{
 				</div>
 				</div>
 				<div className="gameIcon">
-					<img width="110" src={game129} alt="" />
+					<img width="110" src={printable} alt="" />
 				</div>
 				<div className="activity-folder">
 					<div className="activity-folder-bg activity-2-wrap">
 						<div className="activity-2" id="gameBG">
 							<div className="activity-name-block type5">
-								<p className="activity-name medium">Game</p>
+								<p className="activity-name medium">Printables</p>
 							</div>
 							
-							<div className="game-frame-inner">
-								<iframe className="gameIfrm" src="assets/Game/index.html" frameborder="0"></iframe>
-								{/* <button onClick={()=>this.closeVideo()} id="closeBtn">&#10008;</button> */}
+							<div className="print-frame-inner">
+
+								{
+									this.state.printIms.map((nam)=>(
+										<div className="printablesBtn">
+											<div className="print-inner">{nam}</div>
+											<img width="60" src={printIcon} alt="" />
+										</div>
+									))
+								}
+								<div></div>
 							</div>
 							
 						</div>
@@ -51,4 +62,4 @@ class GameComponent extends Component{
     }
 }
 
-export default GameComponent;
+export default PrintableComponent;

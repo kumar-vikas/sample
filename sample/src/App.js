@@ -7,6 +7,7 @@ import Warmup from "./components/Warmup";
 import PreWriting from "./components/PreWriting";
 import ActivityComp from "./components/ActivityComp";
 import GameComponent from "./components/GameComponent";
+import PrintableComponent from "./components/PrintableComponent";
 import PreWritingPractice from "./components/PreWritingPractice";
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
@@ -177,7 +178,7 @@ function App(props) {
             /* component={Precursive} */
         />
 
-<Route 
+        <Route 
           path={"/GameComponent"}
             exact={true}
             render = {(props)=>{
@@ -188,6 +189,19 @@ function App(props) {
               }}
             /* component={Precursive} */
         />
+
+        <Route 
+          path={"/PrintableComponent"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
+              return <PrintableComponent {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
       </Switch>
       </Router>
 

@@ -183,6 +183,8 @@ class Precursive extends Component{
 				      </div>
 				    </div>
 					</NavLink>
+
+					<NavLink to="/PrintableComponent">
 				    <div class="activity-icon-wrap">
 				      <div class="activity-icon-block type2">
 				         <img alt="" src={printImg}/>
@@ -191,6 +193,8 @@ class Precursive extends Component{
 				        <p class="activity-name medium">Printables</p>
 				      </div>
 				    </div>
+					</NavLink>
+
 				</div>
 			</div>
   		</div>
