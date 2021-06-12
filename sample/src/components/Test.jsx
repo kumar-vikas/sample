@@ -38,7 +38,7 @@ function Test(props){
     }
 
     function ccd(){
-      console.log(can.can, " *-*-*-*")
+      //console.log(can.can, " *-*-*-*")
       can.can.isDrawingMode = true;
       can.can.freeDrawingBrush.color = paintOptions.color;
       can.can.freeDrawingBrush.width = paintOptions.width;

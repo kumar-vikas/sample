@@ -205,8 +205,6 @@ function App(props) {
       </Switch>
       </Router>
 
-      {/* <VideoComponent src="assets/animations/supercity_1.mp4"/> */}
-
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

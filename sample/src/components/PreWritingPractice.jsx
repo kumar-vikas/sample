@@ -57,6 +57,7 @@ function PreWritingPractice(props){
 		  </div>
 		</div>
 
+		<div className="bodyTxt">Pre-Writing</div>
 		<div id="vidCont">
 			<div>
 				<button onClick={fetchVideo}>Slow</button>
