@@ -42,7 +42,7 @@ function PreWritingPractice(props){
 	}
 
     return(
-        <div className="activity-base">
+        <div className="activity-base" id="act-base-prePrac">
   	<img alt="" src={pencilImg} class="pencile-image"/>
   	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
