@@ -1,5 +1,5 @@
 /*** Activty Base ****/
-.activity-base{
+.activity-base {
   max-width: 1294px;
   margin: 0 auto;
   overflow: hidden;
@@ -9,82 +9,82 @@
   position: relative;
 }
 
-#act-base-prePrac{
+#act-base-prePrac {
   background: url(../images/activity-bg-image-2.jpg);
   background-size: 100% 100%;
 }
 
-.activity-base-inner{
+.activity-base-inner {
   max-width: 100%;
   padding: 20px 0 0 0;
   border-radius: 25px;
 }
-.pencile-image{
+.pencile-image {
   position: absolute;
   top: 134px;
   left: 117px;
   width: 131px;
 }
-.dailoug-block-img{
+.dailoug-block-img {
   position: absolute;
   top: 150px;
   left: 240px;
   z-index: 1;
 }
-.activity-folder{
+.activity-folder {
   padding-top: 50px;
 }
-.flex{
+.flex {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.activity-footer{
+.activity-footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-.activity-footer .activity-icon-wrap{
+.activity-footer .activity-icon-wrap {
   margin: -30px 20px 0;
 }
-.activity-footer .activity-icon-block{
+.activity-footer .activity-icon-block {
   width: 70px;
   height: 70px;
 }
-.activity-footer .activity-icon-block img{
+.activity-footer .activity-icon-block img {
   width: 52px;
 }
-.activity-footer .activity-name-block.type2{
+.activity-footer .activity-name-block.type2 {
   margin-top: -40px;
   min-width: 120px;
   padding: 10px;
 }
 /****  activity-1 *****/
-.activity-1-wrap{
-  background: url(../images/act-bg-1.png);
+.activity-1-wrap {
+  /* background: url(../images/act-bg-1.png); */
   background-size: 100% 100%;
   width: 100%;
   max-width: 1050px;
   margin: 0 auto;
   height: 500px;
 }
-.activity-1 .activity-assets-block{
+.activity-1 .activity-assets-block {
   margin: 46px 0 42px 0;
 }
-.activity-1 .activity-assets{
+.activity-1 .activity-assets {
   margin-top: 100px;
 }
 
 /****  activity-2 *****/
-.activity-2-wrap{
+.activity-2-wrap {
   background: #c5e9fa;
   width: 1060px;
   margin: 0 auto;
   border-radius: 25px;
   padding: 40px 0 30px;
 }
-.activity-folder-bg .activity-2{
+.activity-folder-bg .activity-2 {
   background-image: url(../images/bubble-bg.png);
   background-size: 100% 100%;
   width: 100%;
@@ -95,19 +95,19 @@
   text-align: center;
 }
 
-#gameBG{
+#gameBG {
   background-image: none;
   background-color: #fff;
   border-radius: 30px;
   max-width: 750px;
 }
-.activity-2 .activity-icon-wrap{
+.activity-2 .activity-icon-wrap {
   vertical-align: middle;
   display: inline-block;
   margin-top: 60px;
   cursor: pointer;
 }
-.video-frame{
+.video-frame {
   background: #bdbec1;
   display: inline-block;
   width: 459px;
@@ -118,7 +118,7 @@
   padding: 20px;
   box-sizing: border-box;
 }
-.video-frame-inner{
+.video-frame-inner {
   background: #fff;
   display: inline-block;
   width: 419px;
@@ -127,7 +127,7 @@
   border-radius: 25px;
   vertical-align: middle;
 }
-.activity-2 .activity-name-block.type3{
+.activity-2 .activity-name-block.type3 {
   display: block;
   max-width: 120px;
   margin: -37px auto;
@@ -139,20 +139,19 @@
   line-height: 1.1;
 }
 
-
 /****  activity-2 *****/
-.activity-3-wrap{
+.activity-3-wrap {
   background: #c5e9fa;
   width: 1060px;
   margin: 0 auto;
   border-radius: 25px;
   padding: 0px 0 30px;
 }
-.activity-3{
+.activity-3 {
   padding: 100px 60px 0;
   text-align: center;
 }
-.activity-3 .activity-name-block.type3{
+.activity-3 .activity-name-block.type3 {
   display: block;
   max-width: 162px;
   margin: -37px auto;
@@ -163,7 +162,7 @@
   font-size: 22px;
   line-height: 1.1;
 }
-.act-3-bubble{
+.act-3-bubble {
   background: url(../images/bubble-icon.png) no-repeat;
   width: 285px;
   height: 198px;
@@ -177,29 +176,29 @@
   font-size: 15px;
   line-height: 1.1;
 }
-.activity-3 .activity-name-block{
+.activity-3 .activity-name-block {
   position: absolute;
 }
-.activity-3 .activity-name-block.first{
+.activity-3 .activity-name-block.first {
   left: 9px;
   bottom: 53px;
 }
-.activity-3 .activity-name-block.second{
+.activity-3 .activity-name-block.second {
   left: 84px;
   bottom: 13px;
 }
-.activity-3 .activity-name-block.third{
+.activity-3 .activity-name-block.third {
   right: 9px;
   bottom: 53px;
 }
-.act-3-bubble > .activity-name-block:first-child{
+.act-3-bubble > .activity-name-block:first-child {
   position: relative;
   top: -10px;
   display: block;
   max-width: 100px;
   margin: 0 auto;
 }
-.activity-3 .activity-bubble.circle{
+.activity-3 .activity-bubble.circle {
   width: 130px;
   height: 130px;
   background: transparent;
@@ -208,67 +207,67 @@
   top: -25px;
 }
 
-#vidPlayer{
+#vidPlayer {
   width: 100%;
   height: 260px;
 }
 
-#closeBtn{
+#closeBtn {
   position: absolute;
-    right: 0;
-    top: 0;
-    width: 45px;
-    height: 45px;
-    font-size: 25px;
-    color: red;
+  right: 0;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  font-size: 25px;
+  color: red;
 }
 
-.vidCont{
+.vidCont {
   position: relative;
-  background-color:rgba(0, 0, 0, 1);
-    /* height: 790px; */
-    display: flex;
-    align-items: center;
-    z-index: 3;
+  background-color: rgba(0, 0, 0, 1);
+  /* height: 790px; */
+  display: flex;
+  align-items: center;
+  z-index: 3;
 }
 
-#iPlayer{
+#iPlayer {
   width: 100%;
   height: 266px;
 }
 
-.gameIfrm{
+.gameIfrm {
   width: 90%;
   height: 400px;
 }
 
-.gameIcon{
+.gameIcon {
   position: absolute;
-    top: 50px;
-    left: 435px;
+  top: 50px;
+  left: 435px;
 }
 
-.print-frame-inner{
+.print-frame-inner {
   margin-top: 30px;
   height: 390px;
   overflow: auto;
 }
 
-.printablesBtn{
+.printablesBtn {
   margin-bottom: 5px;
 }
 
-.printablesBtn a{
+.printablesBtn a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.printablesBtn img{
+.printablesBtn img {
   margin-left: -25px;
 }
 
-.print-inner{
+.print-inner {
   font-family: var(--activityName);
   color: #fff;
   background-color: #00ade6;

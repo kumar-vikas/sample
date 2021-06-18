@@ -1,27 +1,27 @@
 /*** Font ***/
-@font-face{ 
-  font-family: 'adventuring';
-  src: url('../font/adventuring.ttf');
-  src: url('../font/adventuring.ttf') format('truetype');
+@font-face {
+  font-family: "adventuring";
+  src: url("../font/adventuring.ttf");
+  src: url("../font/adventuring.ttf") format("truetype");
 }
 
-@font-face{ 
-  font-family: 'minionProRegular';
-  src: url('../font/minionProRegular.ttf');
-  src: url('../font/minionProRegular.ttf') format('truetype');
+@font-face {
+  font-family: "minionProRegular";
+  src: url("../font/minionProRegular.ttf");
+  src: url("../font/minionProRegular.ttf") format("truetype");
 }
-@font-face{ 
-  font-family: 'myriadProBlack';
-  src: url('../font/myriadProBlack.otf');
+@font-face {
+  font-family: "myriadProBlack";
+  src: url("../font/myriadProBlack.otf");
 }
-@font-face{ 
-  font-family: 'myriadProBoldCond';
-  src: url('../font/myriadProBoldCond.otf');
+@font-face {
+  font-family: "myriadProBoldCond";
+  src: url("../font/myriadProBoldCond.otf");
 }
 
 :root {
   --bookName: minionProRegular;
-  --bookNameColor : #85d4f3;
+  --bookNameColor: #85d4f3;
   --chapterName: adventuring;
   --activityName: adventuring;
   --btnText: adventuring;
@@ -29,7 +29,7 @@
   --textSmall: adventuring;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@ body {
   margin: 0;
 }
 
-.book-name{
+.book-name {
   font-family: var(--bookName);
   color: var(--bookNameColor);
   text-transform: uppercase;
@@ -51,68 +51,67 @@ body {
   line-height: 1.1;
   font-size: 60px;
 }
-.book-name.first-wrod{
+.book-name.first-wrod {
   padding-left: 14px;
 }
 
-.chaper-name{
+.chaper-name {
   font-family: var(--chapterName);
   color: #fff;
   margin: 0;
   line-height: 1.1;
   font-size: 30px;
   text-decoration: none;
-  margin-right: 5px;
+  margin-right: -11px;
 }
 
-.chaper-name.small{
-  font-size: 17px;
-  line-height: 2;
+.chaper-name.small {
+  font-size: 28px;
+  line-height: 28px;
 }
 
-.activity-name{
+.activity-name {
   font-family: var(--activityName);
   color: #fff;
   margin: 0;
   font-size: 29px;
   line-height: 1.1;
 }
-.activity-name.medium{
+.activity-name.medium {
   font-size: 14px;
   line-height: 1.1;
 }
-.activity-name.small{
+.activity-name.small {
   font-size: 11px;
   line-height: 1.2;
 }
 
-.text-large{
+.text-large {
   font-family: var(--textLarge);
   margin: 0;
   font-size: 14px;
   line-height: 1.1;
-  color:#fff;
+  color: #fff;
 }
-.text-small{
+.text-small {
   font-family: var(--textSmall);
   margin: 0;
   font-size: 12px;
   line-height: 1.1;
-  color:#fff;
+  color: #fff;
 }
 
-
 /**** Blocks *****/
-.activity-head{
+.activity-head {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin: 53px 285px 0px 0;
 }
-.activity-head > *{
+.activity-head > * {
   margin: 0 4px;
 }
-.activity-name-block{
+.activity-name-block {
   background: #accf46;
   box-shadow: inset 0 0 8px 4px #89bc40;
   border: 2px solid #fff;
@@ -120,44 +119,44 @@ body {
   padding: 8px 40px;
   display: inline-block;
 }
-.activity-name-block.type3{
+.activity-name-block.type3 {
   background: #ffbc31;
   box-shadow: inset 0 0 8px 4px #f38a1e;
   padding: 6px 24px;
 }
-.activity-name-block.type4{
+.activity-name-block.type4 {
   background: #9e3893;
   box-shadow: inset 0 0 8px 4px #87337e;
   padding: 4px 9px;
 }
-.activity-name-block.type5{
+.activity-name-block.type5 {
   background: #c3d82e;
   box-shadow: inset 0 0 8px 4px #c1d62d;
   padding: 6px 24px;
   display: block;
-    max-width: 120px;
-    margin: -37px auto;
-    position: relative;
-    top: -20px;
-    border: 2px solid #c1d62d;
+  max-width: 120px;
+  margin: -37px auto;
+  position: relative;
+  top: -20px;
+  border: 2px solid #c1d62d;
 }
-.activity-name-block.type4 p{
+.activity-name-block.type4 p {
   display: inline-block;
   vertical-align: middle;
 }
-.activity-name-block.type2{
+.activity-name-block.type2 {
   padding: 6px 10px;
 }
-.activity-head .play-btn{
+.activity-head .play-btn {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
 }
 
-.activity-icon-wrap{
+.activity-icon-wrap {
   text-align: center;
 }
-.activity-icon-block{
+.activity-icon-block {
   background: #fff;
   border: 3px solid #8a268b;
   width: 60px;
@@ -167,21 +166,21 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
 }
-.activity-icon-block.type2{
+.activity-icon-block.type2 {
   border-color: #68bbe8;
 }
-.activity-icon-wrap .activity-name-block.type4{
+.activity-icon-wrap .activity-name-block.type4 {
   position: relative;
   margin-top: -8px;
-  min-width: 70px
+  min-width: 70px;
 }
-.activity-icon-block img{
+.activity-icon-block img {
   width: 37px;
   margin: 11px auto;
   display: block;
 }
 
-.activity-small-icon{
+.activity-small-icon {
   width: 18px;
   background: #fff;
   border-radius: 100%;
@@ -190,14 +189,14 @@ body {
   vertical-align: middle;
   height: 18px;
 }
-.activity-small-icon img{
+.activity-small-icon img {
   width: 13px;
   display: block;
   vertical-align: middle;
   margin: 3px auto;
 }
 
-.dailoug-block{
+.dailoug-block {
   position: relative;
   background: #9e3893;
   box-shadow: inset 0 0 8px 4px #87337e;
@@ -206,11 +205,11 @@ body {
   padding: 10px 2px;
   border-radius: 35px;
 }
-.dailoug-block .btn-icon{
+.dailoug-block .btn-icon {
   vertical-align: middle;
   margin-left: 5px;
 }
-.dailoug-block p{
+.dailoug-block p {
   display: inline-block;
   vertical-align: middle;
   width: calc(100% - 70px);
@@ -218,14 +217,12 @@ body {
 }
 /**** Pencile Postion *****/
 
-
 /**** Activity Icon And text *****/
-
 
 /**** Button and Icon *****/
 .btn-icon,
 .btn-icon:hover,
-.btn-icon:focus{
+.btn-icon:focus {
   min-width: 70px;
   max-width: 70px;
   height: 70px;
@@ -242,22 +239,22 @@ body {
 }
 .btn-icon.small,
 .btn-icon.small:hover,
-.btn-icon.small:focus{
-  min-width: 30px;
-  max-width: 30px;
-  height: 30px;
+.btn-icon.small:focus {
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
   border: 2px solid #fff;
   margin-left: 5px;
 }
 .oragnge-btn,
 .oragnge-btn:hover,
-.oragnge-btn:focus{
+.oragnge-btn:focus {
   background: #ffbc31;
   box-shadow: inset 0 0 8px 4px #f38a1e;
 }
 .blue-btn,
 .blue-btn:hover,
-.blue-btn:focus{
+.blue-btn:focus {
   background: #ffbc31;
   box-shadow: inset 0 0 8px 4px #f38a1e;
   /* background: #2cc9f5;
@@ -265,72 +262,72 @@ body {
 }
 .red-btn,
 .red-btn:hover,
-.red-btn:focus{
+.red-btn:focus {
   background: #eb2d92;
   box-shadow: inset 0 0 8px 4px #e52375;
 }
 
-.btn-icon img{
+.btn-icon img {
   width: 38px;
   margin: 0px auto 0 18px;
 }
-.btn-icon.small img{
-  width: 12px;
-  margin: 0 auto 0 7px;
+.btn-icon.small img {
+  width: 20px;
+  margin: 0 auto 0 14px;
 }
-.btn-icon.info-btn img{
+.btn-icon.info-btn img {
   max-height: 80%;
   width: 13px;
   margin: 0 auto;
 }
-.btn-icon.print-btn img{
+.btn-icon.print-btn img {
   max-height: 90%;
   width: 90%;
   margin: 0 auto;
 }
-.btn-icon.home-btn img{
+.btn-icon.home-btn img {
   max-height: 73%;
   width: 73%;
   margin: 0 auto 0 9px;
 }
-  
+
 /**** activity Assets ****/
-.activity-assets{
+.activity-assets {
   display: flex;
   align-items: center;
 }
-.activity-assets-block{
+.activity-assets-block {
   text-align: center;
 }
-.activity-bubble{
+.activity-bubble {
   background: #87d6f7;
   border: 2px solid #68bbe8;
   padding: 8px;
   /* box-shadow: inset 0 0 1px 0 #000;*/
 }
-.activity-bubble.left{
+.activity-bubble.left {
   border-radius: 50% 0 0 50%;
   border-right: 0;
   margin: -7px -15px 0 0;
   z-index: 1;
 }
-.activity-bubble.left .activity-icon-wrap{
+.activity-bubble.left .activity-icon-wrap {
   position: relative;
   left: 10px;
-  top:12px;
+  top: 12px;
 }
-.activity-bubble.right{
+.activity-bubble.right {
   border-radius: 0 50% 50% 0;
   border-left: 0;
   margin: -7px 0 0 -15px;
   z-index: 1;
 }
-.activity-bubble.right .activity-icon-wrap{
+.activity-bubble.right .activity-icon-wrap {
   position: relative;
   right: 10px;
-  top:12px;
+  top: 12px;
 }
-.activity-bubble.circle{
+.activity-bubble.circle {
   border-radius: 100%;
   height: 160px;
   width: 160px;
@@ -339,11 +336,11 @@ body {
   align-items: center;
   text-align: center;
 }
-.activity-bubble.circle.text{
+.activity-bubble.circle.text {
   border-radius: 100%;
   padding: 20px;
 }
-.activity-bubble.text div{
+.activity-bubble.text div {
   width: 100%;
   height: 100%;
   display: inline-flex;
@@ -355,21 +352,21 @@ body {
   border: 2px solid #2dace3;
   border-radius: 100%;
   overflow: hidden;
-}  
-.activity-bubble.text p{
+}
+.activity-bubble.text p {
   width: 100%;
-  font-family: 'adventuring';
+  font-family: "adventuring";
   color: #2dace3;
   font-weight: 600;
   font-size: 9px;
 }
-.activity-bubble.text img{
+.activity-bubble.text img {
   width: 100%;
   height: 100%;
 }
 .activity-assets-block .activity-name-block.type2 {
   padding: 10px 19px;
-  display:block;
+  display: block;
   margin: -32px auto 0;
   z-index: 1;
   position: relative;
@@ -377,7 +374,7 @@ body {
 }
 .activity-assets-block.top .activity-name-block.type3 {
   padding: 10px 19px;
-  display:block;
+  display: block;
   margin: 0 auto -24px;
   z-index: 1;
   position: relative;
