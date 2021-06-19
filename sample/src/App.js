@@ -15,7 +15,8 @@ import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "re
 import {useState} from "react";
 import React from 'react';
 import backBtn from "./images/play-btn.png"
-import homeBtn from "./images/home-btn.png"
+import homeBtn from "./images/home-btn.png";
+import Provider from "./components/context"
 
 function App(props) {
   const [state, setState] = useState({visible:false, history:null,

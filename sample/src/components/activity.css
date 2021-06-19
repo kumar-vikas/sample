@@ -242,7 +242,7 @@
 
 .gameIfrm {
   width: 90%;
-  height: 400px;
+  height: 425px;
 }
 
 .gameIcon {
@@ -347,6 +347,7 @@
   top: 330px;
   left: -150px;
   text-align: left;
+  width: 755px;
   z-index: 1;
 }
 

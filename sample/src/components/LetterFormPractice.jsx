@@ -5,7 +5,7 @@ import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import penIcon from "../images/pencil-2.png";
 import wPage from "../images/w-page.png"
-import vidIcon538 from "../images/vidIcon-538.png"
+import vidIcon538 from "../images/vidIcon-538.png";
 
 function LetterFormPractice(props){
 
@@ -27,17 +27,6 @@ function LetterFormPractice(props){
 	useEffect(()=>{
 		props.setVisibility(props.history);
 	}, [])
-
-	function fetchVideo(e){
-		var cc = e.target;
-		let cPath = pattern+"$"+cc.innerHTML.toLowerCase();
-		
-		var vid = document.getElementById("vidPlayer-pre");
-		vid.src = obj[cPath];
-		vid.play();
-
-		console.log(cPath, " ========================")
-	}
 
     return(
         <div className="activity-base" id="act-base-prePrac">
@@ -62,8 +51,7 @@ function LetterFormPractice(props){
 			</div>
 			<video autoPlay controls id="vidPlayer-pre" src={obj["g"]}></video>
 		</div>
-
-  		
+		
           <MemoTest canprops={{width:"550", height:"500", marginTop:-161, backImg:wPage, backColor:"#fff"}} className="drawingTool"/>
   	</div>
   </div>
