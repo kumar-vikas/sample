@@ -5,6 +5,7 @@ import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import penIcon from "../images/pencil-2.png";
 import vidIcon538 from "../images/vidIcon-538.png"
+import bee from "../images/bee.png"
 
 function PreWritingPractice(props){
 
@@ -65,7 +66,7 @@ function PreWritingPractice(props){
 		</div>
 
   		
-          <MemoTest canprops={{width:"1090", height:"200", marginTop:108}} className="drawingTool"/>
+          <MemoTest canprops={{width:"1090", height:"200", marginTop:108, backImg:bee, backColor:"#fff"}} className="drawingTool"/>
   	</div>
   </div>
     )
