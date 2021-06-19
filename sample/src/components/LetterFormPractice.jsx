@@ -54,18 +54,16 @@ function LetterFormPractice(props){
 		  </div>
 		</div>
 
-		<div className="bodyTxt">Pre-Writing</div>
+		<div className="letterFormbodyTxt">Letter Formation</div>
 		<div id="letterFormvidCont">
 			<div>
-				<button onClick={fetchVideo}>Slow</button>
 				<span><img src={vidIcon538} alt="" /></span>
-				<button onClick={fetchVideo}>Fast</button>
 			</div>
 			<video autoPlay controls id="vidPlayer-pre" src={obj[pattern+"$"+speed]}></video>
 		</div>
 
   		
-          <MemoTest canprops={{width:"550", height:"500", marginTop:-315}} className="drawingTool"/>
+          <MemoTest canprops={{width:"550", height:"500", marginTop:-161}} className="drawingTool"/>
   	</div>
   </div>
     )

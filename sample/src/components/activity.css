@@ -341,7 +341,30 @@
 
 #letterFormvidCont{
   position: relative;
-    top: 170px;
+    top: 330px;
     left: -150px;
     text-align: left;
+}
+
+#letterFormvidCont img{
+  width: 60px;
+    margin-left: 240px;
+    position: absolute;
+    z-index: 1;
+}
+
+.letterFormbodyTxt{
+  background: #accf46;
+    box-shadow: inset 0 0 8px 4px #89bc40;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    padding: 10px 40px;
+    font-family: var(--activityName);
+    color: #fff;
+    font-size: 20px;
+    top: 200px;
+    right: 214px;
+    position: absolute;
+    width: 250px;
+    z-index: 1;
 }
