@@ -9,6 +9,8 @@ import ActivityComp from "./components/ActivityComp";
 import GameComponent from "./components/GameComponent";
 import PrintableComponent from "./components/PrintableComponent";
 import PreWritingPractice from "./components/PreWritingPractice";
+import LetterFormation from './components/LetterFormation';
+import LetterFormPractice from './components/LetterFormPractice';
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
@@ -174,6 +176,30 @@ function App(props) {
               props.state = state;
               props.updateActiveTab = updateActiveTab;
               return <PreWritingPractice {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+        <Route 
+          path={"/LetterFormPractice"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
+              return <LetterFormPractice {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+        <Route 
+          path={"/LetterFormation"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
+              return <LetterFormation {...props}/>
               }}
             /* component={Precursive} */
         />

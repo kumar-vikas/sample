@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import animationImg from "../images/animation.png";
 import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
+import info143 from "../images/info-i143.png"
 
 class Warmup extends Component{
     constructor(props){
@@ -9,7 +10,10 @@ class Warmup extends Component{
         
 		this.state = {
             src:this.props.src,
-            visible:'none'
+            visible:'none',
+
+			help:"If you need help. Click on the information button.",
+			infDiagVis:'none'
         }
     }
 
@@ -44,53 +48,67 @@ class Warmup extends Component{
 		console.log("close video")
 	}
 
+	openDialog=()=>{
+		this.vis = this.vis=="flex" ? "none" : "flex";
+		this.setState({infDiagVis:this.vis})
+	}
+
     render(){
         return(
-            <div class="activity-base">
-  	<img alt="" src={pencilImg} class="pencile-image"/>
-  	<div class="activity-base-inner">
-  		<div class="activity-head">
-		  <a class="btn-icon oragnge-btn info-btn">
+            <div className="activity-base">
+  	<img alt="" src={pencilImg} className="pencile-image"/>
+  	<div className="activity-base-inner">
+  		<div className="activity-head">
+		  <a className="btn-icon oragnge-btn info-btn" onClick={this.openDialog}>
 		    <img alt="" src={infoBtn}/>
 		  </a>
-		  <div class="activity-name-block">
-		    <p class="activity-name">Pre-Cursive A</p>
+		  <div className="activity-name-block">
+		    <p className="activity-name">Pre-Cursive A</p>
 		  </div>
-		 {/*  <a href="#" class="btn-icon oragnge-btn play-btn">
+		 {/*  <a href="#" className="btn-icon oragnge-btn play-btn">
 		    <img alt="" src="assets/images/play-btn.png"/>
 		  </a>
-		  <a href="#" class="btn-icon red-btn home-btn">
+		  <a href="#" className="btn-icon red-btn home-btn">
 		    <img alt="" src="assets/images/home-btn.png"/>
 		  </a> */}
 		</div>
-  		<div class="activity-folder">
-  			<div class="activity-folder-bg activity-2-wrap">
-  				<div class="activity-2">
-  					<div class="activity-name-block type3">
-					 	<p class="activity-name medium">Warm-Up</p>
+  		<div className="activity-folder">
+		  <div className="info-dialog" style={{display:this.state.infDiagVis}}>
+		  		<div>
+		  			<img src={info143} alt="" />
+				  </div>
+				  <div>
+		  				{this.state.help}
+				  </div>
+			  </div>
+
+  			<div className="activity-folder-bg activity-2-wrap">
+  				<div className="activity-2">
+  					<div className="activity-name-block type3">
+					 	<p className="activity-name medium">Warm-Up</p>
 					</div>
-		  			<div class="activity-icon-wrap" onClick={()=>this.playVideo(0)}>
-				      	<div class="activity-icon-block">
+		  			<div className="activity-icon-wrap" onClick={()=>this.playVideo(0)}>
+				      	<div className="activity-icon-block">
 				        	<img alt="" src={animationImg}/>
 				      	</div>
-				      	<div class="activity-name-block type4">
-				       		<p class="activity-name small">Song</p>
+				      	<div className="activity-name-block type4">
+				       		<p className="activity-name small">Song</p>
 				      	</div>
 				    </div>
-				    <div class="video-frame">
-				    	<div class="video-frame-inner">
+				    <div className="video-frame">
+				    	<div className="video-frame-inner">
 						<div style={{display: this.state.visible }} className="vidCont">
 							<video controls id="vidPlayer" ref={this.videoRef} src=''></video>
 							{/* <button onClick={()=>this.closeVideo()} id="closeBtn">&#10008;</button> */}
 						</div>
 				    	</div>
 				    </div>
-				    <div class="activity-icon-wrap" onClick={()=>this.playVideo(1)}>
-				      	<div class="activity-icon-block">
+				    <div className="activity-icon-wrap" onClick={()=>this.playVideo(1)}>
+				      	<div className="activity-icon-block">
 				        	<img alt="" src={animationImg}/>
 				      	</div>
-				      	<div class="activity-name-block type4">
-				       		<p class="activity-name small">Video</p>
+				      	<div className="activity-name-block type4">
+				       		<p className="activity-name small">Video</p>
 				      	</div>
 				    </div>
 				</div>

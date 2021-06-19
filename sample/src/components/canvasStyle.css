@@ -1,15 +1,14 @@
 .parentCont{
     position: relative;
+    width: 1096px;
+    margin-left: 85px;
+    text-align: right;
 }
 
 .btnControl{
     position: absolute;
-    right: 100px;
+    right: 10px;
     top: -22px;
-}
-
-.canvas-container{
-    margin: 0 auto;
 }
 
 #canBack{
@@ -33,7 +32,7 @@
     background-size: cover;
 }
 
-button:nth-child(2){
+.btnControl button:nth-child(2){
     background-image: url(../images/eraser.png);
     background-size: cover;
 }

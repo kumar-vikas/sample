@@ -3,10 +3,11 @@ import MemoTest from "./Test";
 import "./practice.css";
 import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
-import penIcon from "../images/pencil-2.png";
-import vidIcon538 from "../images/vidIcon-538.png"
+import penIcon from "../images/pencil-621.png";
+import vidIcon538 from "../images/vidIcon-538.png";
+import { NavLink } from 'react-router-dom';
 
-function PreWritingPractice(props){
+function LetterFormation(props){
 
 	const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
 
@@ -22,6 +23,8 @@ function PreWritingPractice(props){
 		"pat-5$slow":"assets/Pre-Writing/Copy of Butterfly_slow.mp4",
 		"pat-5$fast":"assets/Pre-Writing/Copy of Butterfly_normal.mp4"
 	}
+
+	var letterArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 	useEffect(()=>{
 		props.setVisibility(props.history);
@@ -40,7 +43,7 @@ function PreWritingPractice(props){
 
     return(
         <div className="activity-base" id="act-base-prePrac">
-  	<img alt="" src={pencilImg} class="pencile-image"/>
+  	<img alt="" src={pencilImg} className="pencile-image"/>
   	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
 	</div>
@@ -54,21 +57,28 @@ function PreWritingPractice(props){
 		  </div>
 		</div>
 
-		<div className="bodyTxt">Pre-Writing</div>
-		<div id="vidCont">
-			<div>
-				<button onClick={fetchVideo}>Slow</button>
-				<span><img src={vidIcon538} alt="" /></span>
-				<button onClick={fetchVideo}>Fast</button>
-			</div>
-			<video autoPlay controls id="vidPlayer-pre" src={obj[pattern+"$"+speed]}></video>
+		<div className="letterFormText">Letter Formation - Lower Case</div>
+		<div id="letterCont">
+
+			{
+				letterArr.map(
+					(cur)=>(
+						<NavLink key={cur} to="/LetterFormPractice">
+							<button className="letterBtn">
+								{cur}
+								<img src={penIcon} alt="" />
+							</button>
+						</NavLink>
+					)
+				)
+			}
+			
+			
 		</div>
 
-  		
-          <MemoTest canprops={{width:"1090", height:"200", marginTop:108}} className="drawingTool"/>
   	</div>
   </div>
     )
 }
 
-export default PreWritingPractice;
+export default LetterFormation;
