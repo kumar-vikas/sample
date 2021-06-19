@@ -6,7 +6,7 @@ import infoBtn from "../images/info-btn.png";
 import penIcon from "../images/pencil-2.png";
 import vidIcon538 from "../images/vidIcon-538.png"
 
-function PreWritingPractice(props){
+function LetterFormPractice(props){
 
 	const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
 
@@ -40,7 +40,7 @@ function PreWritingPractice(props){
 
     return(
         <div className="activity-base" id="act-base-prePrac">
-  	<img alt="" src={pencilImg} class="pencile-image"/>
+  	<img alt="" src={pencilImg} className="pencile-image"/>
   	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
 	</div>
@@ -55,7 +55,7 @@ function PreWritingPractice(props){
 		</div>
 
 		<div className="bodyTxt">Pre-Writing</div>
-		<div id="vidCont">
+		<div id="letterFormvidCont">
 			<div>
 				<button onClick={fetchVideo}>Slow</button>
 				<span><img src={vidIcon538} alt="" /></span>
@@ -65,10 +65,10 @@ function PreWritingPractice(props){
 		</div>
 
   		
-          <MemoTest canprops={{width:"1090", height:"200", marginTop:108}} className="drawingTool"/>
+          <MemoTest canprops={{width:"550", height:"500", marginTop:-315}} className="drawingTool"/>
   	</div>
   </div>
     )
 }
 
-export default PreWritingPractice;
+export default LetterFormPractice;
