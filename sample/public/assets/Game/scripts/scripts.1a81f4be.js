@@ -911,6 +911,7 @@
             (b.popUpContent = c.popUpContent);
         }),
         angular.element().ready(function () {
+          $("#bg-sound")[0].play();
           angular.element(document.getElementById("loader")).remove(),
             a.$broadcast("getPlayerParameters", {
               activityIndex: b.currentActivityIndex,
@@ -1285,12 +1286,18 @@
             ? (e.totalCorrectAns++,
               e.totalCorrectAns === e.totalPairs &&
                 ((e.isCorrect = !0), (e.bIsActOn = !1)),
+              //console.log("Right"),
+              $("#right-sound")[0].play(),
               d(function () {
+                //console.log("Right done....");
                 e.removePair(a, !0);
               }, 2e3))
-            : d(function () {
+            : //console.log("WRONG"),
+              ($("#wrong-sound")[0].play(),
+              d(function () {
+                //console.log("wrong done....");
                 e.removePair(a, !1);
-              }, 2e3);
+              }, 2e3));
         }),
         (e.removePair = function (a, b) {
           var c = angular.element(document.getElementById(a)),

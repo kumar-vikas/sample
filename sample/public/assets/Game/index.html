@@ -75,70 +75,25 @@
           <!-- popup content - End -->
         </div>
       </div>
-      <div class="footerArea">
-        <div
-          class="prevBtn"
-          ng-class="((player.currentActivityIndex === 0) ? 'disable' : '')"
-          ng-click="player.gotoPrevActivity($event)"
-        ></div>
-        <div class="controllBar">
-          <div
-            class="playpauseBtn roundBtns"
-            ng-show="player.showVideoControls"
-            ng-click="player.playPauseVideo()"
-            ng-class="thisRef.isVideoPlaying ? 'play' : 'pause'"
-          ></div>
-          <div
-            class="muteBtn roundBtns mute"
-            ng-show="player.showVideoControls"
-            ng-click="player.muteUnmuteAudio()"
-            ng-class="thisRef.isAudioPlaying ? 'unmute' : 'mute'"
-          ></div>
-          <div
-            class="showhideBtn roundBtns"
-            ng-show="player.showTextControls"
-            ng-click="player.showHideText()"
-            ng-class="player.isShowText ? 'showText' : 'hideText'"
-          ></div>
-          <div
-            class="popupBtn"
-            ng-show="player.showPopupControls"
-            ng-click="player.displayPopup()"
-          ></div>
-          <div
-            class="extraBtn"
-            ng-show="player.showExtraControls"
-            ng-click="player.launchExtraActivity()"
-          ></div>
-          <div
-            class="btn btn-primary"
-            ng-show="player.showSubmitControls"
-            ng-click="player.checkAnswer()"
-          >
-            Check Answer
-          </div>
-          <div
-            class="btn btn-primary"
-            ng-show="player.showSubmitControls"
-            ng-click="player.showAnswer()"
-          >
-            Show Answer
-          </div>
-          <div
-            class="btn btn-primary"
-            ng-show="player.showSubmitControls"
-            ng-click="player.resetAnswer()"
-          >
-            Reset
-          </div>
-        </div>
-        <div
-          class="nextBtn"
-          ng-class="((player.currentActivityIndex === (player.totalActivities - 1)) ? 'disable' : '')"
-          ng-click="player.gotoNextActivity($event)"
-        ></div>
-      </div>
     </div>
+    <audio
+      id="right-sound"
+      controls
+      class="feedback-sound"
+      src="./audios/correct.mp3"
+    ></audio>
+    <audio
+      id="wrong-sound"
+      controls
+      class="feedback-sound"
+      src="./audios/incorrect.mp3"
+    ></audio>
+    <audio
+      id="bg-sound"
+      controls
+      class="feedback-sound"
+      src="./audios/matchingPairs/bgLoop.mp3"
+    ></audio>
     <div id="loader">
       <div class="spinner">
         <div class="bounce1"></div>
