@@ -18,7 +18,11 @@ function Test(props){
     const [can, setCan] = useState(null)
     
     var canStyle = {
-      border:"1px solid #333"
+      border:"1px solid #333",
+    }
+
+    var canBackS = {
+      backgroundSize:"contain"
     }
 
     useEffect(() => {
@@ -105,11 +109,11 @@ function Test(props){
     }
 
     return(
-        <div className="parentCont" style={{marginTop:props.canprops.marginTop}}>
+        <div className="parentCont" style={{width:props.canprops.width+"px", marginLeft:props.canprops.marginLeft, marginTop:props.canprops.marginTop}}>
           {console.log(can)}
 
-            <div id="canBack">
-              <canvas id="c" style={canStyle}></canvas>
+            <div id="canBack" style={{backgroundImage: "url(" + props.canprops.backImg + ")", backgroundSize:"cover"}}>
+              <canvas id="c"></canvas>
             </div>
 
             <div className="btnControl">

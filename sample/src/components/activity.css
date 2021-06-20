@@ -14,6 +14,11 @@
   background-size: 100% 100%;
 }
 
+#act-base-letterForm {
+  background: url(../images/bg-p5-pre-writing.jpg);
+  background-size: 100% 100%;
+}
+
 .activity-base-inner {
   max-width: 100%;
   padding: 20px 0 0 0;
@@ -237,7 +242,7 @@
 
 .gameIfrm {
   width: 90%;
-  height: 400px;
+  height: 425px;
 }
 
 .gameIcon {
@@ -342,6 +347,8 @@
   top: 330px;
   left: -150px;
   text-align: left;
+  width: 755px;
+  z-index: 1;
 }
 
 #letterFormvidCont img {
@@ -360,8 +367,8 @@
   font-family: var(--activityName);
   color: #fff;
   font-size: 20px;
-  top: 200px;
-  right: 214px;
+  top: 230px;
+  right: 235px;
   position: absolute;
   width: 250px;
   z-index: 1;

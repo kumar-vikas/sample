@@ -42,8 +42,8 @@ function LetterFormation(props){
 	}
 
     return(
-        <div className="activity-base" id="act-base-prePrac">
-  	<img alt="" src={pencilImg} className="pencile-image"/>
+        <div className="activity-base" id="act-base-letterForm">
+  	{/* <img alt="" src={pencilImg} className="pencile-image"/> */}
   	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
 	</div>

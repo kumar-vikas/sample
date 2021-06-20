@@ -4,14 +4,15 @@ import "./practice.css";
 import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import penIcon from "../images/pencil-2.png";
-import vidIcon538 from "../images/vidIcon-538.png"
+import wPage from "../images/w-page.png"
+import vidIcon538 from "../images/vidIcon-538.png";
 
 function LetterFormPractice(props){
 
 	const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
 
 	var obj = {
-		"pat-1$slow":"assets/Pre-Writing/Copy of Bubble_page 4_slow.mp4",
+		"g":"assets/Letter Writing/Small Letters/Copy of g_small_new fast VO.mp4",
 		"pat-1$fast":"assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4",
 		"pat-2$slow":"assets/Pre-Writing/Copy of Chimney_page 6_slow.mp4",
 		"pat-2$fast":"assets/Pre-Writing/Copy of Chimney_page 6_normal.mp4",
@@ -26,17 +27,6 @@ function LetterFormPractice(props){
 	useEffect(()=>{
 		props.setVisibility(props.history);
 	}, [])
-
-	function fetchVideo(e){
-		var cc = e.target;
-		let cPath = pattern+"$"+cc.innerHTML.toLowerCase();
-		
-		var vid = document.getElementById("vidPlayer-pre");
-		vid.src = obj[cPath];
-		vid.play();
-
-		console.log(cPath, " ========================")
-	}
 
     return(
         <div className="activity-base" id="act-base-prePrac">
@@ -59,11 +49,10 @@ function LetterFormPractice(props){
 			<div>
 				<span><img src={vidIcon538} alt="" /></span>
 			</div>
-			<video autoPlay controls id="vidPlayer-pre" src={obj[pattern+"$"+speed]}></video>
+			<video autoPlay controls id="vidPlayer-pre" src={obj["g"]}></video>
 		</div>
-
-  		
-          <MemoTest canprops={{width:"550", height:"500", marginTop:-161}} className="drawingTool"/>
+		
+          <MemoTest canprops={{width:"550", height:"480", marginLeft:625, marginTop:-173, backImg:wPage, backColor:"#fff"}} className="drawingTool"/>
   	</div>
   </div>
     )

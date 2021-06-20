@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import pencilImg from "../images/pencil-big.png"
 import animationImg from "../images/animation.png"
 import infoBtn from "../images/info-btn.png";
 import game129 from "../images/game129.png";
@@ -16,8 +15,7 @@ class GameComponent extends Component{
 
     render(){
         return(
-    	<div className="activity-base">
-  			<img alt="" src={pencilImg} className="pencile-image"/>
+    	<div className="activity-base" id="act-base-letterForm">
 			<div className="activity-base-inner">
 				<div className="activity-head">
 				<a className="btn-icon oragnge-btn info-btn">
