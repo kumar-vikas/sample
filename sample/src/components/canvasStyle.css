@@ -1,8 +1,5 @@
 .parentCont{
     position: relative;
-    width: 1096px;
-    margin-left: 85px;
-    text-align: right;
 }
 
 .btnControl{
@@ -14,6 +11,8 @@
 #canBack{
     /* background-color: #fff; */
     display: inline-block;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 .btnControl .buttons{

@@ -66,7 +66,7 @@ function PreWritingPractice(props){
 		</div>
 
   		
-          <MemoTest canprops={{width:"1090", height:"200", marginTop:108, backImg:bee, backColor:"#fff"}} className="drawingTool"/>
+          <MemoTest canprops={{width:"1070", height:"200", marginLeft:100, marginTop:100, backImg:bee, backColor:"#fff"}} className="drawingTool"/>
   	</div>
   </div>
     )

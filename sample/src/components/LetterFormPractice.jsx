@@ -52,7 +52,7 @@ function LetterFormPractice(props){
 			<video autoPlay controls id="vidPlayer-pre" src={obj["g"]}></video>
 		</div>
 		
-          <MemoTest canprops={{width:"550", height:"500", marginTop:-161, backImg:wPage, backColor:"#fff"}} className="drawingTool"/>
+          <MemoTest canprops={{width:"550", height:"480", marginLeft:625, marginTop:-173, backImg:wPage, backColor:"#fff"}} className="drawingTool"/>
   	</div>
   </div>
     )
