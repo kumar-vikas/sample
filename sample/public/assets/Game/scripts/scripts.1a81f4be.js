@@ -1267,6 +1267,7 @@
         (e.prevSelection = ""),
         (e.bIsActOn = !0),
         (e.onTileClicked = function (a) {
+          $("#flip-sound")[0].play();
           var b = a.currentTarget.id,
             c = angular.element(document.getElementById(b));
           if (!c.hasClass("flipped")) {
