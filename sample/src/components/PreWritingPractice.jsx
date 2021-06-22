@@ -3,9 +3,9 @@ import MemoTest from "./Test";
 import "./practice.css";
 import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
-import penIcon from "../images/pencil-2.png";
 import vidIcon538 from "../images/vidIcon-538.png";
 import bee from "../images/bee.png";
+import { MyConsumer } from "./context";
 
 function PreWritingPractice(props) {
   const [pattern, speed] = props.location.path
@@ -40,6 +40,16 @@ function PreWritingPractice(props) {
     console.log(cPath, " ========================");
   }
 
+  function abc(){
+    return <MyConsumer>
+      {
+      (a) => (
+        <p className="activity-name">Pre-Cursive {a.dateJoined}</p>
+      )
+    }
+    </MyConsumer>
+  }
+
   return (
     <div className="activity-base" id="act-base-prePrac">
       <img alt="" src={pencilImg} class="pencile-image" />
@@ -52,7 +62,8 @@ function PreWritingPractice(props) {
             <img alt="" src={infoBtn} />
           </a>
           <div className="activity-name-block">
-            <p className="activity-name">Pre-Cursive</p>
+            {abc()}
+            {/* <p className="activity-name">Pre-Cursive</p> */}
           </div>
         </div>
 

@@ -1,8 +1,22 @@
-import React from "react"
+import React, {Component} from "react";
 
-const Context = React.createContext();
+const MyContext = React.createContext()
+export const MyConsumer = MyContext.Consumer
 
-const Provider = Context.Provider;
-const Consumer = Context.Consumer;
+class MyProvider extends Component {
+  state = {
+    username: 'Crunchy Crunch',
+    dateJoined: 'A',
+    membershipLevel: 'Silver'
+  } 
+  
+  render () {
+    return (
+       <MyContext.Provider value={this.state}>
+        {this.props.children}
+      </MyContext.Provider>
+    )
+  }
+}
 
-export default {Provider, Consumer}
+export default MyProvider;
