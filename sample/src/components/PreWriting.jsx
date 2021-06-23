@@ -5,6 +5,7 @@ import infoBtn from "../images/info-btn.png";
 import actbg from "../images/act-1.png";
 import activityImg from "../images/activity.png";
 import { NavLink } from "react-router-dom";
+import { MyConsumer } from "./context";
 
 class PreWriting extends Component {
   constructor(props) {
@@ -13,6 +14,16 @@ class PreWriting extends Component {
 
   componentDidMount() {
     this.props.setVisibility(this.props.history);
+  }
+
+  abc(){
+    return <MyConsumer>
+      {
+      (a) => (
+        <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+      )
+    }
+    </MyConsumer>
   }
 
   render() {
@@ -24,7 +35,7 @@ class PreWriting extends Component {
               <img alt="" src={infoBtn} />
             </a>
             <div className="activity-name-block">
-              <p className="activity-name">Pre-Cursive A</p>
+              {this.abc()}
             </div>
           </div>
           <div className="activity-folder">

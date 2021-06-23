@@ -14,9 +14,9 @@ import LetterFormPractice from './components/LetterFormPractice';
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
-import backBtn from "./images/play-btn.png"
+import backBtn from "./images/play-btn.png";
 import homeBtn from "./images/home-btn.png";
-import Provider from "./components/context"
+import MyProvider from "./components/context";
 
 function App(props) {
   const [state, setState] = useState({visible:false, history:null,
@@ -95,6 +95,7 @@ function App(props) {
           </div>
       </div>: ''}
 
+    <MyProvider data={state}>
       <Router>
       <Switch>
         <Route 
@@ -231,6 +232,7 @@ function App(props) {
 
       </Switch>
       </Router>
+      </MyProvider>
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

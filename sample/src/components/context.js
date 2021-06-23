@@ -1,8 +1,31 @@
-import React from "react"
+import React, {Component} from "react";
 
-const Context = React.createContext();
+const MyContext = React.createContext()
+export const MyConsumer = MyContext.Consumer
 
-const Provider = Context.Provider;
-const Consumer = Context.Consumer;
+class MyProvider extends Component {
+  constructor(props){
+    super(props)
 
-export default {Provider, Consumer}
+    this.state = {
+      data: props.data,
+      activeTab:null,
+      func: this.updateContextTab
+    }
+  }
+
+  updateContextTab = (_a) => {
+    this.setState({activeTab:_a});
+    console.log(this.state)
+  }
+  
+  render () {
+    return (
+       <MyContext.Provider value={this.state}>
+        {this.props.children}
+      </MyContext.Provider>
+    )
+  }
+}
+
+export default MyProvider;

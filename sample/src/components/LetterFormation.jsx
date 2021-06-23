@@ -6,11 +6,12 @@ import infoBtn from "../images/info-btn.png";
 import penIcon from "../images/pencil-621.png";
 import vidIcon538 from "../images/vidIcon-538.png";
 import { NavLink } from 'react-router-dom';
+import { MyConsumer } from './context';
 
 function LetterFormation(props){
 
 	const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
-
+	var func = null;
 	var obj = {
 		"pat-1$slow":"assets/Pre-Writing/Copy of Bubble_page 4_slow.mp4",
 		"pat-1$fast":"assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4",
@@ -37,9 +38,18 @@ function LetterFormation(props){
 		var vid = document.getElementById("vidPlayer-pre");
 		vid.src = obj[cPath];
 		vid.play();
-
-		console.log(cPath, " ========================")
 	}
+
+	function abc(){
+		return <MyConsumer>
+		  {
+		  (a) => {
+				func = a.func;
+			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+		  }
+		}
+		</MyConsumer>
+	  }
 
     return(
         <div className="activity-base" id="act-base-letterForm">
@@ -53,7 +63,8 @@ function LetterFormation(props){
 		    <img alt="" src={infoBtn}/>
 		  </a>
 		  <div className="activity-name-block">
-		    <p className="activity-name">Pre-Cursive</p>
+			  {abc()}
+		    {/* <p className="activity-name">Pre-Cursive</p> */}
 		  </div>
 		</div>
 

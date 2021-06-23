@@ -6,11 +6,14 @@ import infoBtn from "../images/info-btn.png";
 import penIcon from "../images/pencil-2.png";
 import wPage from "../images/w-page.png";
 import vidIcon538 from "../images/vidIcon-538.png";
+import { MyConsumer } from './context';
 
 function LetterFormPractice(props) {
   const [pattern, speed] = props.location.path
     ? props.location.path.split("$")
     : ["pat-1", ""];
+
+  var func = null;
 
   var obj = {
     "g": "assets/Letter Writing/Small Letters/Copy of g_small_new fast VO.mp4",
@@ -29,6 +32,17 @@ function LetterFormPractice(props) {
     props.setVisibility(props.history);
   }, []);
 
+  function abc(){
+		return <MyConsumer>
+		  {
+		  (a) => {
+				func = a.func;
+			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+		  }
+		}
+		</MyConsumer>
+	  }
+
   return (
     <div className="activity-base" id="act-base-prePrac">
       <img alt="" src={pencilImg} className="pencile-image" />
@@ -41,7 +55,7 @@ function LetterFormPractice(props) {
             <img alt="" src={infoBtn} />
           </a>
           <div className="activity-name-block">
-            <p className="activity-name">Pre-Cursive</p>
+            {abc()}
           </div>
         </div>
 
