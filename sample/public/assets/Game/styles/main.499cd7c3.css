@@ -7499,6 +7499,7 @@ h3 {
   left: 0;
 }
 .eyeBlink {
+  display: none;
   width: 84px;
   height: 45px;
   animation: EyeBlinkAnim 4s steps(32) infinite;
@@ -7589,15 +7590,23 @@ h3 {
   background-image: url(../images/MatchingPairs/blink16.88418f9f.png);
 }
 #objDesk_1,
+#objDesk_2,
+#objDesk_3,
+#objDesk_4,
+#objDesk_5,
+#objDesk_6,
+#objDesk_7,
+#objDesk_8,
+#objDesk_9
 #objDesk_10,
 #objDesk_11,
 #objDesk_12,
 #objDesk_13,
 #objDesk_14,
 #objDesk_15,
-#objDesk_16,
-#objDesk_9 {
-  background-image: url(../images/MatchingPairs/deskAnim1.1e196b7b.png);
+#objDesk_16
+ {
+  background-image: url(../images/MatchingPairs/deskAnim0.1e196b7b.png);
 }
 .desk {
   width: 208px;
@@ -7618,37 +7627,37 @@ h3 {
 #objDesk_2 {
   top: 172px;
   left: 404px;
-  background-image: url(../images/MatchingPairs/deskAnim2.97d90ad7.png);
+  /* background-image: url(../images/MatchingPairs/deskAnim2.97d90ad7.png); */
 }
 #objDesk_3 {
   top: 172px;
   left: 616px;
-  background-image: url(../images/MatchingPairs/deskAnim3.e61129cc.png);
+  /* background-image: url(../images/MatchingPairs/deskAnim3.e61129cc.png); */
 }
 #objDesk_4 {
   top: 172px;
   left: 827px;
-  background-image: url(../images/MatchingPairs/deskAnim4.1a6b4ea9.png);
+  /* background-image: url(../images/MatchingPairs/deskAnim4.1a6b4ea9.png); */
 }
 #objDesk_5 {
   top: 355px;
   left: 193px;
-  background-image: url(../images/MatchingPairs/deskAnim5.468f212a.png);
+  /* background-image: url(../images/MatchingPairs/deskAnim5.468f212a.png); */
 }
 #objDesk_6 {
   top: 355px;
   left: 405px;
-  background-image: url(../images/MatchingPairs/deskAnim6.eece74ac.png);
+  /* background-image: url(../images/MatchingPairs/deskAnim6.eece74ac.png); */
 }
 #objDesk_7 {
   top: 355px;
   left: 616px;
-  background-image: url(../images/MatchingPairs/deskAnim7.2333bb62.png);
+  /* background-image: url(../images/MatchingPairs/deskAnim7.2333bb62.png); */
 }
 #objDesk_8 {
   top: 355px;
   left: 827px;
-  background-image: url(../images/MatchingPairs/deskAnim8.79406bf8.png);
+  /* background-image: url(../images/MatchingPairs/deskAnim8.79406bf8.png); */
 }
 #objDesk_9 {
   top: 546px;
@@ -7694,4 +7703,46 @@ h3 {
 #tile_14 img {
   margin-top: 11px;
   margin-left: -7px;
+}
+#msg-ovelay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 70%);;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#overlay-box{
+  background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px #000;
+}
+#overlay-text{
+  font-size: 30px;
+  color: #000;
+  margin: 20px;
+  text-align: center;
+}
+#overlay-button-wrap{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 10px;
+}
+.overlay-button{
+  height: 60px;
+  width: 180px;
+  font-size: 23px;
+  text-shadow: 1px 2px 2px white;
+  background: #f2e1c1;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 4px;
+  margin: 0 10px;
+}
+.hidden{
+  display: none;
 }

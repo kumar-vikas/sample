@@ -1266,6 +1266,19 @@
         (e.totalCorrectAns = 0),
         (e.prevSelection = ""),
         (e.bIsActOn = !0),
+        ($("#restart-btn").on("click", function(){
+          e.resetGame();
+        })),
+
+        (e.resetGame = function(){
+          e.totalCorrectAns = 0;
+          e.prevSelection = "";
+          e.bIsActOn = !0;         
+          for(var i=1;i<=e.totalPairs;i++){
+            e.resetPair("tile_"+i, !0);
+          }
+          $("#msg-ovelay").addClass("hidden");
+        }),
         (e.onTileClicked = function (a) {
           $("#flip-sound")[0].play();
           var b = a.currentTarget.id,
@@ -1279,19 +1292,21 @@
               e.prevSelection ? e.checkAnswer(b) : (e.prevSelection = b);
           }
         }),
-        (e.checkAnswer = function (a) {
+        (e.checkAnswer = function (a) {          
           e.bIsActOn = !1;
           var b = angular.element(document.getElementById(a)),
             c = b.attr("data-pair_id");
           e.prevSelection === c
             ? (e.totalCorrectAns++,
               e.totalCorrectAns === e.totalPairs &&
-                ((e.isCorrect = !0), (e.bIsActOn = !1)),
-              //console.log("Right"),
+                ((e.isCorrect = !0), (e.bIsActOn = !1)),             
               $("#right-sound")[0].play(),
               d(function () {
                 //console.log("Right done....");
                 e.removePair(a, !0);
+                if(e.totalCorrectAns === e.totalPairs){
+                  $("#msg-ovelay").removeClass("hidden");
+                }
               }, 2e3))
             : //console.log("WRONG"),
               ($("#wrong-sound")[0].play(),
@@ -1300,7 +1315,7 @@
                 e.removePair(a, !1);
               }, 2e3));
         }),
-        (e.removePair = function (a, b) {
+        (e.removePair = function (a, b) {          
           var c = angular.element(document.getElementById(a)),
             d = angular.element(document.getElementById(e.prevSelection)),
             f = angular.element(
@@ -1320,8 +1335,28 @@
                 f.removeClass("deskAnim"),
                 g.removeClass("deskAnim"));
         }),
+
+        (e.resetPair = function (a) {          
+          var element = document.getElementById(a),
+          c = angular.element(element),
+            d = angular.element(document.getElementById(element.getAttribute("data-pair_id"))),
+            f = angular.element(
+              document.getElementById("objDesk_" + a.split("_")[1])
+            ),
+            g = angular.element(
+              document.getElementById(
+                "objDesk_" + element.getAttribute("data-pair_id").split("_")[1]
+              )
+            );
+            (c.css("opacity", "1"), d.css("opacity", "1")),
+            (c.removeClass("flipped"),
+            d.removeClass("flipped"),
+            f.removeClass("deskAnim"),
+            g.removeClass("deskAnim"));
+        }),
+        
         b.$on("setActivityData", function (a, b) {
-          e.data = b.data;
+          e.data = b.data;          
         }),
         b.$broadcast("getActivityData", { activityIndex: c });
     },
