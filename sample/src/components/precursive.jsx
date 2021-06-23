@@ -8,61 +8,35 @@ import infoBtn from "../images/info-btn.png";
 import gameImg from "../images/games.png";
 import printImg from "../images/print-btn.png";
 import { NavLink } from 'react-router-dom';
-import info143 from "../images/info-i143.png"
+import info143 from "../images/info-i143.png";
+import { MyConsumer } from './context';
 
 class Precursive extends Component{
 
     constructor(props){
         super(props);
-		this.vid = null;
+		this.func = null;
         //this.videoRef = React.createRef();
         this.state = {
             src:this.props.src,
-            visible:'none',
 			name:this.props.location.name,
 
 			help:"If you need help. Click on the information button.",
 			infDiagVis:'none'
         }
 
-		console.log(props)
     }
-
-    /* playVideo = () => {
-        this.setState({visible:"flex" })
-        this.vid = document.getElementById("vidPlayer");
-        console.log(this.vid)
-        this.vid.src = "assets/animations/supercity_1.mp4"
-        this.vid.play();
-
-        console.log(" video playing")
-    }
-
-	closeVideo = () =>{
-		this.setState({visible:"none" })
-		this.vid.pause();
-		console.log("close video")
-	} */
     
 	componentDidMount(){
-		//console.log(this.props.state," -----------------")
 		this.props.setVisibility(this.props.history);
+		
+		if(this.state.name) this.func(this.state.name);
 	}
-
-	/* componentDidUpdate(){
-		if(this.state.name !== this.props.state.name){
-			this.props.updateActiveTab(this.state.name);
-		}		
-
-		console.log(this.props.state," *************** ", this.state.name)
-	} */
 
 	componentWillReceiveProps(props, state){
 		if(props.location.name != null){
-			console.log(this.state.name, " ============", props.location.name);
 			if(this.state.name != props.state.activeTab){
 				props.updateActiveTab(this.state.name);
-				console.log(props," *------------------------------- ")
 			}
 		}
 	}
@@ -71,6 +45,17 @@ class Precursive extends Component{
 		this.vis = this.vis=="flex" ? "none" : "flex";
 		this.setState({infDiagVis:this.vis})
 	}
+
+	abc(){
+		return <MyConsumer>
+		  {
+		  (a) => {
+				this.func = a.func;
+			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+		  }
+		}
+		</MyConsumer>
+	  }
 
     render() { 
         return (
@@ -86,7 +71,8 @@ class Precursive extends Component{
 		    <img alt="" src={infoBtn}/>
 		  </a>
 		  <div className="activity-name-block">
-		    <p className="activity-name">Pre-Cursive {this.state.name}</p>
+			  {this.abc()}
+		    {/* <p className="activity-name">Pre-Cursive {this.state.name}</p> */}
 		  </div>
 		  {/* <a href="#" className="btn-icon oragnge-btn play-btn">
 		    <img alt="" src="assets/images/play-btn.png"/>

@@ -37,13 +37,12 @@ class FirstScr extends Component {
   };
 
   setToState = (e) => {
-    console.log(e.currentTarget.parentNode);
     try {
-      document
-        .getElementsByClassName("selected-topic")[0]
+      document.getElementsByClassName("selected-topic")[0]
         .classList.remove("selected-topic");
     } catch (err) {}
     e.currentTarget.parentNode.children[0].classList.add("selected-topic");
+    
     this.setState({ subToc: true });
   };
 
@@ -84,40 +83,10 @@ class FirstScr extends Component {
                 ))}
             </div>
             <div className="subToc">
-              {this.state.subToc ? this.fetchContent() : ""}
+              {this.fetchContent() /* this.state.subToc ? this.fetchContent() : "" */}
             </div>
           </div>
 
-          {/* <ul>
-			{console.log(this.props.nameList, " ===========")}
-			{
-				this.props.state.nameList && this.props.state.nameList.map((curVal)=>(
-					<li>
-						<a className="chaper-name">Pre-Cursive {curVal.name}</a>
-						<div className="btn-wrappper">
-							<a className="btn-icon blue-btn">
-							<img alt="" src={playBtn}/>
-							</a>
-							<div className="small-btn-wrap">
-								{
-								this.props.state.nameList && this.props.state.nameList.map((cur)=>(
-									<p  className="chaper-name small">
-									<NavLink to={{pathname:"/precursive", name:cur.name, updateActiveTab:this.props.updateActiveTab}}>
-										<a className="btn-icon small oragnge-btn">
-											<img alt="" src={playBtn}/>
-										</a> Cursive {cur.name}
-									</NavLink>
-									</p>
-									)
-								)
-								}
-							</div>
-						</div>
-    				</li>
-				)
-				)
-			}
-    	</ul> */}
         </div>
       </div>
     );

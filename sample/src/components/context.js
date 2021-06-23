@@ -4,11 +4,20 @@ const MyContext = React.createContext()
 export const MyConsumer = MyContext.Consumer
 
 class MyProvider extends Component {
-  state = {
-    username: 'Crunchy Crunch',
-    dateJoined: 'A',
-    membershipLevel: 'Silver'
-  } 
+  constructor(props){
+    super(props)
+
+    this.state = {
+      data: props.data,
+      activeTab:null,
+      func: this.updateContextTab
+    }
+  }
+
+  updateContextTab = (_a) => {
+    this.setState({activeTab:_a});
+    console.log(this.state)
+  }
   
   render () {
     return (

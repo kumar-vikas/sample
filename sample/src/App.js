@@ -95,7 +95,7 @@ function App(props) {
           </div>
       </div>: ''}
 
-    <MyProvider>
+    <MyProvider data={state}>
       <Router>
       <Switch>
         <Route 
