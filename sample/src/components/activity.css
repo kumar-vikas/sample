@@ -309,6 +309,7 @@
   width: 770px;
   margin: 0 auto;
 }
+
 .letterBtn {
   display: inline-block;
   width: 70px;
@@ -320,6 +321,7 @@
   font-size: 25px;
   font-family: var(--minionProRegular);
   border: none;
+  cursor: pointer;
 }
 
 .letterBtn img {

@@ -8,10 +8,6 @@ import vidIcon538 from "../images/vidIcon-538.png";
 import { MyConsumer } from './context';
 
 function LetterFormPractice(props) {
-  /* const [pattern, speed] = props.location.path
-    ? props.location.path.split("$")
-    : ["pat-1", ""]; */
-
   var func = null;
 
   var obj = {
