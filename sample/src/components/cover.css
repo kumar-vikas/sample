@@ -33,7 +33,7 @@
 }
 .cover-base .btn-wrappper > .btn-icon img {
   width: 27px;
-  margin: 7px auto 0 13px;
+  margin: 7px auto 0 3px;
 }
 .cover-base .btn-wrappper {
   background: transparent;
@@ -55,12 +55,18 @@
   border: 3px solid #fff;
 }
 
+.cover-base .btn-wrappper:hover img{
+  transform: rotate(90deg);
+  margin: 9px 0 0 0;
+}
+
 .small-btn-wrap {
   display: inline-block;
   vertical-align: middle;
   visibility: hidden;
   text-align: left;
 }
+
 .cover-base .btn-wrappper:hover .small-btn-wrap {
   visibility: visible;
 }
