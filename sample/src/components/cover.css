@@ -46,15 +46,15 @@
   align-items: center;
 }
 
-.selected-topic {
+/* .selected-topic {
   background-color: #1164b1;
   border: 3px solid #fff !important;
-}
-/* .cover-base .btn-wrappper:hover{
-  background: #0164b1;
-  border: 2px solid #fff;
-  width: 220px;
 } */
+.cover-base .btn-wrappper:hover{
+  background: #0164b1;
+  border: 3px solid #fff;
+}
+
 .small-btn-wrap {
   display: inline-block;
   vertical-align: middle;

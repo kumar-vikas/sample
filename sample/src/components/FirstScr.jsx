@@ -16,7 +16,18 @@ class FirstScr extends Component {
     return (
       this.props.state.subList &&
       this.props.state.subList.map((cur) => (
-        <NavLink
+
+          <div className="chaper-name small">
+            Cursive {cur.name}
+            <span className="btn-icon small oragnge-btn">
+              <img alt="" src={playBtn} />
+            </span>
+          </div>
+      ))
+    );
+        
+    // to activate the links of right side
+    {/* <NavLink
           to={{
             pathname: "/precursive",
             name: cur.name,
@@ -29,19 +40,15 @@ class FirstScr extends Component {
               <img alt="" src={playBtn} />
             </span>
           </div>
-        </NavLink>
-      ))
-    );
-
-    console.log(" *-*-*--*-* ");
+        </NavLink> */}
   };
 
   setToState = (e) => {
-    try {
+    /* try {
       document.getElementsByClassName("selected-topic")[0]
         .classList.remove("selected-topic");
     } catch (err) {}
-    e.currentTarget.parentNode.children[0].classList.add("selected-topic");
+    e.currentTarget.parentNode.children[0].classList.add("selected-topic"); */
     
     this.setState({ subToc: true });
   };
@@ -57,6 +64,11 @@ class FirstScr extends Component {
             <div className="lftToc">
               {this.props.state.nameList &&
                 this.props.state.nameList.map((curVal) => (
+                  <NavLink   to={{
+                      pathname: "/precursive",
+                      name: curVal.name,
+                      updateActiveTab: this.props.updateActiveTab,
+                    }}>
                   <div className="btn-wrappper">
                     <a className="chaper-name">Pre-Cursive {curVal.name}</a>
                     <a
@@ -66,20 +78,9 @@ class FirstScr extends Component {
                       <img alt="" src={playBtn} />
                     </a>
                     <div className="small-btn-wrap">
-                      {/* {
-									this.props.state.nameList && this.props.state.nameList.map((cur)=>(
-										<p  className="chaper-name small">
-										<NavLink to={{pathname:"/precursive", name:cur.name, updateActiveTab:this.props.updateActiveTab}}>
-											<a className="btn-icon small oragnge-btn">
-												<img alt="" src={playBtn}/>
-											</a> Cursive {cur.name}
-										</NavLink>
-										</p>
-										)
-									)
-									} */}
                     </div>
                   </div>
+                  </NavLink>
                 ))}
             </div>
             <div className="subToc">
