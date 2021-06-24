@@ -43,11 +43,20 @@
   margin-left: 40px;
   cursor: pointer;
   display: flex;
+  min-height: 50px;
+  width: 290px;
   align-items: center;
+  position: relative;
+  margin-bottom: 5px;
 }
 
 .animated {
   transition: all 0.3s;
+}
+
+.main-menu-btn {
+  position: absolute !important;
+  right: -20px;
 }
 
 /* .selected-topic {
@@ -59,7 +68,7 @@
   border: 3px solid #fff;
 }
 
-.cover-base .btn-wrappper:hover .main-menu {
+.cover-base .btn-wrappper:hover .main-menu-btn {
   transform: rotate(90deg);
 }
 
