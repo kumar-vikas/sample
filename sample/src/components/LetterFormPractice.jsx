@@ -3,29 +3,20 @@ import MemoTest from "./Test";
 import "./practice.css";
 import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
-import penIcon from "../images/pencil-2.png";
 import wPage from "../images/w-page.png";
 import vidIcon538 from "../images/vidIcon-538.png";
 import { MyConsumer } from './context';
 
 function LetterFormPractice(props) {
-  const [pattern, speed] = props.location.path
+  /* const [pattern, speed] = props.location.path
     ? props.location.path.split("$")
-    : ["pat-1", ""];
+    : ["pat-1", ""]; */
 
   var func = null;
 
   var obj = {
-    "g": "assets/Letter Writing/Small Letters/Copy of g_small_new fast VO.mp4",
-    "pat-1$fast": "assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4",
-    "pat-2$slow": "assets/Pre-Writing/Copy of Chimney_page 6_slow.mp4",
-    "pat-2$fast": "assets/Pre-Writing/Copy of Chimney_page 6_normal.mp4",
-    "pat-3$slow": "assets/Pre-Writing/Copy of Bee_slow.mp4",
-    "pat-3$fast": "assets/Pre-Writing/Copy of Bee_Normal.mp4",
-    "pat-4$slow": "assets/Pre-Writing/Copy of Snail page_12 slow.mp4",
-    "pat-4$fast": "assets/Pre-Writing/Copy of Snail page_12_normal.mp4",
-    "pat-5$slow": "assets/Pre-Writing/Copy of Butterfly_slow.mp4",
-    "pat-5$fast": "assets/Pre-Writing/Copy of Butterfly_normal.mp4",
+    "path": "assets/Letter Writing/Small Cursive/",
+    "curLetter":props.location.curLetter
   };
 
   useEffect(() => {
@@ -71,7 +62,7 @@ function LetterFormPractice(props) {
             autoPlay
             controls
             id="vidPlayer-pre"
-            src={obj["g"]}
+            src={obj["path"]+obj["curLetter"]+".mp4"}
           ></video>
         </div>
 

@@ -57,7 +57,7 @@ class Precursive extends Component{
 		</MyConsumer>
 	  }
 
-    render() { 
+    render() {
         return (
 
 			<div className="activity-base">

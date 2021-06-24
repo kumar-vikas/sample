@@ -74,7 +74,7 @@ function LetterFormation(props){
 			{
 				letterArr.map(
 					(cur)=>(
-						<NavLink key={cur} to="/LetterFormPractice">
+						<NavLink key={cur} to={{pathname:"/LetterFormPractice", curLetter:cur}}>
 							<button className="letterBtn">
 								{cur}
 								<img src={penIcon} alt="" />
