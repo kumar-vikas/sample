@@ -16,18 +16,18 @@ class FirstScr extends Component {
     return (
       this.props.state.subList &&
       this.props.state.subList.map((cur) => (
-
-          <div className="chaper-name small">
-            Cursive {cur.name}
-            <span className="btn-icon small oragnge-btn">
-              <img alt="" src={playBtn} />
-            </span>
-          </div>
+        <div className="chaper-name small">
+          Cursive {cur.name}
+          <span className="btn-icon small oragnge-btn">
+            <img alt="" src={playBtn} />
+          </span>
+        </div>
       ))
     );
-        
+
     // to activate the links of right side
-    {/* <NavLink
+    {
+      /* <NavLink
           to={{
             pathname: "/precursive",
             name: cur.name,
@@ -40,7 +40,8 @@ class FirstScr extends Component {
               <img alt="" src={playBtn} />
             </span>
           </div>
-        </NavLink> */}
+        </NavLink> */
+    }
   };
 
   setToState = (e) => {
@@ -49,7 +50,7 @@ class FirstScr extends Component {
         .classList.remove("selected-topic");
     } catch (err) {}
     e.currentTarget.parentNode.children[0].classList.add("selected-topic"); */
-    
+
     this.setState({ subToc: true });
   };
 
@@ -64,22 +65,23 @@ class FirstScr extends Component {
             <div className="lftToc">
               {this.props.state.nameList &&
                 this.props.state.nameList.map((curVal) => (
-                  <NavLink   to={{
+                  <NavLink
+                    to={{
                       pathname: "/precursive",
                       name: curVal.name,
                       updateActiveTab: this.props.updateActiveTab,
-                    }}>
-                  <div className="btn-wrappper">
-                    <a className="chaper-name">Pre-Cursive {curVal.name}</a>
-                    <a
-                      className="btn-icon blue-btn"
-                      onClick={(e) => this.setToState(e)}
-                    >
-                      <img alt="" src={playBtn} />
-                    </a>
-                    <div className="small-btn-wrap">
+                    }}
+                  >
+                    <div className="btn-wrappper">
+                      <a className="chaper-name">Pre-Cursive {curVal.name}</a>
+                      <a
+                        className="animated main-menu btn-icon blue-btn"
+                        onClick={(e) => this.setToState(e)}
+                      >
+                        <img alt="" src={playBtn} />
+                      </a>
+                      <div className="small-btn-wrap"></div>
                     </div>
-                  </div>
                   </NavLink>
                 ))}
             </div>
@@ -87,7 +89,6 @@ class FirstScr extends Component {
               {this.fetchContent() /* this.state.subToc ? this.fetchContent() : "" */}
             </div>
           </div>
-
         </div>
       </div>
     );

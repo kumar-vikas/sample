@@ -37,7 +37,7 @@
 }
 .cover-base .btn-wrappper {
   background: transparent;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   border-radius: 50px 20px 20px 50px;
   /* padding: 3px 40px 0 8px; */
   margin-left: 40px;
@@ -46,18 +46,21 @@
   align-items: center;
 }
 
+.animated {
+  transition: all 0.3s;
+}
+
 /* .selected-topic {
   background-color: #1164b1;
   border: 3px solid #fff !important;
 } */
-.cover-base .btn-wrappper:hover{
+.cover-base .btn-wrappper:hover {
   background: #0164b1;
   border: 3px solid #fff;
 }
 
-.cover-base .btn-wrappper:hover img{
+.cover-base .btn-wrappper:hover .main-menu {
   transform: rotate(90deg);
-  margin: 9px 0 0 0;
 }
 
 .small-btn-wrap {
@@ -97,7 +100,8 @@
 
 .lftToc {
   height: 420px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 360px;
 }
 .lftToc .chaper-name {
