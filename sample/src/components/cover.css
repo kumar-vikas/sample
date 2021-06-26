@@ -51,7 +51,7 @@
 }
 
 .animated {
-  transition: all 0.3s;
+  transition: transform 0.3s;
 }
 
 .main-menu-btn {
@@ -70,6 +70,8 @@
 
 .cover-base .btn-wrappper:hover .main-menu-btn {
   transform: rotate(90deg);
+  background: #09b9ed;
+  box-shadow: inset 0 0 8px 4px #098fba;
 }
 
 .small-btn-wrap {
