@@ -5,30 +5,30 @@ import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import wPage from "../images/w-page.png";
 import vidIcon538 from "../images/vidIcon-538.png";
-import { MyConsumer } from './context';
+import { MyConsumer } from "./context";
 
 function LetterFormPractice(props) {
   var func = null;
 
   var obj = {
-    "path": "assets/Letter Writing/Small Cursive/",
-    "curLetter":props.location.curLetter
+    path: "assets/Letter Writing/Small Cursive/",
+    curLetter: props.location.curLetter,
   };
 
   useEffect(() => {
     props.setVisibility(props.history);
   }, []);
 
-  function abc(){
-		return <MyConsumer>
-		  {
-		  (a) => {
-				func = a.func;
-			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
-		  }
-		}
-		</MyConsumer>
-	  }
+  function abc() {
+    return (
+      <MyConsumer>
+        {(a) => {
+          func = a.func;
+          return <p className="activity-name">Pre-Cursive {a.activeTab}</p>;
+        }}
+      </MyConsumer>
+    );
+  }
 
   return (
     <div className="activity-base" id="act-base-prePrac">
@@ -41,9 +41,7 @@ function LetterFormPractice(props) {
           <a className="btn-icon oragnge-btn info-btn">
             <img alt="" src={infoBtn} />
           </a>
-          <div className="activity-name-block">
-            {abc()}
-          </div>
+          <div className="activity-name-block">{abc()}</div>
         </div>
 
         <div className="letterFormbodyTxt">Letter Formation</div>
@@ -58,7 +56,7 @@ function LetterFormPractice(props) {
             autoPlay
             controls
             id="vidPlayer-pre"
-            src={obj["path"]+obj["curLetter"]+".mp4"}
+            src={obj["path"] + obj["curLetter"] + ".mp4"}
           ></video>
         </div>
 

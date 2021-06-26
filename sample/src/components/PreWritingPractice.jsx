@@ -4,14 +4,19 @@ import "./practice.css";
 import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import vidIcon538 from "../images/vidIcon-538.png";
-import bee from "../images/bee.png";
+import pat1 from "../images/pat-1-bg.png";
+import pat2 from "../images/pat-2-bg.png";
+import pat3 from "../images/pat-3-bg.png";
+import pat4 from "../images/pat-4-bg.png";
+import pat5 from "../images/pat-5-bg.png";
+
 import { MyConsumer } from "./context";
 
 function PreWritingPractice(props) {
-  const [pattern, speed] = props.location.path
-    ? props.location.path.split("$")
-    : ["pat-1", ""];
-
+  const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
+  const bgimgs = [pat1, pat2, pat3, pat4, pat5];
+  var bgimg = bgimgs[parseInt(pattern.split("-")[1]) - 1];
+  console.log(bgimg);
   var obj = {
     "pat-1$slow": "assets/Pre-Writing/Copy of Bubble_page 4_slow.mp4",
     "pat-1$fast": "assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4",
@@ -40,14 +45,10 @@ function PreWritingPractice(props) {
     console.log(cPath, " ========================");
   }
 
-  function abc(){
-    return <MyConsumer>
-      {
-      (a) => (
-        <p className="activity-name">Pre-Cursive {a.activeTab}</p>
-      )
-    }
-    </MyConsumer>
+  function abc() {
+    return (
+      <MyConsumer>{(a) => <p className="activity-name">Pre-Cursive {a.activeTab}</p>}</MyConsumer>
+    );
   }
 
   return (
@@ -76,24 +77,18 @@ function PreWritingPractice(props) {
             </span>
             <button onClick={fetchVideo}>Fast</button>
           </div>
-          <video
-            autoPlay
-            loop
-            controls
-            id="vidPlayer-pre"
-            src={obj[pattern + "$" + speed]}
-          ></video>
+          <video autoPlay loop controls id="vidPlayer-pre" src={obj[pattern + "$" + speed]}></video>
         </div>
 
         <MemoTest
           canprops={{
             width: "1070",
-            height: "200",
+            height: "280",
             marginLeft: 100,
-            marginTop: 100,
-            backImg: bee,
+            marginTop: 25,
             backColor: "#fff",
           }}
+          bgImg={bgimg}
           className="drawingTool"
         />
       </div>
