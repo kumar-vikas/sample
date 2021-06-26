@@ -309,6 +309,7 @@
   width: 770px;
   margin: 0 auto;
 }
+
 .letterBtn {
   display: inline-block;
   width: 70px;
@@ -317,16 +318,19 @@
   margin-bottom: 40px;
   background-color: #fff;
   border-radius: 50%;
-  font-size: 25px;
-  font-family: var(--minionProRegular);
+  font-size: 30px;
+  font-family: sassoon;
   border: none;
+  cursor: pointer;
 }
 
 .letterBtn img {
   position: absolute;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-left: 0px;
   width: 35px;
   transform: scaleX(-1);
+  cursor: pointer;
 }
 
 .letterFormText {
