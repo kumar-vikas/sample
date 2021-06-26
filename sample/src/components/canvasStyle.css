@@ -20,6 +20,7 @@
     height: 45px;
     margin-left: 5px;
     transition: transform .5s;
+    cursor: pointer;
 }
 
 .btnControl .buttons:focus{
