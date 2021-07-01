@@ -184,15 +184,15 @@
   position: absolute;
 }
 .activity-3 .activity-name-block.first {
-  left: 9px;
+  left: 25px;
   bottom: 53px;
 }
 .activity-3 .activity-name-block.second {
-  left: 84px;
-  bottom: 13px;
+  left: 100px;
+  bottom: 6px;
 }
 .activity-3 .activity-name-block.third {
-  right: 9px;
+  right: 30px;
   bottom: 53px;
 }
 .act-3-bubble > .activity-name-block:first-child {
@@ -292,7 +292,7 @@
   background-size: cover;
   align-items: center;
   justify-content: center;
-  left: 227px;
+  left: 248px;
   top: 165px;
   font-family: myriadProBlack;
   color: #fff;

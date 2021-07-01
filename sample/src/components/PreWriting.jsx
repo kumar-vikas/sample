@@ -65,7 +65,7 @@ class PreWriting extends Component {
                   <NavLink
                     to={{
                       pathname: "/PreWritingPractice",
-                      path: "pat-1$practice",
+                      path: "pat-1$slow",
                     }}
                   >
                     <div className="activity-name-block type4 second">
@@ -107,7 +107,7 @@ class PreWriting extends Component {
                   <NavLink
                     to={{
                       pathname: "/PreWritingPractice",
-                      path: "pat-2$practice",
+                      path: "pat-2$slow",
                     }}
                   >
                     <div className="activity-name-block type4 second">
@@ -127,6 +127,7 @@ class PreWriting extends Component {
                     </div>
                   </NavLink>
                 </div>
+
                 <div className="act-3-bubble">
                   <div className="activity-name-block type2">
                     <p className="activity-name medium">Pattern 3</p>
@@ -148,7 +149,7 @@ class PreWriting extends Component {
                   <NavLink
                     to={{
                       pathname: "/PreWritingPractice",
-                      path: "pat-3$practice",
+                      path: "pat-3$slow",
                     }}
                   >
                     <div className="activity-name-block type4 second">
@@ -187,7 +188,7 @@ class PreWriting extends Component {
                   <NavLink
                     to={{
                       pathname: "/PreWritingPractice",
-                      path: "pat-4$practice",
+                      path: "pat-4$slow",
                     }}
                   >
                     <div className="activity-name-block type4 second">
@@ -226,7 +227,7 @@ class PreWriting extends Component {
                   <NavLink
                     to={{
                       pathname: "/PreWritingPractice",
-                      path: "pat-5$practice",
+                      path: "pat-5$slow",
                     }}
                   >
                     <div className="activity-name-block type4 second">
