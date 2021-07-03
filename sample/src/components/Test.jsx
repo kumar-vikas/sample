@@ -14,7 +14,7 @@ function Test(props) {
     color: "#0000ff",
     width: 5,
   };
-  console.log(props.canprops.backImg);
+  console.log(props.bgImg);
   const [can, setCan] = useState(null);
 
   var canStyle = {
@@ -117,7 +117,7 @@ function Test(props) {
     >
       <div
         id="canBack"
-        style={{ backgroundImage: "url(" + props.canprops.backImg + ")", backgroundSize: "cover" }}
+        style={{ backgroundImage: "url(" + props.bgImg + ")", backgroundSize: "cover" }}
       >
         <canvas id="c"></canvas>
       </div>

@@ -360,6 +360,7 @@
   margin-left: 240px;
   position: absolute;
   z-index: 1;
+  transform: scaleX(-1);
 }
 
 .letterFormbodyTxt {
