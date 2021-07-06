@@ -1269,6 +1269,12 @@
         ($("#restart-btn").on("click", function(){
           e.resetGame();
         })),
+        ($("#cancel-btn").on("click", function(){
+          e.cancleHandler();
+        })),
+        (e.cancleHandler = function(){
+          $("#msg-ovelay").addClass("hidden");
+        }),
 
         (e.resetGame = function(){
           e.totalCorrectAns = 0;
