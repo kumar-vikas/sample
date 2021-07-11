@@ -29,7 +29,7 @@ class PreWriting extends Component {
 
   render() {
     return (
-      <div className="activity-base" id="act-base-letterForm">
+      <div className="activity-base" id="act-base-prewriting">
         <div className="activity-base-inner">
           <div className="activity-head">
             <a className="btn-icon oragnge-btn info-btn">

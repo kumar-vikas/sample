@@ -23,8 +23,8 @@ class PrintableComponent extends Component{
 
     render(){
         return(
-    	<div className="activity-base">
-  			<img alt="" src={pencilImg} className="pencile-image"/>
+    	<div className="activity-base" id="act-base-printable">
+  			{/* <img alt="" src={pencilImg} className="pencile-image"/> */}
 			<div className="activity-base-inner">
 				<div className="activity-head">
 				<a className="btn-icon oragnge-btn info-btn">

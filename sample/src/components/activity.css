@@ -3,7 +3,7 @@
   max-width: 1294px;
   margin: 0 auto;
   overflow: hidden;
-  background: url(../images/activity-bg-image.jpg);
+  background: url(../images/BG-images/pre-cur-a-bg-2.jpg);
   height: 813px;
   background-size: 100% 100%;
   position: relative;
@@ -14,7 +14,17 @@
   background-size: 100% 100%;
 }
 
+#act-base-prewriting{
+  background: url(../images/bg-p5-pre-writing.jpg);
+  background-size: 100% 100%;
+}
+
 #act-base-letterForm {
+  background: url(../images/bg-p5-pre-writing.jpg);
+  background-size: 100% 100%;
+}
+
+#act-base-printable{
   background: url(../images/bg-p5-pre-writing.jpg);
   background-size: 100% 100%;
 }
