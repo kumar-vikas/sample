@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import MemoTest from "./Test";
 import "./practice.css";
-import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import vidIcon538 from "../images/vidIcon-538.png";
 import pat1 from "../images/pat-1-bg.png";
@@ -53,7 +52,6 @@ function PreWritingPractice(props) {
 
   return (
     <div className="activity-base" id="act-base-prePrac">
-      <img alt="" src={pencilImg} className="pencile-image" />
       <div className="dailoug-block-img">
         <img alt="" src="assets/images/dialog-1.png" />
       </div>
