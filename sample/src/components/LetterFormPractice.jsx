@@ -29,7 +29,7 @@ function LetterFormPractice(props) {
       </MyConsumer>
     );
   }
-
+  console.log("AAAAAA", wPage);
   return (
     <div className="activity-base" id="act-base-prePrac">
       <img alt="" src={pencilImg} className="pencile-image" />
