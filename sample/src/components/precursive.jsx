@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import "./activity.css";
 import "./theme.css";
-import pencilImg from "../images/pencil-big.png"
+import bgImgA from "../images/BG-images/pre-cur-a-bg-2.png"
+import bgImgB from "../images/BG-images/pre-cur-b-bg-2.png"
+import bgImgC from "../images/BG-images/pre-cur-c-bg-2.png"
+import bgImgD from "../images/BG-images/pre-cur-d-bg-2.png"
 import act1 from "../images/act-1.png";
 import act2 from "../images/act-2.png";
 import infoBtn from "../images/info-btn.png";
@@ -16,6 +19,7 @@ class Precursive extends Component{
     constructor(props){
         super(props);
 		this.func = null;
+		this.actTab = null;
         //this.videoRef = React.createRef();
         this.state = {
             src:this.props.src,
@@ -25,12 +29,21 @@ class Precursive extends Component{
 			infDiagVis:'none'
         }
 
+		this.getImg = {
+			A:bgImgA,
+			B:bgImgB,
+			C:bgImgC,
+			D:bgImgD
+		}
     }
     
 	componentDidMount(){
 		this.props.setVisibility(this.props.history);
 		
 		if(this.state.name) this.func(this.state.name);
+		
+		console.log(this.actTab, " -*-*-*-*-*-*-")
+		//if(this.actTab) document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url("+this.getImg[this.actTab]+")";
 	}
 
 	componentWillReceiveProps(props, state){
@@ -51,6 +64,7 @@ class Precursive extends Component{
 		  {
 		  (a) => {
 				this.func = a.func;
+				this.actTab = a.activeTab;
 			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
 		  }
 		}
@@ -60,8 +74,7 @@ class Precursive extends Component{
     render() {
         return (
 
-			<div className="activity-base">
-  	<img alt="" src={pencilImg} className="pencile-image"/>
+			<div className="activity-base" style={{backgroundImage: "url("+this.getImg[this.actTab]+")"}}>
   	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
 	</div>

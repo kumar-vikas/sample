@@ -3,14 +3,14 @@
   max-width: 1294px;
   margin: 0 auto;
   overflow: hidden;
-  background: url(../images/BG-images/pre-cur-a-bg-2.jpg);
+  /* background: url(../images/BG-images/pre-cur-a-bg-2.jpg); */
   height: 813px;
   background-size: 100% 100%;
   position: relative;
 }
 
 #act-base-prePrac {
-  background: url(../images/activity-bg-image-2.jpg);
+  /* background-image: var(--backImage); */
   background-size: 100% 100%;
 }
 

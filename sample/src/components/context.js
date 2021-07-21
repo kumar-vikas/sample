@@ -15,11 +15,11 @@ class MyProvider extends Component {
   }
 
   updateContextTab = (_a) => {
-    this.setState({activeTab:_a}, this.getState);    
+    this.setState({activeTab:_a}, this.getState);
   }
 
   getState(){
-    console.log(this.state)
+    console.log(this.state);
   }
   
   render () {
