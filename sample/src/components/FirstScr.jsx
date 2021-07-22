@@ -16,11 +16,12 @@ class FirstScr extends Component {
     return (
       this.props.state.subList &&
       this.props.state.subList.map((cur) => (
-        <div className="chaper-name small">
-          Cursive {cur.name}
-          <span className="btn-icon small oragnge-btn">
+        <div className="btn-wrappper">
+          <a className="chaper-name">Cursive {cur.name}</a>
+          <a className="animated main-menu-btn btn-icon blue-btn" onClick={(e) => this.setToState(e)}>
             <img alt="" src={playBtn} />
-          </span>
+          </a>
+          <div className="small-btn-wrap"></div>
         </div>
       ))
     );
@@ -74,10 +75,7 @@ class FirstScr extends Component {
                   >
                     <div className="btn-wrappper">
                       <a className="chaper-name">Pre-Cursive {curVal.name}</a>
-                      <a
-                        className="animated main-menu-btn btn-icon blue-btn"
-                        onClick={(e) => this.setToState(e)}
-                      >
+                      <a className="animated main-menu-btn btn-icon blue-btn" onClick={(e) => this.setToState(e)}>
                         <img alt="" src={playBtn} />
                       </a>
                       <div className="small-btn-wrap"></div>
@@ -85,9 +83,7 @@ class FirstScr extends Component {
                   </NavLink>
                 ))}
             </div>
-            <div className="subToc">
-              {this.fetchContent() /* this.state.subToc ? this.fetchContent() : "" */}
-            </div>
+            <div className="subToc">{this.fetchContent() /* this.state.subToc ? this.fetchContent() : "" */}</div>
           </div>
         </div>
       </div>
