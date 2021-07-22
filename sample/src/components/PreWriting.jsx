@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import pencilImg from "../images/pencil-big.png";
 import animationImg from "../images/animation.png";
 import infoBtn from "../images/info-btn.png";
-import actbg from "../images/act-1.png";
 import circleIcon1 from "../images/circle-1.png";
 import circleIcon2 from "../images/circle-2.png";
 import circleIcon3 from "../images/circle-3.png";
@@ -15,6 +13,7 @@ import { MyConsumer } from "./context";
 class PreWriting extends Component {
   constructor(props) {
     super(props);
+    this.actImg = null;
   }
 
   componentDidMount() {
@@ -22,14 +21,21 @@ class PreWriting extends Component {
   }
 
   abc() {
-    return (
-      <MyConsumer>{(a) => <p className="activity-name">Pre-Cursive {a.activeTab}</p>}</MyConsumer>
-    );
+    return <MyConsumer>
+      {
+        (a) =>{
+          if(a.getImg[a.activeTab] != undefined){
+            this.actImg = a.getImg[a.activeTab].a2;
+          }
+          return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+        }
+      }
+      </MyConsumer>    
   }
 
   render() {
     return (
-      <div className="activity-base" id="act-base-prewriting">
+      <div className="activity-base" style={{backgroundImage: "url("+this.actImg+")"}}>
         <div className="activity-base-inner">
           <div className="activity-head">
             <a className="btn-icon oragnge-btn info-btn">

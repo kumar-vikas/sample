@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import "./activity.css";
 import "./theme.css";
-import bgImgA from "../images/BG-images/pre-cur-a-bg-2.png"
-import bgImgB from "../images/BG-images/pre-cur-b-bg-2.png"
-import bgImgC from "../images/BG-images/pre-cur-c-bg-2.png"
-import bgImgD from "../images/BG-images/pre-cur-d-bg-2.png"
 import act1 from "../images/act-1.png";
 import act2 from "../images/act-2.png";
 import infoBtn from "../images/info-btn.png";
@@ -19,7 +15,7 @@ class Precursive extends Component{
     constructor(props){
         super(props);
 		this.func = null;
-		this.actTab = null;
+		this.actImg = null;
         //this.videoRef = React.createRef();
         this.state = {
             src:this.props.src,
@@ -28,22 +24,12 @@ class Precursive extends Component{
 			help:"If you need help. Click on the information button.",
 			infDiagVis:'none'
         }
-
-		this.getImg = {
-			A:bgImgA,
-			B:bgImgB,
-			C:bgImgC,
-			D:bgImgD
-		}
     }
     
 	componentDidMount(){
 		this.props.setVisibility(this.props.history);
 		
 		if(this.state.name) this.func(this.state.name);
-		
-		console.log(this.actTab, " -*-*-*-*-*-*-")
-		//if(this.actTab) document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url("+this.getImg[this.actTab]+")";
 	}
 
 	componentWillReceiveProps(props, state){
@@ -64,7 +50,9 @@ class Precursive extends Component{
 		  {
 		  (a) => {
 				this.func = a.func;
-				this.actTab = a.activeTab;
+				if(a.getImg[a.activeTab] != undefined){
+					this.actImg = a.getImg[a.activeTab].a1;
+				}
 			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
 		  }
 		}
@@ -74,7 +62,7 @@ class Precursive extends Component{
     render() {
         return (
 
-			<div className="activity-base" style={{backgroundImage: "url("+this.getImg[this.actTab]+")"}}>
+			<div className="activity-base" style={{backgroundImage: "url("+this.actImg+")"}}>
   	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
 	</div>
