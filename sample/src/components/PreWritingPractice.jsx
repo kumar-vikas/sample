@@ -57,7 +57,7 @@ function PreWritingPractice(props) {
     return <MyConsumer>
       {
         (a) =>{
-          actImg = a.getImg[a.activeTab].a3;
+          actImg = a.getImg[a.activeTab].a4;
           return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
         }
       }

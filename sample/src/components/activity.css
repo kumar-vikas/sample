@@ -9,18 +9,6 @@
   position: relative;
 }
 
-#act-base-prePrac {
-  background-size: 100% 100%;
-}
-
-#act-base-letterForm {
-  background-size: 100% 100%;
-}
-
-#act-base-printable{
-  background-size: 100% 100%;
-}
-
 .activity-base-inner {
   max-width: 100%;
   padding: 20px 0 0 0;
@@ -350,7 +338,7 @@
 
 #letterFormvidCont {
   position: relative;
-  top: 330px;
+  top: 300px;
   left: -150px;
   text-align: left;
   width: 755px;

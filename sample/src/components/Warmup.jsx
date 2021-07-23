@@ -1,13 +1,14 @@
 import React, {Component} from "react";
 import animationImg from "../images/animation.png";
-import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import info143 from "../images/info-i143.png"
+import { MyConsumer } from './context';
 
 class Warmup extends Component{
     constructor(props){
         super(props);
-        
+        this.func = null;
+		this.actImg = null;
 		this.state = {
             src:this.props.src,
             visible:'none',
@@ -53,17 +54,31 @@ class Warmup extends Component{
 		this.setState({infDiagVis:this.vis})
 	}
 
+	abc(){
+		return <MyConsumer>
+		  {
+		  (a) => {
+				this.func = a.func;
+				if(a.getImg[a.activeTab] != undefined){
+					this.actImg = a.getImg[a.activeTab].a2;
+				}
+			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+		  }
+		}
+		</MyConsumer>
+	  }
+
     render(){
         return(
-            <div className="activity-base" id="act-base-letterForm">
+            <div className="activity-base" style={{backgroundImage: "url("+this.actImg+")"}}>
   	
   	<div className="activity-base-inner">
   		<div className="activity-head">
 		  <a className="btn-icon oragnge-btn info-btn" onClick={this.openDialog}>
 		    <img alt="" src={infoBtn}/>
 		  </a>
-		  <div className="activity-name-block">
-		    <p className="activity-name">Pre-Cursive A</p>
+		  <div className="activity-Title">
+		  	{this.abc()}
 		  </div>
 		 {/*  <a href="#" className="btn-icon oragnge-btn play-btn">
 		    <img alt="" src="assets/images/play-btn.png"/>

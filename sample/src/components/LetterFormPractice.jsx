@@ -9,6 +9,7 @@ import { MyConsumer } from "./context";
 
 function LetterFormPractice(props) {
   var func = null;
+  var actImg = null;
 
   var obj = {
     path: "assets/Letter Writing/Small Cursive/",
@@ -17,6 +18,7 @@ function LetterFormPractice(props) {
 
   useEffect(() => {
     props.setVisibility(props.history);
+    document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url("+actImg+")";
   }, []);
 
   function abc() {
@@ -24,6 +26,9 @@ function LetterFormPractice(props) {
       <MyConsumer>
         {(a) => {
           func = a.func;
+          if(a.getImg[a.activeTab] != undefined){
+            actImg = a.getImg[a.activeTab].a4;
+          }
           return <p className="activity-name">Pre-Cursive {a.activeTab}</p>;
         }}
       </MyConsumer>
@@ -31,7 +36,7 @@ function LetterFormPractice(props) {
   }
   console.log("AAAAAA", wPage);
   return (
-    <div className="activity-base" id="act-base-prePrac">
+    <div className="activity-base">
       <img alt="" src={pencilImg} className="pencile-image" />
       <div className="dailoug-block-img">
         <img alt="" src="assets/images/dialog-1.png" />
