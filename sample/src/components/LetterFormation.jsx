@@ -1,15 +1,13 @@
 import { useEffect } from 'react';
 import MemoTest from "./Test";
 import "./practice.css";
-import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import penIcon from "../images/pencil-621.png";
-import vidIcon538 from "../images/vidIcon-538.png";
 import { NavLink } from 'react-router-dom';
 import { MyConsumer } from './context';
 
 function LetterFormation(props){
-
+	var actImg = null;
 	const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
 	var func = null;
 	var obj = {
@@ -29,6 +27,7 @@ function LetterFormation(props){
 
 	useEffect(()=>{
 		props.setVisibility(props.history);
+		document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url("+actImg+")";
 	}, [])
 
 	function fetchVideo(e){
@@ -45,6 +44,9 @@ function LetterFormation(props){
 		  {
 		  (a) => {
 				func = a.func;
+				if(a.getImg[a.activeTab] != undefined){
+					actImg = a.getImg[a.activeTab].a2;
+				}
 			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
 		  }
 		}
@@ -52,7 +54,7 @@ function LetterFormation(props){
 	  }
 
     return(
-        <div className="activity-base" id="act-base-letterForm">
+        <div className="activity-base">
   	{/* <img alt="" src={pencilImg} className="pencile-image"/> */}
   	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
