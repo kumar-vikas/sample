@@ -41,7 +41,7 @@ class PreWriting extends Component {
             <a className="btn-icon oragnge-btn info-btn">
               <img alt="" src={infoBtn} />
             </a>
-            <div className="activity-name-block">{this.abc()}</div>
+            <div className="activity-Title">{this.abc()}</div>
           </div>
           <div className="activity-folder">
             <div className="activity-folder-bg activity-3-wrap">

@@ -41,7 +41,7 @@ function LetterFormPractice(props) {
           <a className="btn-icon oragnge-btn info-btn">
             <img alt="" src={infoBtn} />
           </a>
-          <div className="activity-name-block">{abc()}</div>
+          <div className="activity-Title">{abc()}</div>
         </div>
 
         <div className="letterFormbodyTxt">Letter Formation</div>

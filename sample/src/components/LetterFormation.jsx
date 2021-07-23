@@ -62,7 +62,7 @@ function LetterFormation(props){
 		  <a className="btn-icon oragnge-btn info-btn">
 		    <img alt="" src={infoBtn}/>
 		  </a>
-		  <div className="activity-name-block">
+		  <div className="activity-Title">
 			  {abc()}
 		    {/* <p className="activity-name">Pre-Cursive</p> */}
 		  </div>

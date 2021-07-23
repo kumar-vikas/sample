@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import bgImgA from "../images/BG-images/pre-cur-a-bg-2.png"
-import bgImgA2 from "../images/BG-images/pre-cur-a-bg-5.jpg"
+import bgImgA2 from "../images/BG-images/pre-cur-a-bg-5.png"
+import bgImgA3 from "../images/BG-images/pre-cur-a-bg-6.png"
 
 import bgImgB from "../images/BG-images/pre-cur-b-bg-2.png"
 import bgImgB2 from "../images/BG-images/pre-cur-b-bg-5.png"
@@ -25,7 +26,7 @@ class MyProvider extends Component {
       func: this.updateContextTab,
 
       getImg: {
-        A:{a1: bgImgA, a2:bgImgA2},
+        A:{a1: bgImgA, a2:bgImgA2, a3:bgImgA3},
         B:{a1: bgImgB, a2:bgImgB2},
         C:{a1: bgImgC, a2:bgImgC2},
         D:{a1: bgImgD, a2:bgImgD2},

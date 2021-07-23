@@ -71,9 +71,8 @@ class Precursive extends Component{
 		  <a className="btn-icon oragnge-btn info-btn" onClick={this.openDialog}>
 		    <img alt="" src={infoBtn}/>
 		  </a>
-		  <div className="activity-name-block">
+		  <div className="activity-Title">
 			  {this.abc()}
-		    {/* <p className="activity-name">Pre-Cursive {this.state.name}</p> */}
 		  </div>
 		  {/* <a href="#" className="btn-icon oragnge-btn play-btn">
 		    <img alt="" src="assets/images/play-btn.png"/>

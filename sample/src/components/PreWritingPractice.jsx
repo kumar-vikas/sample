@@ -12,6 +12,8 @@ import pat5 from "../images/pat-5-bg.png";
 import { MyConsumer } from "./context";
 
 function PreWritingPractice(props) {
+  var actImg = null;
+
   const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
   const bgimgs = [pat1, pat2, pat3, pat4, pat5];
   var bgimg = bgimgs[parseInt(pattern.split("-")[1]) - 1];
@@ -31,6 +33,7 @@ function PreWritingPractice(props) {
 
   useEffect(() => {
     props.setVisibility(props.history);
+    document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url("+actImg+")";
   }, []);
 
   function fetchVideo(e) {
@@ -44,14 +47,25 @@ function PreWritingPractice(props) {
     console.log(cPath, " ========================");
   }
 
-  function abc() {
+  /* function abc() {
     return (
       <MyConsumer>{(a) => <p className="activity-name">Pre-Cursive {a.activeTab}</p>}</MyConsumer>
     );
+  } */
+
+  function abc() {
+    return <MyConsumer>
+      {
+        (a) =>{
+          actImg = a.getImg[a.activeTab].a3;
+          return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+        }
+      }
+      </MyConsumer>    
   }
 
   return (
-    <div className="activity-base" id="act-base-prePrac">
+    <div className="activity-base" >
       <div className="dailoug-block-img">
         <img alt="" src="assets/images/dialog-1.png" />
       </div>
@@ -60,7 +74,7 @@ function PreWritingPractice(props) {
           <a className="btn-icon oragnge-btn info-btn">
             <img alt="" src={infoBtn} />
           </a>
-          <div className="activity-name-block">
+          <div className="activity-Title">
             {abc()}
             {/* <p className="activity-name">Pre-Cursive</p> */}
           </div>

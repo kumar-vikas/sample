@@ -16,6 +16,13 @@ class FirstScr extends Component {
     return (
       this.props.state.subList &&
       this.props.state.subList.map((cur) => (
+        <NavLink
+          to={{
+            pathname: "/precursive",
+            name: cur.name,
+            updateActiveTab: this.props.updateActiveTab,
+          }}
+        >
         <div className="btn-wrappper">
           <a className="chaper-name">Cursive {cur.name}</a>
           <a className="animated main-menu-btn btn-icon blue-btn" onClick={(e) => this.setToState(e)}>
@@ -23,6 +30,7 @@ class FirstScr extends Component {
           </a>
           <div className="small-btn-wrap"></div>
         </div>
+        </NavLink>
       ))
     );
 

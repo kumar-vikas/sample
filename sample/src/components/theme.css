@@ -46,6 +46,7 @@ body {
   position: relative;
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 
 .book-name {
@@ -113,10 +114,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 53px 285px 0px 0;
+  margin: 63px 270px 0px 0;
 }
 .activity-head > * {
   margin: 0 4px;
+}
+.activity-Title{
+  width: 320px;
 }
 .activity-name-block {
   background: #accf46;
@@ -234,6 +238,7 @@ body {
 /**** Button and Icon *****/
 .info-btn {
   cursor: pointer;
+  margin-right: 19px;
 }
 .btn-icon,
 .btn-icon:hover,
@@ -316,9 +321,9 @@ body {
   text-align: center;
 }
 .activity-bubble {
-  /* background: #87d6f7;
+  background: #87d6f7;
   border: 2px solid #68bbe8;
-  padding: 8px; */
+  padding: 8px;
 }
 
 .activity-bubble.left .activity-icon-wrap {
