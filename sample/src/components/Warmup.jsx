@@ -59,10 +59,14 @@ class Warmup extends Component{
 		  {
 		  (a) => {
 				this.func = a.func;
-				if(a.getImg[a.activeTab] != undefined){
-					this.actImg = a.getImg[a.activeTab].a2;
+				if(a.activeTab != null){
+					var cc = a.activeTab.replace(" ", "");
+					if(cc.includes("-")){
+						cc = cc.replace("-", "");
+					}
+					this.actImg = a.getImg[cc].a1;
 				}
-			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+			  return <p className="activity-name">{a.activeTab}</p>
 		  }
 		}
 		</MyConsumer>

@@ -24,7 +24,7 @@ class FirstScr extends Component {
           }}
         >
         <div className="btn-wrappper">
-          <a className="chaper-name">Cursive {cur.name}</a>
+          <a className="chaper-name">{cur.name}</a>
           <a className="animated main-menu-btn btn-icon blue-btn" onClick={(e) => this.setToState(e)}>
             <img alt="" src={playBtn} />
           </a>
@@ -82,7 +82,7 @@ class FirstScr extends Component {
                     }}
                   >
                     <div className="btn-wrappper">
-                      <a className="chaper-name">Pre-Cursive {curVal.name}</a>
+                      <a className="chaper-name">{curVal.name}</a>
                       <a className="animated main-menu-btn btn-icon blue-btn" onClick={(e) => this.setToState(e)}>
                         <img alt="" src={playBtn} />
                       </a>

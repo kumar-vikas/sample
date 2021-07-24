@@ -24,8 +24,12 @@ class PreWriting extends Component {
     return <MyConsumer>
       {
         (a) =>{
-          if(a.getImg[a.activeTab] != undefined){
-            this.actImg = a.getImg[a.activeTab].a2;
+          if(a.activeTab != null){
+            var cc = a.activeTab.replace(" ", "");
+            if(cc.includes("-")){
+              cc = cc.replace("-", "");
+            }
+            this.actImg = a.getImg[cc].a2;
           }
           return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
         }

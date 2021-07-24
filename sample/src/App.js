@@ -21,10 +21,10 @@ import MyProvider from "./components/context";
 function App(props) {
   const [state, setState] = useState({visible:false, history:null,
     nameList:[
-      {"name":"A", "video":"path"},
-      {"name":"B"},
-      {"name":"C"},
-      {"name":"D"},
+      {"name":"Pre-Cursive A", "video":"path"},
+      {"name":"Pre-Cursive B"},
+      {"name":"Pre-Cursive C"},
+      {"name":"Pre-Cursive D"},
       /* {"name":"E"},
       {"name":"F"},
       {"name":"G"},
@@ -49,12 +49,12 @@ function App(props) {
       {"name":"Z"} */
     ],
     subList:[
-      {"name":"A", "video":"path"},
-      {"name":"B"},
-      {"name":"C"},
-      {"name":"D"},
-      {"name":"E"},
-      {"name":"F"}
+      {"name":"Cursive A", "video":"path"},
+      {"name":"Cursive B"},
+      {"name":"Cursive C"},
+      {"name":"Cursive D"},
+      {"name":"Cursive E"},
+      {"name":"Cursive F"}
     ],
     activeTab: null
   });

@@ -44,8 +44,12 @@ function LetterFormation(props){
 		  {
 		  (a) => {
 				func = a.func;
-				if(a.getImg[a.activeTab] != undefined){
-					actImg = a.getImg[a.activeTab].a3;
+				if(a.activeTab != null){
+					var cc = a.activeTab.replace(" ", "");
+					if(cc.includes("-")){
+						cc = cc.replace("-", "");
+					}
+					actImg = a.getImg[cc].a3;
 				}
 			  return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
 		  }

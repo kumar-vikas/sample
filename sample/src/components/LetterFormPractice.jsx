@@ -26,8 +26,12 @@ function LetterFormPractice(props) {
       <MyConsumer>
         {(a) => {
           func = a.func;
-          if(a.getImg[a.activeTab] != undefined){
-            actImg = a.getImg[a.activeTab].a4;
+          if(a.activeTab != null){
+            var cc = a.activeTab.replace(" ", "");
+            if(cc.includes("-")){
+              cc = cc.replace("-", "");
+            }
+            actImg = a.getImg[cc].a4;
           }
           return <p className="activity-name">Pre-Cursive {a.activeTab}</p>;
         }}
