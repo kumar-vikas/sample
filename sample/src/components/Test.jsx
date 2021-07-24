@@ -14,7 +14,7 @@ function Test(props) {
     color: "#0000ff",
     width: 5,
   };
-  console.log(props.canprops.backImg);
+  
   const [can, setCan] = useState(null);
 
   var canStyle = {

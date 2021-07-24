@@ -16,6 +16,11 @@ class Precursive extends Component{
         super(props);
 		this.func = null;
 		this.actImg = null;
+		this.nextLink = "/LetterFormation";
+		this.disAr= []
+
+		this.currentTabName = null;
+		this.disabledArr = [];
         //this.videoRef = React.createRef();
         this.state = {
             src:this.props.src,
@@ -52,11 +57,38 @@ class Precursive extends Component{
 				this.func = a.func;
 				
 				if(a.activeTab != null){
+					this.currentTabName = a.activeTab;
+
 					var cc = a.activeTab.replace(" ", "");
 					if(cc.includes("-")){
 						cc = cc.replace("-", "");
 					}
 					this.actImg = a.getImg[cc].a1;
+					
+					this.nextLink = "/LetterFormation"
+					if(cc == "PreCursiveB"){
+						this.nextLink = "/UpperLowerScreen";
+					}
+
+					if(a.activeTab.startsWith("Pre")){
+						this.disabledArr = a.data.nameList;
+					}else{
+						this.disabledArr = a.data.subList;
+					}
+
+					// disabling
+					this.disAr = [];
+					for(var i=0; i<this.disabledArr.length; i++){
+						
+						if(this.disabledArr[i].name == this.currentTabName){
+							this.disArr = this.disabledArr[i].disabled;
+							break;
+						}
+					}
+
+					this.disArr.forEach(element => {
+						if(document.getElementById(element)) document.getElementById(element).classList.add("disabled");
+					})
 				}
 			  return <p className="activity-name">{a.activeTab}</p>
 		  }
@@ -99,8 +131,7 @@ class Precursive extends Component{
   				<div className="flex activity-1">
 		  			<div className="activity-assets">						
 						<div className="activity-assets-block">
-
-						<NavLink to="PreWriting">
+						<NavLink to="PreWriting" id="preWriting">
 							<div className="activity-bubble circle text">
 							<div className="">
 							<img alt="" src={act1}/>
@@ -110,12 +141,11 @@ class Precursive extends Component{
 							<p className="activity-name medium">Pre-Writing</p>
 							</div>
 						</NavLink>
-
 						</div>					  					  
 					</div>
 
 					<div className="activity-assets-block top">
-						<NavLink to="/Warmup">
+						<NavLink to="/Warmup" id="warmUp">
 							<div className="activity-name-block type3">
 							<p className="activity-name medium">Warm-Up</p>
 							</div>
@@ -128,18 +158,9 @@ class Precursive extends Component{
 					</div>
 					
 					<div className="activity-assets">
-					  {/* <div className="activity-bubble left">
-					    <div className="activity-icon-wrap">
-					      <div className="activity-icon-block">
-					         <img alt="" src={animationImg}/>
-					      </div>
-					      <div className="activity-name-block type4">
-					        <p className="activity-name small">Animations</p>
-					      </div>
-					    </div>
-					  </div> */}
+					  
 					<div className="activity-assets-block">
-						<NavLink to="/LetterFormation">
+						<NavLink to={this.nextLink} id="letterFormation">
 							<div className="activity-bubble circle text">
 								<div className="">
 								<img alt="" src={act2}/>
@@ -150,20 +171,11 @@ class Precursive extends Component{
 							</div>
 						</NavLink>
 					</div>
-					  {/* <div className="activity-bubble right">
-					    <div className="activity-icon-wrap">
-					      <div className="activity-icon-block">
-					         <img alt="" src={activityImg}/>
-					      </div>
-					      <div className="activity-name-block type4">
-					        <p className="activity-name small">Activities</p>
-					      </div>
-					    </div>
-					  </div> */}
+
 					</div>
 				</div>
 				<div className="activity-footer">
-					<NavLink to="/GameComponent">
+					<NavLink to="/GameComponent" id="games">
 					<div className="activity-icon-wrap">
 				      <div className="activity-icon-block type2">
 				         <img alt="" src={gameImg}/>

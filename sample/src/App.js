@@ -11,6 +11,7 @@ import PrintableComponent from "./components/PrintableComponent";
 import PreWritingPractice from "./components/PreWritingPractice";
 import LetterFormation from './components/LetterFormation';
 import LetterFormPractice from './components/LetterFormPractice';
+import UpperLowerScreen from './components/UpperLowerScreen';
 import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
@@ -21,10 +22,10 @@ import MyProvider from "./components/context";
 function App(props) {
   const [state, setState] = useState({visible:false, history:null,
     nameList:[
-      {"name":"Pre-Cursive A", "video":"path"},
-      {"name":"Pre-Cursive B"},
-      {"name":"Pre-Cursive C"},
-      {"name":"Pre-Cursive D"},
+      {"name":"Pre-Cursive A", "disabled":[]},
+      {"name":"Pre-Cursive B", "disabled":[]},
+      {"name":"Pre-Cursive C", "disabled":["letterFormation", "games", "warmUp", "preWriting"]},
+      {"name":"Pre-Cursive D", "disabled":["letterFormation", "games", "warmUp", "preWriting"]},
       /* {"name":"E"},
       {"name":"F"},
       {"name":"G"},
@@ -49,12 +50,12 @@ function App(props) {
       {"name":"Z"} */
     ],
     subList:[
-      {"name":"Cursive A", "video":"path"},
-      {"name":"Cursive B"},
-      {"name":"Cursive C"},
-      {"name":"Cursive D"},
-      {"name":"Cursive E"},
-      {"name":"Cursive F"}
+      {"name":"Cursive A", "disabled":["preWriting"]},
+      {"name":"Cursive B", "disabled":["preWriting"]},
+      {"name":"Cursive C", "disabled":["preWriting"]},
+      {"name":"Cursive D", "disabled":["preWriting"]},
+      {"name":"Cursive E", "disabled":["letterFormation", "games", "warmUp", "preWriting"]},
+      {"name":"Cursive F", "disabled":["letterFormation", "games", "warmUp", "preWriting"]}
     ],
     activeTab: null
   });
@@ -226,6 +227,18 @@ function App(props) {
               props.state = state;
               props.updateActiveTab = updateActiveTab;
               return <PrintableComponent {...props}/>
+              }}
+            /* component={Precursive} */
+        />
+
+        <Route 
+          path={"/UpperLowerScreen"}
+            exact={true}
+            render = {(props)=>{
+              props.setVisibility = setVisibility;
+              props.state = state;
+              props.updateActiveTab = updateActiveTab;
+              return <UpperLowerScreen {...props}/>
               }}
             /* component={Precursive} */
         />

@@ -90,7 +90,7 @@ class MyProvider extends Component {
   }
 
   getState(){
-    console.log(this.state);
+    //console.log(this.state);
   }
   
   render () {

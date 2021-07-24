@@ -31,7 +31,7 @@ class PreWriting extends Component {
             }
             this.actImg = a.getImg[cc].a2;
           }
-          return <p className="activity-name">Pre-Cursive {a.activeTab}</p>
+          return <p className="activity-name">{a.activeTab}</p>
         }
       }
       </MyConsumer>    

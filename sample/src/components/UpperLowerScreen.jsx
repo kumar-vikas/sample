@@ -1,17 +1,14 @@
 import { useEffect } from 'react';
-import MemoTest from "./Test";
 import "./practice.css";
 import infoBtn from "../images/info-btn.png";
-import penIcon from "../images/pencil-621.png";
+import upperBtn from "../images/upper.png";
+import lowerBtn from "../images/lower.png";
 import { NavLink } from 'react-router-dom';
 import { MyConsumer } from './context';
 
-function LetterFormation(props){
+function UpperLowerScreen(props){
 	var actImg = null;
-	const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
 	var func = null;
-	
-	var letterArrsmall = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 	useEffect(()=>{
 		props.setVisibility(props.history);
@@ -38,7 +35,6 @@ function LetterFormation(props){
 
     return(
         <div className="activity-base">
-  	{/* <img alt="" src={pencilImg} className="pencile-image"/> */}
   	<div className="dailoug-block-img">
 	 	<img alt="" src="assets/images/dialog-1.png"/>
 	</div>
@@ -53,22 +49,16 @@ function LetterFormation(props){
 		  </div>
 		</div>
 
-		<div className="letterFormText">Letter Formation - Lower Case</div>
+		<div className="letterFormText">Letter Formation</div>
 		<div id="letterCont">
-
-			{
-				letterArrsmall.map(
-					(cur)=>(
-						<NavLink key={cur} to={{pathname:"/LetterFormPractice", curLetter:cur, case:props.location.case}}>
-							<button className="letterBtn">
-								{cur}
-								<img src={penIcon} alt="" />
-							</button>
-						</NavLink>
-					)
-				)
-			}
-			
+			<div className="upperLowerCont">
+				<NavLink to={{pathname:"/LetterFormation", case:"lower"}}>
+					<div><img src={lowerBtn} alt="" />Lower Case</div>
+				</NavLink>
+				<NavLink to={{pathname:"/LetterFormation", case:"upper"}}>
+					<div><img src={upperBtn} alt="" />Upper Case</div>
+				</NavLink>
+			</div>
 			
 		</div>
 
@@ -77,4 +67,4 @@ function LetterFormation(props){
     )
 }
 
-export default LetterFormation;
+export default UpperLowerScreen;
