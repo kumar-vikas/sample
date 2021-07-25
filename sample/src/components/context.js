@@ -3,6 +3,7 @@ import bgImgA from "../images/BG-images/pre-cur-a-bg-2.png"
 import bgImgA2 from "../images/BG-images/pre-cur-a-bg-5.png"
 import bgImgA3 from "../images/BG-images/pre-cur-a-bg-7.png"
 import bgImgA4 from "../images/BG-images/pre-cur-a-bg-8.png"
+import bgImgA5 from "../images/BG-images/pre-cur-a-bg-11.png"
 
 import bgImgB from "../images/BG-images/pre-cur-b-bg-2.png"
 import bgImgB2 from "../images/BG-images/pre-cur-b-bg-5.png"
@@ -69,7 +70,7 @@ class MyProvider extends Component {
       func: this.updateContextTab,
 
       getImg: {
-        PreCursiveA:{a1: bgImgA, a2:bgImgA2, a3:bgImgA3, a4:bgImgA4},
+        PreCursiveA:{a1: bgImgA, a2:bgImgA2, a3:bgImgA3, a4:bgImgA4, a5:bgImgA5},
         PreCursiveB:{a1: bgImgB, a2:bgImgB2, a3:bgImgB3, a4:bgImgB4},
         PreCursiveC:{a1: bgImgC, a2:bgImgC2, a3:bgImgC3, a4:bgImgC4},
         PreCursiveD:{a1: bgImgD, a2:bgImgD2, a3:bgImgD3, a4:bgImgD4},

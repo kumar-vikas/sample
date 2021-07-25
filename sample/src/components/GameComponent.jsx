@@ -7,12 +7,15 @@ import { MyConsumer } from './context';
 
 class GameComponent extends Component{
     constructor(props){
-        super(props);				
+        super(props);
+
+		this.actImg = null;
     }
 
 	componentDidMount(){
 		this.props.setVisibility(this.props.history);
 	}
+
 	componentWillReceiveProps(props, state){
 		if(props.location.name != null){
 			if(this.state.name != props.state.activeTab){
@@ -20,6 +23,23 @@ class GameComponent extends Component{
 			}
 		}
 	}
+
+	abc() {
+		return <MyConsumer>
+		  {
+			(a) =>{
+			  if(a.activeTab != null){
+				var cc = a.activeTab.replace(" ", "");
+				if(cc.includes("-")){
+				  cc = cc.replace("-", "");
+				}
+				this.actImg = a.getImg[cc].a5;
+			  }
+			  return <p className="activity-name">{a.activeTab}</p>
+			}
+		  }
+		  </MyConsumer>    
+	  }
 		
 	getTabName(){
 		var tname="";
@@ -33,14 +53,14 @@ class GameComponent extends Component{
     render(){
 			var gamePath = "assets/Game/"+this.getTabName()+"/index.html";
 			return(
-    	<div className="activity-base" id="act-base-letterForm">
+    	<div className="activity-base" style={{backgroundImage: "url("+this.actImg+")"}}>
 			<div className="activity-base-inner">
 				<div className="activity-head">
 				<a className="btn-icon oragnge-btn info-btn">
 					<img alt="" src={infoBtn}/>
 				</a>
-				<div className="activity-name-block">
-					<p className="activity-name">Pre-Cursive A</p>
+				<div className="activity-Title">
+					{this.abc()}
 				</div>
 				</div>
 				<div className="gameIcon">
