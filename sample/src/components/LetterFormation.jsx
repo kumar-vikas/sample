@@ -61,6 +61,18 @@ function LetterFormation(props){
 		<div className="letterFormText">Letter Formation - Lower Case</div>
 		<div id="letterCont">
 
+			{/* {
+				letterArrsmall.map(
+					(cur)=>(
+						<NavLink key={cur} to={{pathname:"/LetterFormPractice", curLetter:cur, case:props.location.case}}>
+							<button className="letterBtn">
+								{cur}
+								<img src={penIcon} alt="" />
+							</button>
+						</NavLink>
+					)
+				)
+			} */}
 			{
 				letterArrsmall.map(
 					(cur)=>(
@@ -72,6 +84,7 @@ function LetterFormation(props){
 						</NavLink>
 					)
 				)
+
 			}
 			
 			
