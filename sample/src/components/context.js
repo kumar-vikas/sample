@@ -82,7 +82,7 @@ class MyProvider extends Component {
         CursiveF:{a1: cursiveF, a2:cursiveF2, a3:cursiveF3, a4:cursiveF4, a5:cursiveF5}
       }
 
-    }    
+    }
   }
 
   updateContextTab = (_a) => {

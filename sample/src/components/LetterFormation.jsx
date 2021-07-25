@@ -37,14 +37,8 @@ function LetterFormation(props){
 	}
 
 	function getLetterCase(_cur){
-		return <MyConsumer>
-		  {
-		  (a) => {
-			_cur = props.location.case == "upper" ? _cur.toUpperCase() : _cur
-			return _cur;
-		  }
-		}
-		</MyConsumer>
+		_cur = props.location.case == "upper" ? _cur.toUpperCase() : _cur
+		return _cur;
 	}
 
     return(
