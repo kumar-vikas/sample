@@ -147,12 +147,12 @@ function LetterFormation(props) {
     );
   }
 
-  function getLetterCase(_cur) {
-    _cur = props.location.case == "upper" ? _cur.toUpperCase() : _cur;
+  function getLetterCase() {
+    var _cur = props.location.case == "upper" ? "Upper" : "Lower";
     return _cur;
   }
+
 	function getChar(_cur){
-		
 		var casing = "lower";
 		if(props.location.case == "upper"){
 			_cur = _cur.toUpperCase();
@@ -187,7 +187,7 @@ function LetterFormation(props) {
           </div>
         </div>
 
-        <div className="letterFormText">Letter Formation - Lower Case</div>
+        <div className="letterFormText">Letter Formation - {getLetterCase()} Case</div>
         <div id="letterCont">
 					{
 						letterArrsmall.map(
