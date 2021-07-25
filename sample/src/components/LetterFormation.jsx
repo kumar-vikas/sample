@@ -34,7 +34,18 @@ function LetterFormation(props){
 		  }
 		}
 		</MyConsumer>
-	  }
+	}
+
+	function getLetterCase(_cur){
+		return <MyConsumer>
+		  {
+		  (a) => {
+			_cur = props.location.case == "upper" ? _cur.toUpperCase() : _cur
+			return _cur;
+		  }
+		}
+		</MyConsumer>
+	}
 
     return(
         <div className="activity-base">
@@ -61,7 +72,7 @@ function LetterFormation(props){
 					(cur)=>(
 						<NavLink key={cur} to={{pathname:"/LetterFormPractice", curLetter:cur, case:props.location.case}}>
 							<button className="letterBtn">
-								{cur}
+								{getLetterCase(cur)}
 								<img src={penIcon} alt="" />
 							</button>
 						</NavLink>

@@ -12,7 +12,7 @@ import PreWritingPractice from "./components/PreWritingPractice";
 import LetterFormation from './components/LetterFormation';
 import LetterFormPractice from './components/LetterFormPractice';
 import UpperLowerScreen from './components/UpperLowerScreen';
-import { BrowserRouter as Router, withRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
 import backBtn from "./images/play-btn.png";

@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import animationImg from "../images/animation.png";
 import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 
