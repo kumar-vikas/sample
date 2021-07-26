@@ -126,7 +126,7 @@ function LetterFormPractice(props) {
     vidFold = cc.substr(0, cc.length-1);
     props.location.case = props.location.case || "lower"
     path = obj[vidFold+"-"+props.location.case+"-"+props.location.curLetter]
-    console.log(path, vidFold+"-"+props.location.case+"-"+props.location.curLetter)
+//    console.log(path, vidFold+"-"+props.location.case+"-"+props.location.curLetter)
     document.getElementById("vidPlayer-pre").src = path;
   }, []);
 

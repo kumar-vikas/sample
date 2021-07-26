@@ -168,25 +168,37 @@ function LetterFormation(props) {
   }
 
   function getLetterCase() {
-    var _cur = props.location.case == "upper" ? "Upper" : "Lower";
-    return _cur;
+    return (
+      <MyConsumer>
+        {(a) => {
+          var _cur = a.case == "upper" ? "Upper" : "Lower";
+          return _cur;
+        }        
+      }</MyConsumer>
+      );
   }
 
 	function getChar(_cur){
-		var casing = "lower";
-		if(props.location.case == "upper"){
-			_cur = _cur.toUpperCase();
-			casing = "upper";
-		}else{
-			_cur = _cur.toLowerCase();			
-		}
-
-		if(!tabName.startsWith("Pre")){
-        var str = casing + _cur;
-        return <img className="letter-formed" src={svgImg[str]}></img>
-		}else{
-			return _cur;
-		}
+    return (
+      <MyConsumer>
+        {(a) => {
+            var casing = a.case;
+            if(casing == "upper"){
+              _cur = _cur.toUpperCase();
+            }else{
+              _cur = _cur.toLowerCase();			
+            }
+        
+            if(!tabName.startsWith("Pre")){
+                var str = casing + _cur;
+                return <img className="letter-formed" src={svgImg[str]}></img>
+            }else{
+              return _cur;
+            }
+          }
+        }
+      </MyConsumer>
+    )
 	}
 
   return (
@@ -202,7 +214,6 @@ function LetterFormation(props) {
           </a>
           <div className="activity-Title">
             {abc()}
-            {/* <p className="activity-name">Pre-Cursive</p> */}
           </div>
         </div>
 
