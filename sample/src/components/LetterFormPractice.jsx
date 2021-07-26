@@ -124,7 +124,6 @@ function LetterFormPractice(props) {
     document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url("+actImg+")";
 
     vidFold = cc.substr(0, cc.length-1);
-    console.log(props.location.case)
     props.location.case = props.location.case || "lower"
     path = obj[vidFold+"-"+props.location.case+"-"+props.location.curLetter]
     console.log(path, vidFold+"-"+props.location.case+"-"+props.location.curLetter)

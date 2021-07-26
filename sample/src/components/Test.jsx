@@ -12,7 +12,7 @@ function Test(props) {
   var boxColor = "rgba(0,0,255,0.5)";
   var paintOptions = {
     color: "#0000ff",
-    width: 5,
+    width: 12,
   };
   
   const [can, setCan] = useState(null);

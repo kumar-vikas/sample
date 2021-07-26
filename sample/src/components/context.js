@@ -100,7 +100,8 @@ class MyProvider extends Component {
     }
   }
 
-  updateContextTab = (_a) => {
+  updateContextTab = (_a, _b) => {
+    if(_b != undefined) this.setState({case:_b}, this.getState);
     this.setState({activeTab:_a}, this.getState);
   }
 

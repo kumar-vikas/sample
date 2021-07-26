@@ -64,7 +64,6 @@ function LetterFormation(props) {
   const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
   var func = null;
   var tabName = "";
-	var useIamge=false;
 	var letterArrsmall = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 	try{
 		tabName = props.state.activeTab.replace("-", "").replace(" ", "");
@@ -127,6 +126,8 @@ function LetterFormation(props) {
   useEffect(() => {
     props.setVisibility(props.history);
     document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url(" + actImg + ")";
+
+    func(null, props.location.case);
   }, []);
 
   function getTColor(){
