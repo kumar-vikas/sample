@@ -3,10 +3,12 @@ import pencilImg from "../images/pencil-big.png"
 import printable from "../images/printable-icon.png";
 import printIcon from "../images/printIcon-932.png";
 import infoBtn from "../images/info-btn.png";
+import { MyConsumer } from './context';
 
 class PrintableComponent extends Component{
     constructor(props){
         super(props)
+		this.actImg = null;
 
 		this.state={
 			printIms: [{"display":"1 Worksheet: the letter a", "path":"assets/Printables/a.pdf"},
@@ -21,17 +23,34 @@ class PrintableComponent extends Component{
 		this.props.setVisibility(this.props.history);
 	}
 
+	abc() {
+		return <MyConsumer>
+		  {
+			(a) =>{
+			  if(a.activeTab != null){
+				var cc = a.activeTab.replace(" ", "");
+				if(cc.includes("-")){
+				  cc = cc.replace("-", "");
+				}
+				this.actImg = a.getImg[cc].a5;
+			  }
+			  return <p className="activity-name">{a.activeTab}</p>
+			}
+		  }
+		  </MyConsumer>    
+	  }
+
     render(){
         return(
-    	<div className="activity-base" id="act-base-printable">
+    	<div className="activity-base" style={{backgroundImage: "url("+this.actImg+")"}}>
   			{/* <img alt="" src={pencilImg} className="pencile-image"/> */}
 			<div className="activity-base-inner">
 				<div className="activity-head">
 				<a className="btn-icon oragnge-btn info-btn">
 					<img alt="" src={infoBtn}/>
 				</a>
-				<div className="activity-name-block">
-					<p className="activity-name">Pre-Cursive A</p>
+				<div className="activity-Title">
+					{this.abc()}
 				</div>
 				</div>
 				<div className="gameIcon">

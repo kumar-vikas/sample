@@ -145,15 +145,15 @@ body {
     align-items: center;
 }
 .activity-name-block.type5 {
-  background: #c3d82e;
-  box-shadow: inset 0 0 8px 4px #c1d62d;
+  background: var(--tabColors);
+  box-shadow: inset 0 0 8px 4px var(--tabColors);
   padding: 6px 24px;
   display: block;
   max-width: 120px;
   margin: -37px auto;
   position: relative;
   top: -20px;
-  border: 2px solid #c1d62d;
+  border: 2px solid #fff;
 }
 .activity-name-block.type4 p {
   display: inline-block;

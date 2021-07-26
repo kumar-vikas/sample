@@ -31,8 +31,9 @@
 }
 .flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
+  padding: 0 40px;
 }
 .activity-footer {
   display: flex;
