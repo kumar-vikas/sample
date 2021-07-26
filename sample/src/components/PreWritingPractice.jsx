@@ -13,38 +13,54 @@ import { MyConsumer } from "./context";
 
 function PreWritingPractice(props) {
   var actImg = null;
-
+  var tabName="";
   const [pattern, speed] = props.location.path ? props.location.path.split("$") : ["pat-1", ""];
   const bgimgs = [pat1, pat2, pat3, pat4, pat5];
   var bgimg = bgimgs[parseInt(pattern.split("-")[1]) - 1];
   console.log(bgimg);
   var obj = {
-    "pat-1$slow": "assets/Pre-Writing/Copy of Bubble_page 4_slow.mp4",
-    "pat-1$fast": "assets/Pre-Writing/Copy of Bubble_page 4_normal.mp4",
-    "pat-2$slow": "assets/Pre-Writing/Copy of Chimney_page 6_slow.mp4",
-    "pat-2$fast": "assets/Pre-Writing/Copy of Chimney_page 6_normal.mp4",
-    "pat-3$slow": "assets/Pre-Writing/Copy of Bee_slow.mp4",
-    "pat-3$fast": "assets/Pre-Writing/Copy of Bee_Normal.mp4",
-    "pat-4$slow": "assets/Pre-Writing/Copy of Snail page_12 slow.mp4",
-    "pat-4$fast": "assets/Pre-Writing/Copy of Snail page_12_normal.mp4",
-    "pat-5$slow": "assets/Pre-Writing/Copy of Butterfly_slow.mp4",
-    "pat-5$fast": "assets/Pre-Writing/Copy of Butterfly_normal.mp4",
+    "PreCursive-1$slow": "assets/Pre-Writing/preCursive/Bubble_page 4_slow.mp4",
+    "PreCursive-1$fast": "assets/Pre-Writing/preCursive/Bubble_page 4_normal.mp4",
+    "PreCursive-2$slow": "assets/Pre-Writing/preCursive/Chimney_page 6_slow.mp4",
+    "PreCursive-2$fast": "assets/Pre-Writing/preCursive/Chimney_page 6_normal.mp4",
+    "PreCursive-3$slow": "assets/Pre-Writing/preCursive/Bee_slow.mp4",
+    "PreCursive-3$fast": "assets/Pre-Writing/preCursive/Bee_Normal.mp4",
+    "PreCursive-4$slow": "assets/Pre-Writing/preCursive/Snail page_12 slow.mp4",
+    "PreCursive-4$fast": "assets/Pre-Writing/preCursive/Snail page_12_normal.mp4",
+    "PreCursive-5$slow": "assets/Pre-Writing/preCursive/Butterfly_slow.mp4",
+    "PreCursive-5$fast": "assets/Pre-Writing/preCursive/Butterfly_normal.mp4",
+    
+    "Cursive-1$slow": "assets/Pre-Writing/preCursive/Bubble_page 4_slow.mp4",
+    "Cursive-1$fast": "assets/Pre-Writing/preCursive/Bubble_page 4_normal.mp4",
+    "Cursive-2$slow": "assets/Pre-Writing/preCursive/Chimney_page 6_slow.mp4",
+    "Cursive-2$fast": "assets/Pre-Writing/preCursive/Chimney_page 6_normal.mp4",
+    "Cursive-3$slow": "assets/Pre-Writing/preCursive/Bee_slow.mp4",
+    "Cursive-3$fast": "assets/Pre-Writing/preCursive/Bee_Normal.mp4",
+    "Cursive-4$slow": "assets/Pre-Writing/preCursive/Snail page_12 slow.mp4",
+    "Cursive-4$fast": "assets/Pre-Writing/preCursive/Snail page_12_normal.mp4",
+    "Cursive-5$slow": "assets/Pre-Writing/preCursive/Butterfly_slow.mp4",
+    "Cursive-5$fast": "assets/Pre-Writing/preCursive/Butterfly_normal.mp4",
   };
 
   useEffect(() => {
     props.setVisibility(props.history);
+    console.log(props);
+    tabName = props.state.activeTab;
     document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url("+actImg+")";
   }, []);
 
   function fetchVideo(e) {
     var cc = e.target;
-    let cPath = pattern + "$" + cc.innerHTML.toLowerCase();
-
+    var tmp = tabName.replace("-","");
+    tmp = tmp.split(" ")[0];
+    var str = pattern.replace("pat", tmp);
+    let cPath = str + "$" + cc.innerHTML.toLowerCase();
     var vid = document.getElementById("vidPlayer-pre");
     vid.src = obj[cPath];
-    vid.play();
-
-    console.log(cPath, " ========================");
+    vid.oncanplay = function(){
+      vid.play();
+    }
+    
   }
 
   /* function abc() {
@@ -64,6 +80,7 @@ function PreWritingPractice(props) {
               cc = cc.replace("-", "");
             }
             actImg = a.getImg[cc].a4;
+            tabName = a.activeTab;
           }
           return <p className="activity-name">{a.activeTab}</p>
         }
