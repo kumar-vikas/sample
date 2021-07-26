@@ -85,7 +85,7 @@ class Precursive extends Component{
 					this.actImg = a.getImg[cc].a1;
 					
 					this.nextLink = "/LetterFormation"
-					if(cc == "PreCursiveB"){
+					if(cc == "PreCursiveB" || cc == "CursiveB"){
 						this.nextLink = "/UpperLowerScreen";
 					}
 
