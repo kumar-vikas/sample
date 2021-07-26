@@ -83,7 +83,7 @@ class Warmup extends Component{
 					if(cc.includes("-")){
 						cc = cc.replace("-", "");
 					}
-					this.actImg = a.getImg[cc].a1;
+					this.actImg = a.getImg[cc].a6;
 				}
 			  return <p className="activity-name">{a.activeTab}</p>
 		  }
