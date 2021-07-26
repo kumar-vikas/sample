@@ -130,6 +130,25 @@ function LetterFormPractice(props) {
     document.getElementById("vidPlayer-pre").src = path;
   }, []);
 
+  function getTColor(){
+		return <MyConsumer>
+			{
+				(a) => {
+					if(a.activeTab != null){
+						let cc = a.activeTab.replace(" ", "");
+						if(cc.includes("-")){
+							cc = cc.replace("-", "");
+						}
+
+						var r = document.documentElement;
+						r.style.setProperty("--tabColors", a.getImg[cc].tColor);
+					}
+					
+				}
+			}
+		</MyConsumer>
+	}
+
   function abc() {
     return (
       <MyConsumer>
@@ -148,7 +167,7 @@ function LetterFormPractice(props) {
       </MyConsumer>
     );
   }
-  //console.log("AAAAAA", wPage);
+  
   return (
     <div className="activity-base">
       <img alt="" src={pencilImg} className="pencile-image" />
@@ -191,6 +210,7 @@ function LetterFormPractice(props) {
           className="drawingTool"
         />
       </div>
+      {getTColor()}
     </div>
   );
 }

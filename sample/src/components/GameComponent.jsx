@@ -50,6 +50,7 @@ class GameComponent extends Component{
 		}
 		return tname;
 	}
+	
     render(){
 			var gamePath = "assets/Game/"+this.getTabName()+"/index.html";
 			return(

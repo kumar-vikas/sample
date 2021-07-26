@@ -15,6 +15,25 @@ function UpperLowerScreen(props){
 		document.getElementsByClassName("activity-base")[0].style.backgroundImage = "url("+actImg+")";
 	}, [])
 
+	function getTColor(){
+		return <MyConsumer>
+			{
+				(a) => {
+					if(a.activeTab != null){
+						let cc = a.activeTab.replace(" ", "");
+						if(cc.includes("-")){
+							cc = cc.replace("-", "");
+						}
+
+						var r = document.documentElement;
+						r.style.setProperty("--tabColors", a.getImg[cc].tColor);
+					}
+					
+				}
+			}
+		</MyConsumer>
+	}
+
 	function abc(){
 		return <MyConsumer>
 		  {
@@ -61,7 +80,7 @@ function UpperLowerScreen(props){
 			</div>
 			
 		</div>
-
+		{getTColor()}
   	</div>
   </div>
     )
