@@ -49,8 +49,6 @@ class Precursive extends Component{
 
 						var r = document.documentElement;
 						r.style.setProperty("--tabColors", a.getImg[cc].tColor);
-
-						console.log(cc, "8888888888888888888888888888888 ", a.getImg[cc].tColor);
 					}
 					
 				}

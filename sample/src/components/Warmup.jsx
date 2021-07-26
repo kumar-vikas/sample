@@ -54,6 +54,25 @@ class Warmup extends Component{
 		this.setState({infDiagVis:this.vis})
 	}
 
+	getTColor(){
+		return <MyConsumer>
+			{
+				(a) => {
+					if(a.activeTab != null){
+						let cc = a.activeTab.replace(" ", "");
+						if(cc.includes("-")){
+							cc = cc.replace("-", "");
+						}
+
+						var r = document.documentElement;
+						r.style.setProperty("--tabColors", a.getImg[cc].tColor);
+					}
+					
+				}
+			}
+		</MyConsumer>
+	}
+
 	abc(){
 		return <MyConsumer>
 		  {
@@ -130,6 +149,7 @@ class Warmup extends Component{
 				       		<p className="activity-name small">Video</p>
 				      	</div>
 				    </div>
+					{this.getTColor()}
 				</div>
 		  	</div>
 		</div>
