@@ -33,6 +33,8 @@
   --textLarge: adventuring;
   --textSmall: adventuring;
   --handwriting: sassoon;
+
+  --tabColors: #000;
 }
 
 a {
@@ -123,18 +125,14 @@ body {
   width: 320px;
 }
 .activity-name-block {
-  background: #accf46;
-  box-shadow: inset 0 0 8px 4px #89bc40;
   border: 2px solid #fff;
   border-radius: 25px;
   padding: 8px 40px;
   display: inline-block;
 }
 .activity-name-block.type3 {
-  /* background: #ffbc31;
-  box-shadow: inset 0 0 8px 4px #f38a1e; */
-  background: #accf46;
-  box-shadow: inset 0 0 8px 4px #89bc40;
+  background: var(--tabColors);
+  box-shadow: inset 0 0 8px 4px var(--tabColors);
   padding: 6px 24px;
   opacity: inherit;
 }
@@ -162,6 +160,8 @@ body {
   vertical-align: middle;
 }
 .activity-name-block.type2 {
+  background-color: var(--tabColors);
+  box-shadow: inset 0 0 8px 4px var(--tabColors);
   padding: 6px 10px;
 }
 .activity-head .play-btn {

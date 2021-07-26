@@ -37,6 +37,27 @@ class Precursive extends Component{
 		if(this.state.name) this.func(this.state.name);
 	}
 
+	getTColor(){
+		return <MyConsumer>
+			{
+				(a) => {
+					if(a.activeTab != null){
+						let cc = a.activeTab.replace(" ", "");
+						if(cc.includes("-")){
+							cc = cc.replace("-", "");
+						}
+
+						var r = document.documentElement;
+						r.style.setProperty("--tabColors", a.getImg[cc].tColor);
+
+						console.log(cc, "8888888888888888888888888888888 ", a.getImg[cc].tColor);
+					}
+					
+				}
+			}
+		</MyConsumer>
+	}
+
 	componentWillReceiveProps(props, state){
 		if(props.location.name != null){
 			if(this.state.name != props.state.activeTab){
@@ -141,7 +162,7 @@ class Precursive extends Component{
 							<p className="activity-name medium">Pre-Writing</p>
 							</div>
 						</NavLink>
-						</div>					  					  
+						</div>
 					</div>
 
 					<div className="activity-assets-block top">
@@ -196,7 +217,7 @@ class Precursive extends Component{
 				      </div>
 				    </div>
 					</NavLink>
-
+		  		{this.getTColor()}
 				</div>
 			</div>
   		</div>

@@ -73,17 +73,17 @@ class MyProvider extends Component {
       func: this.updateContextTab,
 
       getImg: {
-        PreCursiveA:{a1: bgImgA, a2:bgImgA2, a3:bgImgA3, a4:bgImgA4, a5:bgImgA5},
-        PreCursiveB:{a1: bgImgB, a2:bgImgB2, a3:bgImgB3, a4:bgImgB4, a5:bgImgB5},
-        PreCursiveC:{a1: bgImgC, a2:bgImgC2, a3:bgImgC3, a4:bgImgC4, a5:bgImgC5},
-        PreCursiveD:{a1: bgImgD, a2:bgImgD2, a3:bgImgD3, a4:bgImgD4, a5:bgImgD5},
+        PreCursiveA:{a1: bgImgA, a2:bgImgA2, a3:bgImgA3, a4:bgImgA4, a5:bgImgA5, tColor:"#accf46"},
+        PreCursiveB:{a1: bgImgB, a2:bgImgB2, a3:bgImgB3, a4:bgImgB4, a5:bgImgB5, tColor:"#accf46"},
+        PreCursiveC:{a1: bgImgC, a2:bgImgC2, a3:bgImgC3, a4:bgImgC4, a5:bgImgC5, tColor:"#accf46"},
+        PreCursiveD:{a1: bgImgD, a2:bgImgD2, a3:bgImgD3, a4:bgImgD4, a5:bgImgD5, tColor:"#accf46"},
 
-        CursiveA:{a1: cursiveA, a2:cursiveA2, a3:cursiveA3, a4:cursiveA4, a5:cursiveA5},
-        CursiveB:{a1: cursiveB, a2:cursiveB2, a3:cursiveB3, a4:cursiveB4, a5:cursiveB5},
-        CursiveC:{a1: cursiveC, a2:cursiveC2, a3:cursiveC3, a4:cursiveC4, a5:cursiveC5},
-        CursiveD:{a1: cursiveD, a2:cursiveD2, a3:cursiveD3, a4:cursiveD4, a5:cursiveD5},
-        CursiveE:{a1: cursiveE, a2:cursiveE2, a3:cursiveE3, a4:cursiveE4, a5:cursiveE5},
-        CursiveF:{a1: cursiveF, a2:cursiveF2, a3:cursiveF3, a4:cursiveF4, a5:cursiveF5}
+        CursiveA:{a1: cursiveA, a2:cursiveA2, a3:cursiveA3, a4:cursiveA4, a5:cursiveA5, tColor:"#34bcee"},
+        CursiveB:{a1: cursiveB, a2:cursiveB2, a3:cursiveB3, a4:cursiveB4, a5:cursiveB5, tColor:"#34bcee"},
+        CursiveC:{a1: cursiveC, a2:cursiveC2, a3:cursiveC3, a4:cursiveC4, a5:cursiveC5, tColor:"#34bcee"},
+        CursiveD:{a1: cursiveD, a2:cursiveD2, a3:cursiveD3, a4:cursiveD4, a5:cursiveD5, tColor:"#34bcee"},
+        CursiveE:{a1: cursiveE, a2:cursiveE2, a3:cursiveE3, a4:cursiveE4, a5:cursiveE5, tColor:"#34bcee"},
+        CursiveF:{a1: cursiveF, a2:cursiveF2, a3:cursiveF3, a4:cursiveF4, a5:cursiveF5, tColor:"#34bcee"}
       }
 
     }
