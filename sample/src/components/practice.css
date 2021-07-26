@@ -57,9 +57,9 @@
 
 .letter-formed{
   transform: scale(1) !important;
-    margin: -34px 0px 0px -15px !important;
-    max-height: 67px;
-    
+  margin: -31px 0px 0px -29px !important;
+  height: 60px;
+  width: auto !important; 
 }
 
 /* .activity-base{
