@@ -188,7 +188,6 @@ function LetterFormation(props) {
 		}
 	}
 
-
   return (
     <div className="activity-base">
       {/* <img alt="" src={pencilImg} className="pencile-image"/> */}
@@ -211,11 +210,9 @@ function LetterFormation(props) {
 					{
 						letterArrsmall.map(
 							(cur)=>(
-								<NavLink key={cur} to={{pathname:"/LetterFormPractice", curLetter:cur}}>
+								<NavLink key={cur} to={{pathname:"/LetterFormPractice", curLetter:cur, case: props.location.case}}>
 									<button className="letterBtn">
-										
 										{getChar(cur)}
-
 										<img src={penIcon} alt="" />
 									</button>
 								</NavLink>
