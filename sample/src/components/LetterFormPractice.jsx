@@ -1,13 +1,17 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import MemoTest from "./Test";
 import "./practice.css";
 import pencilImg from "../images/pencil-big.png";
 import infoBtn from "../images/info-btn.png";
 import wPage from "../images/w-page.png";
 import vidIcon538 from "../images/vidIcon-538.png";
+import info143 from "../images/info-i143.png";
 import { MyConsumer } from "./context";
 
 function LetterFormPractice(props) {
+  const [state, setStateHelp] = useState({help:"Watch the letter video and then try for yourself.",
+    infDiagVis:"none"
+  });
   var func = null;
   var actImg = null;
   var vidFold = "";
@@ -167,6 +171,11 @@ function LetterFormPractice(props) {
       </MyConsumer>
     );
   }
+
+  function openDialog(){
+		var vis = state.infDiagVis=="flex" ? "none" : "flex";    
+		setStateHelp({...state, infDiagVis:vis})
+	}
   
   return (
     <div className="activity-base">
@@ -176,12 +185,21 @@ function LetterFormPractice(props) {
       </div>
       <div className="activity-base-inner">
         <div className="activity-head">
-          <a className="btn-icon oragnge-btn info-btn">
+          <a className="btn-icon oragnge-btn info-btn" onClick={openDialog}>
             <img alt="" src={infoBtn} />
           </a>
           <div className="activity-Title">{abc()}</div>
         </div>
 
+        <div className="info-dialog" style={{display:state.infDiagVis}}>
+		  		<div>
+		  			<img src={info143} alt="" />
+				  </div>
+				  <div>
+		  				{state.help}
+				  </div>
+			  </div>
+        
         <div className="letterFormbodyTxt">Letter Formation</div>
         <div id="letterFormvidCont">
           <div>

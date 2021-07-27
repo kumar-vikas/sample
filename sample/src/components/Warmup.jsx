@@ -13,7 +13,7 @@ class Warmup extends Component{
             src:this.props.src,
             visible:'none',
 
-			help:"If you need help. Click on the information button.",
+			help:"Follow along with our warm up video to get ready to begin handwriting.",
 			infDiagVis:'none'
         }
     }

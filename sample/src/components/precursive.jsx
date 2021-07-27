@@ -26,7 +26,7 @@ class Precursive extends Component{
             src:this.props.src,
 			name:this.props.location.name,
 
-			help:"If you need help. Click on the information button.",
+			help:"Select your activity to get started!",
 			infDiagVis:'none'
         }
     }
