@@ -20,11 +20,11 @@ if (process.env.NODE_ENV === 'production'){
 }
 
 //page not found with 404
-app.use((req, res, next)=>{
+/*app.use((req, res, next)=>{
 	var err = new Error('Page not Found');
 	err.status = 404;
 	next(err)
-});
+});*/
 
 //handling errors
 app.use((err, req, res, next)=>{
